@@ -1,2 +1,0 @@
----------------------------------------------
-arquivo temporário para conseguir subir pasta no git
