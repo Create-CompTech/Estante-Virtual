@@ -1,12 +1,13 @@
 import React from 'react';
+
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import Inicial from './Pages/Inicial'
+import Inicial from './Pages/index'
 import Login from './Pages/Login'
 import Senha from './Pages/Login/Senha'
-import Cadastro from './Pages/Cadastro'
-import Cadastro1 from './Pages/Cadastro/Cadastro1'
-import Cadastro2 from './Pages/Cadastro/Cadastro2'
+import Cadastro from './Pages/admin/Cadastro'
+import Cadastro1 from './Pages/admin/Cadastro/Cadastro1'
+import Cadastro2 from './Pages/admin/Cadastro/Cadastro2'
 
 export default function Routes(){
 
