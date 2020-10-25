@@ -4,18 +4,45 @@ import './cadastro2.css';
 
 function Cadastro2() {
   return (
-    <div className="Cadastro2">
-      <header className="Cadastro-Header2">
-          <form class="cadastro2">
-            <div class="cadastre2">Cadastre-se</div>
-                <p>Preencha com as informações para Login</p>
-                <input type="email" placeholder="Email"></input>
-                <input type="password" placeholder="Senha"></input>
-                <input type="password" placeholder="Confirme a senha"></input>
-                <Link to="/Login"><button class="continuarbotao2">Confirmar</button></Link>
-                <Link to="/Cadastro"><button class="cancelarbotao">Cancelar</button></Link>
-          </form>
-      </header>
+    <div className="fundo4">
+      <div className="cadastro2">
+        <div className="titulo4">
+          <h1>Cadastre-se</h1>
+        </div>
+        <div className="subtitulo">
+          <h6>Preencha com as informações para</h6>
+          <h6>login</h6>
+      </div>
+      <div className="inputlogin">
+
+      <div class="form">
+         <input type="text" name="name" autocomplete="off" required />
+          <label for="name" class="label-name">
+            <span class="content-name">E-mail</span>
+          </label>
+        </div>
+
+        <div class="form">
+         <input type="text" name="name" autocomplete="off" required />
+          <label for="name" class="label-name">
+            <span class="content-name">Senha</span>
+          </label>
+        </div>
+
+        <div class="form">
+         <input type="text" name="name" autocomplete="off" required />
+          <label for="name" class="label-name">
+            <span class="content-name">Confirme a senha</span>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="botao">
+      <Link to="/Login"><button class="continuarbotao2">Confirmar</button></Link>
+      </div>
+    
+    </div>
     </div>
   );
 }

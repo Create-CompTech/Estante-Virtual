@@ -1,120 +1,151 @@
-.Login{
-    text-align: center;
-    width: 100%;
+.menu{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-}
-  
-.Login-Header{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    background: linear-gradient(15deg, #36013F , #343837 );
+    height: 11.5vh;
     width: 100%;
-    height: 100%;
-    background: #222f3e;
-    display: flex;
-    background: rgb(149,0,253);
-    background: linear-gradient(90deg, rgba(149,0,253,1) 0%, rgba(211,3,170,1) 35%, rgba(251,139,0,1) 100%);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-  
-    font-family: 'Sulphur Point', sans-serif;
+.contato{
+    display: flex;
 }
-  
-a{
-    text-decoration: none;
+
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87vh;
 }
-  
-button{
-    border: none;
-    cursor: pointer;
-}
+
 
 .login{
-    width: 420px;
-    height: 550px;
+    background-color: white;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 16px;
-    border: 1px solid rgba(200, 214, 229, 0.596);
-    border-radius: 24px;
-    position: relative;
-}
-  
-form img{
-    width: 120px;
-    height: 120px;
-    margin: 20px;
-}
-  
-.Avatar{
-    padding: 3px;
-    background: #fff;
-    border-radius: 50%;
-}
-  
-.bemvindo{
-    font-size: 48px;
-    color: #c8d6e5;
-    margin-bottom: 16px;
-    font-weight: bold;
-}
-  
-form input{
-    width: 100%;
-    height: 52px;
+
+    height: 65vh;
+    width: 43vw;
+
+    border: solid  #D8DCD6 1px;
     border-radius: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #5f27cd;
-    font-size: 20px;
-    padding: 0 16px;
+
+    flex-direction: column;
 }
-  
+
 .opçoes{
     width: 100%;
     color: #c8d6e5;
     text-align: center;
     display: flex;
-    justify-content: space-between;
-    padding: 0 16px;
+    justify-content: space-evenly;
+    margin-top: 18px;
+    padding: 0 25px;
 }
   
 .opçoes a{
-    color: #c8d6e5;
-}
-  
-button{
-    width: 100%;
-    height: 52px;
-    margin-top: 24px;
-    border-radius: 24px;
-    font-size: 22px;
-    font-weight: bold;
-    background: #5f27cd;
-    color: #c8d6e5;
+    color: #9DBCD4;
 }
 
-.loginbotao{
-    width: 390px;
-    height: 52px;
-    margin-top: 40px;
-    border-radius: 24px;
-    font-size: 22px;
-    font-weight: bold;
-    background: #5f27cd;
-    color: #c8d6e5;
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70px;
+    width: 45vw;
+
+    margin-top: 15px;
+}
+
+.botao button{
+    background: linear-gradient(#EDC8FE,#9DBCD4);
+
+    height: 47px;
+    width: 142px;
+
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.titulo h1{
+    font-size: 25px;
+}
+
+.contato p {
+    color: white;
+}
+
+.imagem p {
+    color: white;
+}
+
+.form{
+    width: 52%;
+    position: relative;
+    height: 58px;
+    overflow: hidden;
+}
+
+.form input {
+    width: 100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 14px;
+    border: none;
+    outline: none;
+}
+
+.form label{
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 0.5px solid rgba(149,0,253,1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name, 
+.form input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 13px;
+    color: #36013F
+}
+
+.form input:focus .label-name::after,
+.form input:valid + .label-name::after {
+    transform: translateX(0%);
 }

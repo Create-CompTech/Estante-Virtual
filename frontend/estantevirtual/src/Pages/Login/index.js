@@ -1,25 +1,58 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import './login.css';
+import './login.css'
+
 
 function Login() {
   return (
     <div className="Login">
-      <header className="Login-Header">
-          <form class="login">
-              <img class="Avatar" src="https://lh3.googleusercontent.com/proxy/ww5ibRelg4_gcR6IZIwUDntvwZDgFCD4h-3YpBsfOO-rQEdxSK21TH8_CPDKex5753j3LXxyHGiv82dR9H1jsBjl_nxsBLyoo-L8rypVS6-NDpV7TAQ" alt="user login" />
-              <div class="bemvindo">Bem-Vindo(a)</div>
-              <input type="email" placeholder="Email"></input>
-              <input type="password" placeholder="Senha"></input>
-              <div class="opçoes">
-                  <Link to="/Cadastro">Cadastrar</Link>
-                  <Link to="/EsqueciaSenha">Esqueci a senha</Link>
+      <div className="menu">
+
+        <div className="imagem">
+          <p>imagemlogo</p>
+        </div>
+        <div className="contato">
+          <p>contato</p>
+        </div>
+      </div>
+
+
+      <div className="container2">
+        <div className="login">
+
+          <div className="bemvindo">
+          <h1>Bem-vindo(a)</h1>
+          </div>
+
+
+        <div class="form">
+        <input type="text" name="name" autocomplete="on" required />
+        <label for="name" class="label-name">
+            <span class="content-name">E-mail</span>
+        </label>
+       </div>
+
+       <div class="form">
+        <input type="password" name="name" autocomplete="on" required />
+        <label for="name" class="label-name">
+            <span class="content-name">Senha</span>
+        </label>
+       </div>
+
+       <div class="opçoes">
+                  <Link to="/Cadastro">Cadastrar-se</Link>
+                  <Link to="/ConfirmacaoSenha">Esqueci a senha</Link>
               </div>
-              <Link to="/"><button class="loginbotao">Login</button></Link>
-          </form> 
-      </header>
+
+       <div class="botao">
+          <button>Login</button>
+       </div>
+
+        </div>
+      </div>
     </div>
   );
 }
+
 
 export default Login;

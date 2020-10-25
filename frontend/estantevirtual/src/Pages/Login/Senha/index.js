@@ -1,23 +1,37 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './senha.css';
+import {Link} from 'react-router-dom';
 
-function Senha() {
+function ConfirmacaoSenha() {
   return (
-    <div className="Senha">
-      <header className="Senha-Header">
-          <form class="senha">
-              <div class="esquecisenha">Mudar a senha</div>
-              <p>Digite o Email cadastrado e sua nova senha para redefini-lá.</p>
-              <input type="email" placeholder="Email"></input>
-              <input type="password" placeholder="Senha"></input>
-              <input type="password" placeholder="Confirmar senha"></input>
-              <Link to="/Login"><button class="senhabotao">Alterar senha</button></Link>
-              <Link to="/Login"><button class="cancelarbotao">Cancelar</button></Link>
-          </form>
-      </header>
+    <div className="fundo1">
+      <div className="confirmacaosenha">
+        <div className="confirmaremail">
+          <h1>Confirmação de e-mail</h1>
+        </div>
+        <div className="descricao">
+          <p>Foi enviado um e-mail para gustavofurtado***@gmail com o código para realizar  a confirmação</p>
+        </div>
+
+        <div className="codigo">
+          <label>
+            <input  type="text" placeholder=" Código Recebido" ></input>
+          </label>
+        </div>
+
+        <div className="botao">
+          <div className="reenviar">
+            <button>REENVIAR EMAIL</button>
+          </div>
+          <div className="confirmar">
+          <Link to="/Login"><button class="cancelar">Cancelar</button></Link>
+          <Link to="/Alterar"><button class="cancelar">Confirmar</button></Link>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
 
-export default Senha;
+export default ConfirmacaoSenha;

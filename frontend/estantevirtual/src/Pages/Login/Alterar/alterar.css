@@ -1,4 +1,4 @@
-.fundo4{
+.fundo3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,47 +7,35 @@
     width: 100%;
 }
 
-.cadastro2{
+.container4{
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: white;
-    height: 67vh;
-    width: 35vw;
-    border: none;
+    height: 50vh;
+    width: 46vw;
+
     border-radius: 10px;
 }
 
-.titulo4{
+.alterar{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55px;
-    width: 35vw;
+    height: 50px;
+    width: 46vw;
 }
 
-.subtitulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 55px;
-    width: 35vw;
-}
-
-.inputlogin{
+.formulario{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 190px;
-    width: 35vw;
+    height: 155px;
+    width: 36vw;
 }
 
-.titulo4 h1{
-    font-size: 30px;
+.alterar h1{
+    font-size: 29px;
 }
 
-.subtitulo h6{
-    font: 22px;
-}

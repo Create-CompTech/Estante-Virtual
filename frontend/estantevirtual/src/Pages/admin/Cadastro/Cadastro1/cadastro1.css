@@ -1,78 +1,84 @@
-.Cadastro1{
-    text-align: center;
-    width: 100%;
+.fundo2{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background: linear-gradient(15deg, #36013F , #343837 );
+    height: 100vh;
+    width: 100%;
 }
-  
-.Cadastro-Header1{
-    min-height: 100vh;
+
+.boxcadastro{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 85vh;
+    width: 45vw;
+    border-radius: 10px;
+}
+
+.nomecadastro{
+    display: flex;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    width: 100%;
-    height: 100%;
-    background: #222f3e;
-    display: flex;
-    background: rgb(149,0,253);
-    background: linear-gradient(90deg, rgba(149,0,253,1) 0%, rgba(211,3,170,1) 35%, rgba(251,139,0,1) 100%);
+    align-items: center;
+    height: 55px;
+    width: 45vw;
+
 }
 
-.cadastro1{
-    width: 420px;
-    height: 600px;
+.inputendereco{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
-    border: 1px solid rgba(200, 214, 229, 0.596);
-    border-radius: 24px;
-    position: relative;
+    height: 350px;
+    width: 37vw;
+
 }
 
-
-.cadastre1{
-    margin: 5px;
-    font-size: xx-large;
-}
-
-p{
-    margin: 5px;
-    margin-bottom: 5px;
-}
-
-.continuarbotao1{
-    width: 175px;
-    height: 52px;
-    margin-top:  24px;
-    border-radius: 24px;
-    font-size: 22px;
-    font-weight: bold;
-    background: #5f27cd;
-    color: #c8d6e5;
-}
-
-.voltarbotao{
-    width: 300px;
-    height: 52px;
-    border-radius: 24px;
-    font-size: 22px;
-    font-weight: bold;
-    background: #5f27cd;
-    color: #c8d6e5;
-}
-
-.opcoes{
-    width: 100%;
-    color: #c8d6e5;
-    text-align: center;
+.botoes{
     display: flex;
-    justify-content: space-between;
-    padding: 0 16px;
+    height: 60px;
+    width: 45vw;
+}
+
+.botaovoltar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 18vw;
+}
+
+.botaovoltar button {
+    background: linear-gradient(#EDC8FE,#9DBCD4);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 43px;
+    width: 165px;
+}
+
+.botaoconfirmar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 55px;
+    width: 27vw;
+
+}
+
+.botaoconfirmar button{
+    background: linear-gradient(#EDC8FE,#9DBCD4);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 43px;
+    width: 165px;
+}
+
+
+
+.nomecadastro h1{
+    font-size: 26px;
 }
