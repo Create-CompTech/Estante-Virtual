@@ -1,11 +1,14 @@
+.fundocadas{
+    background-color: #D8DCD6;
+}
 
 .container{
-
     display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
 .box{
@@ -14,6 +17,7 @@
     width: 75vw;
     border: #95A3A6 solid 1px;
     border-radius: 10px;
+    border: none;
 }
 
 .direito{
@@ -35,6 +39,7 @@
     width: 44vw;
     height: 86vh;
     border-radius: 10px;
+    background-color: white;
 }
 
 .box2{
@@ -63,8 +68,7 @@
 }
 
 
-.botaocadastro{  
-}
+
 
 .botaocadastro button{
     background: linear-gradient(#EDC8FE,#9DBCD4);

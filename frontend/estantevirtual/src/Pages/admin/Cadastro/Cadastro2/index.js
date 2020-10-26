@@ -23,14 +23,14 @@ function Cadastro2() {
         </div>
 
         <div class="form">
-         <input type="text" name="name" autocomplete="off" required />
+         <input type="password" name="name" autocomplete="off" required />
           <label for="name" class="label-name">
             <span class="content-name">Senha</span>
           </label>
         </div>
 
         <div class="form">
-         <input type="text" name="name" autocomplete="off" required />
+         <input type="password" name="name" autocomplete="off" required />
           <label for="name" class="label-name">
             <span class="content-name">Confirme a senha</span>
           </label>
