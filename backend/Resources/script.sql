@@ -500,20 +500,20 @@ show tables from db_gobook;
 
                
                
- Insert into tb_autor ( nm_autor, ds_img, ds_genero, ds_nascimento, ds_autor, bt_filiado)
-Values (Antonio,  null, masculino, '02-06-1980', 'antonio', null);
+ Insert into tb_autor(nm_autor, ds_img, ds_genero, ds_nascimento, ds_autor, bt_filiado)
+Values (Antonio, null, masculino, '02-06-1980', 'antonio', null);
 
 Insert into tb_ebook (nm_ebook, ds_ebook, ds_img, vl_ebook, qt_paginas, nm_editora, ds_edicao, ds_cor_barra, ds_isbn, nm_lingua, nm_lingua_original, ds_insercao)
-Values (primavera, null, null, 50, editora sonhos, primeira, '12867', '18456', portugues_brasil, inglês, '28-08-1990', null);
+Values (primavera, null, null, 50, editora_sonhos, primeira, '12867', '18456', portugues_brasil, ingles, '28-08-1990', null);
 
-Insert into tb_ login ( ds_email, ds_senha, ds_perfil)
+Insert into tb_login (ds_email, ds_senha, ds_perfil)
 Values (agathaultra25@gmail.com, agatha12345, agatha255);
 
-Insert into tb_usuario ( nm_usuario, ds_img, dt_nascimento, ds_cpf, ds_genero)
+Insert into tb_usuario(nm_usuario, ds_img, dt_nascimento, ds_cpf, ds_genero)
 Values ( agatha5f, null, '04-01-2000', '6848685', feminio);
 
-Insert into tb_endereco (ds_cep, ds_rua, nr_casa, ds_complemento, ds_estado, ds_cidade)
+Insert into tb_endereco(ds_cep, ds_rua, nr_casa, ds_complemento, ds_estado, ds_cidade)
 Values ('1485745', rua dos limoes, null, casa, SP, sao Paulo);
 
-Insert into tb_cartao (tp_cartao, nm_bandeira, nm_titular, ds_cartao, dt_expira)
-Values (visa, '1566961', marcia, cartão de credito, '05-05-2025');
+Insert into tb_cartao(tp_cartao, nm_bandeira, nm_titular, ds_cartao, dt_expira)
+Values (visa,'1566961', marcia, cartão de credito, '05-05-2025');
