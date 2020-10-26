@@ -12,14 +12,14 @@ function AlterarSenha () {
                 <div className="formulario">
 
                 <div class="form">
-                  <input type="text" name="name" autocomplete="on" required />
+                  <input type="password" name="name" autocomplete="on" required />
                  <label for="name" class="label-name">
                    <span class="content-name">Nova senha</span>
                  </label>
                </div>
 
                <div class="form">
-                  <input type="text" name="name" autocomplete="on" required />
+                  <input type="password" name="name" autocomplete="on" required />
                  <label for="name" class="label-name">
                    <span class="content-name">confirmar nova Senha</span>
                  </label>

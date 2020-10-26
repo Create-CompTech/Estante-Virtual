@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     background: linear-gradient(15deg, #36013F , #343837 );
-    height: 11.5vh;
+    height: 12vh;
     width: 100%;
 }
 
@@ -14,6 +13,7 @@
 
 
 .container2{
+    background-color: #D8DCD6;
     display: flex;
     justify-content: center;
     align-items: center;

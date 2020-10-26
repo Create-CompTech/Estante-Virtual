@@ -1,9 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import './login.css'
 
-
 function Login() {
+
   return (
     <div className="Login">
       <div className="menu">
@@ -45,7 +49,7 @@ function Login() {
               </div>
 
        <div class="botao">
-          <button>Login</button>
+          <Link to="./InicialCliente"><button>Login</button></Link>
        </div>
 
         </div>

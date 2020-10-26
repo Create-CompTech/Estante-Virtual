@@ -5,10 +5,11 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Inicial from './Pages/index'
 import Login from './Pages/Login'
 import ConfirmacaoSenha from './Pages/Login/Senha'
-import Cadastro from './Pages/admin/Cadastro'
-import Cadastro1 from './Pages/admin/Cadastro/Cadastro1'
-import Cadastro2 from './Pages/admin/Cadastro/Cadastro2'
 import AlterarSenha from './Pages/Login/Alterar'
+import Cadastro from './Pages/Cliente/Cadastro'
+import Cadastro1 from './Pages/Cliente/Cadastro/Cadastro1'
+import Cadastro2 from './Pages/Cliente/Cadastro/Cadastro2'
+import InicialCliente from './Pages/Cliente/Inicial'
 
 
 export default function Routes(){
@@ -19,10 +20,11 @@ export default function Routes(){
                 <Route path="/" exact={true} component={Inicial} />
                 <Route path="/Login" component={Login} />
                 <Route path="/ConfirmacaoSenha" component={ConfirmacaoSenha} />
+                <Route path="/Alterar" component={AlterarSenha} />
                 <Route path="/Cadastro" component={Cadastro} />
                 <Route path="/Cadastro1" component={Cadastro1} />
                 <Route path="/Cadastro2" component={Cadastro2} />
-                <Route path="/Alterar" component={AlterarSenha} />
+                <Route path="/InicialCliente" component={InicialCliente} />
             </Switch>
         </BrowserRouter>
     )

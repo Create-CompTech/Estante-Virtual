@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom';
 
 function Cadastro() {
   return (
-    <div className="container">
+    <div className="fundocadas">
+          <div className="container">
       <div className="box">
 
         <div className="direito">
@@ -59,6 +60,7 @@ function Cadastro() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
