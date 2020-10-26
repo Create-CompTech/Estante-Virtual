@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './inicial.css';
+import './inicialcliente.css';
 
 function Inicial() {
   return (
@@ -15,8 +15,8 @@ function Inicial() {
         </div>
 
         <div class="BotoesCabeçalho">
-          <Link class="BotoesCabeçalho1" to="/Cadastro">Cadastre-se</Link>
-          <Link class="BotoesCabeçalho2" to="/Login">Faça Login</Link>
+          <button>Menu</button>
+          <Link to="/">Logout</Link>
         </div>
 
       </header>
