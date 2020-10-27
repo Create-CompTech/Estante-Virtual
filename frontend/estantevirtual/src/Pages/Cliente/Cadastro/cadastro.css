@@ -26,7 +26,7 @@
     justify-content: center;
     flex-direction: column;
     background: linear-gradient(15deg, #36013F , #343837 );
-    height: 76vh;
+    height: 86vh;
     width: 33vw;
     border-radius: 10px;
 }
@@ -37,10 +37,11 @@
     align-items: center;
     flex-direction: column;
     width: 44vw;
-    height: 76vh;
+    height: 86vh;
     border-radius: 10px;
     background-color: white;
 }
+
 
 .box2{
     display: flex;
