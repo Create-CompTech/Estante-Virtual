@@ -43,6 +43,7 @@
     width: 400px;
     height: 40px;
     margin-top: 95px;
+    margin-right: 350px;
     padding: 10px 10px;
     border-radius: 100px;
     
@@ -118,5 +119,110 @@ ul{
 
 body{
     height: 100%;
-    background: gray;
+    background: #D8DCD6;
+}
+
+.sidebar{
+    position: fixed;
+    left: 1375px;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(15deg, #36013F , #343837 );
+    transition: all .5s ease;
+}
+
+.sidebar header{
+    font-size: 25px;
+    color: #fff;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    line-height: 70px;
+    user-select: none;
+    transition: all .5s;
+}
+
+.sidebar ul a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: all .4s;
+}
+
+ul li:hover a{
+    padding-right: 65px;
+}
+
+.sidebar ul a li{
+    margin-right: 160px;
+}
+
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+label #btn{
+    left: 1300px;
+    top: 10px;
+    font-size: 40px;
+    color: #fff;
+    padding: 6px 12px;
+    transition: all .5s ease;
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -100px;
+    top: 12px;
+    font-size: 40px;
+    color: #fff;
+    background: #282c34;
+    padding: 2px 6px;
+    transition: all .0s
+}
+
+.botaologout{
+    margin-top: 225px;
+}
+
+.botaologout1{
+    color: #fff;
+}
+
+#btn1{
+    margin-left: 10px;
+    color: #fff;
+}
+
+#check:checked ~ .sidebar{
+    left: 1116px;
+}
+
+#check:checked ~ label #btn{
+    right: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 1310px;
+}
+
+#check:checked ~ Inicial{
+    margin-right: 250px;
 }

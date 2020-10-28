@@ -9,7 +9,7 @@ function Inicial() {
       
         <div class="Logo"><h1>goBook</h1></div>
 
-        <div class="Pesquisa">
+        <div class="Pesquisa1">
           <input type="search" placeholder="Livro ou Autor" class="Texto"></input> 
             <i class="fas fa-search"></i>
         </div>

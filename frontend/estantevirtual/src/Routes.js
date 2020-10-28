@@ -9,7 +9,7 @@ import AlterarSenha from './Pages/Login/Alterar'
 import Cadastro from './Pages/Cliente/Cadastro'
 import Cadastro1 from './Pages/Cliente/Cadastro/Cadastro1'
 import Cadastro2 from './Pages/Cliente/Cadastro/Cadastro2'
-import InicialCliente from './Pages/Cliente/Inicial'
+import InicialCliente from './Pages/Cliente'
 
 
 export default function Routes(){

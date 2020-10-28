@@ -13,11 +13,25 @@ function Inicial() {
           <input type="search" placeholder="Livro ou Autor" class="Texto"></input> 
             <i class="fas fa-search"></i>
         </div>
-
-        <div class="BotoesCabeçalho">
-          <button>Menu</button>
-          <Link to="/">Logout</Link>
-        </div>
+        
+        <input type="checkbox" id="check"></input>
+          <label for="check">
+              <i class="fas fa-bars" id="btn"></i>
+              <i class="fas fa-bars" id="cancel"></i>
+          </label>
+          <div class="sidebar">
+              <header>Menu goBook</header>
+              <ul>
+                <li><a href="a">Perfil</a></li>
+                <li><a href="a">Mensagens</a></li>
+                <li><a href="a">Minhas estantes</a></li>
+                <li><a href="a">Meu carrinho</a></li>
+              </ul>
+              <div class="botaologout">
+                <Link class="botaologout1" to="/">Logout</Link>
+                <i class="fas fa-sign-in-alt" id="btn1"></i>
+              </div>
+          </div>
 
       </header>
       <body>
