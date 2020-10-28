@@ -501,64 +501,64 @@ show tables from db_gobook;
                
                
  Insert into tb_autor(nm_autor, ds_img, ds_genero, ds_nascimento, ds_autor, bt_filiado)
-Values (Antonio, null, masculino, '02-06-1980', 'antonio', null);
+Values ('Antonio', null, masculino, '02-06-1980', 'antonio', null);
 
 Insert into tb_ebook (nm_ebook, ds_ebook, ds_img, vl_ebook, qt_paginas, nm_editora, ds_edicao, ds_cor_barra, ds_isbn, nm_lingua, nm_lingua_original, ds_insercao)
-Values (primavera, null, null, 50, editora_sonhos, primeira, '12867', '18456', portugues_brasil, ingles, '28-08-1990', null);
+Values (primavera, null, null, 50, editora_sonhos, primeira, 12867, 18456, portugues_brasil, ingles, '28-08-1990', null);
 
 Insert into tb_login (ds_email, ds_senha, ds_perfil)
 Values ('agathaultra25@gmail.com', 'agatha12345', 'agatha255');
 
 Insert into tb_usuario(nm_usuario, ds_img, dt_nascimento, ds_cpf, ds_genero)
-Values ( 'agatha5f', null, '04-01-2000', '6848685', 'feminino');
+Values ( 'agatha5f', null, '04-01-2000', 6848685, 'feminino');
 
 Insert into tb_endereco(ds_cep, ds_rua, nr_casa, ds_complemento, ds_estado, ds_cidade)
-Values ('1485745', 'rua dos limoes', null, 'casa', 'SP', 'sao Paulo');
+Values (1485745, 'rua dos limoes', null, 'casa', 'SP', 'sao Paulo');
 
 Insert into tb_admin (id_usuario, id_endereco, ds_cargo)
 Values ('adm', 'rua_jardins_55', 'adm1');
         
 Insert into tb_cliente (id_usuario, qt_pontos, bt_assinante)
-Values ('xipst', '10', true);
+Values ('xipst', 10, true);
 
 
 Insert into tb_cartao(tp_cartao, nm_bandeira, nm_titular, ds_cartao, dt_expira)
-Values (visa,'1566961', 'marcia', 'cartão de credito', 05-05-2025);
+Values (visa,1566961, 'marcia', 'cartão de credito', 05-05-2025);
                
 Insert tb_venda (id_cartao, dt_venda, ds_nota_fiscal, tp_pgto, qt_parcelas)
-Values( '87564', 15-05-2020, '9655', '25,50', '1');
+Values( '87564', 15-05-2020, 9655, 25.50, 1);
 
 Insert into tb_venda_item (id_ebook, id_venda, qt_itens)
-Values ('30', '9655', '1');
+Values (30, 9655, 1);
 
 Insert into (id_autor, id_ebook, vl_pgto, dt_pgto_referente, dt_pgto_efetuado)
-Values( '22652', '30', '30.00', 15-05-2020, 18-05-2020);
+Values( 22652, 30, 30.00, 15-05-2020, 18-05-2020);
 
 Insert into tb_controle_admin (id_login, dt_login)
 Values ('controle_admin', 20-08-2020);
 
 Insert into tb_pgto_assinatura (id_cartao, dt_pgto_referente, dt_pgto_efetuado);
-Values ( '5486', 20-10-2020, 21-10-2020);
+Values ( 5486, 20-10-2020, 21-10-2020);
 
 Insert into tb_genero ( nm_genero)
 Values ('terror');
 
 
 insert into Tb_feedback ( id_ebook, id_cliente, id_admin_aprovacao ds_feedback, qt_estrelas, bt_aprovado, dt_feedback)
-Values ('50','47', '01', 'bom', '4', true, 25-10-2020);
+Values (50,47, 01, 'bom', 4, true, 25-10-2020);
 
 insert into Tb_genero_ebook (id_genero, id_ebook, bt_genero_principal)
-Values ('terror', ‘666’, true);
+Values ('terror', 666, true);
 
 
 insert into Tb_genero_fav_cliente (id_cliente, id_genero)
-Values ('12', 'terror');
+Values (12, 'terror');
 
 insert into Tb_prateleira_item ( id_prateleira, id_ebook, bt_favorito)
-Values ('15', '85', true);
+Values (15, 85, true);
 
  insert into Tb_presente ( id_venda_item, id_cliente)
-Values ('12','03');
+Values (12,03);
 
 
 
