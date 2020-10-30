@@ -9,17 +9,29 @@ namespace backend.Controllers
 
     public class RecuperarSenhaController : ControllerBase
     {
-        Utils.RecuperarSenhaConversor conversor = new Utils.RecuperarSenhaConversor();
         Business.RecuperarSenhaBusiness business = new Business.RecuperarSenhaBusiness();
-        Resources.EnviarEmail mail = new Resources.EnviarEmail();
+        Utils.Conversor.RecuperarSenhaConversor conversor = new Utils.Conversor.RecuperarSenhaConversor();
+
+        Services.EnviarMensagem.EmailMensagem mail = new Services.EnviarMensagem.EmailMensagem();
+        Utils.GeradorCodigo.RecuperacaoSenha gerador = new Utils.GeradorCodigo.RecuperacaoSenha();
+
+
+
 
         [HttpPost("email")]
-        public ActionResult<string> VerificarEmail (string info)
+        public ActionResult<Models.Response.MensagemResponse> VerificarEmail (string destinatario)
         {
             try 
             {
-                // mail.VerificarEmail();
-                return "Ok";
+                mail.EmailSimples(new Models.Request.VerificarEmail() {
+                    destinatario = destinatario,
+                    assunto = "Verificação de email",
+                    conteudo = $"Olá! Você acabou de pedir uma alteração de senha na GoBook Company. Seu código de verificação é: ${gerador.GerarCodigo()}. OBS: Se você não fez o pedido, ignore este e-mail."
+                });
+
+                return new Models.Response.MensagemResponse() {
+                    msg = "Email enviado com sucesso"
+                };
             }
             catch (Exception ex)
             {
@@ -31,8 +43,10 @@ namespace backend.Controllers
         {
             try 
             {
+                business.AlterarSenha(conversor.ParaTabela(req));
+
                 return new Models.Response.MensagemResponse() {
-                    msg = business.AlterarSenha(conversor.ParaTabela(req))
+                    msg = "Senha alterada com sucesso" 
                 };
             }
             catch(Exception ex)
