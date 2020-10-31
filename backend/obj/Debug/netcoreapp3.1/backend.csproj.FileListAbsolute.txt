@@ -1,0 +1,5 @@
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.csprojAssemblyReference.cache
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.AssemblyInfoInputs.cache
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.AssemblyInfo.cs
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.csproj.CoreCompileInputs.cache
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.MvcApplicationPartsAssemblyInfo.cache

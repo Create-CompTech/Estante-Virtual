@@ -41,9 +41,5 @@ namespace backend.Models
         [InverseProperty("IdClienteNavigation")]
         public virtual ICollection<TbPresente> TbPresente { get; set; }
 
-        public static implicit operator TbCliente(TbCliente v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
