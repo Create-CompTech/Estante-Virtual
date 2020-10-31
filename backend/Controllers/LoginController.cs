@@ -9,7 +9,7 @@ namespace backend.Controllers
     public class LoginController : ControllerBase
     {
         Business.LoginBusiness business = new Business.LoginBusiness();
-        Utils.LoginConversor conversor = new Utils.LoginConversor();
+        Utils.Conversor.LoginConversor conversor = new Utils.Conversor.LoginConversor();
 
 
         [HttpPost]

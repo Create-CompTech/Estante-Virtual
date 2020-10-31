@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace backend.Utils
+namespace backend.Utils.Conversor
 {
     public class LoginConversor
     {

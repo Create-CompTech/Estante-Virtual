@@ -1,6 +1,6 @@
 using System;
 
-namespace backend.Utils
+namespace backend.Utils.Conversor
 {
     public class RecuperarSenhaConversor
     {

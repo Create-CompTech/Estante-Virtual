@@ -36,7 +36,7 @@
     background-color: #482d66;
 }
 
-.Pesquisa{
+.Pesquisa1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,7 @@
     background-color: #fff;
 }
 
-.Pesquisa input{
+.Pesquisa1 input{
     padding: 5px;
     border: none;
     outline: none;
@@ -118,5 +118,5 @@ ul{
 
 body{
     height: 100%;
-    background: gray;
+    background: #D8DCD6;
 }
