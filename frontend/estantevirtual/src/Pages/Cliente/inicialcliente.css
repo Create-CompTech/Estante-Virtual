@@ -5,7 +5,7 @@
 
 .Inicial{
     text-align: center;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
 
@@ -21,7 +21,7 @@
     height: 100%;
     background: #222f3e;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background: linear-gradient(15deg, #36013F , #343837 );
 }
 
@@ -103,6 +103,7 @@ ul{
     background-color: #482d66;
 }
 
+
 .OpcoesCabeçalho2{
     display: block;
     font-size: 25px;
@@ -119,12 +120,13 @@ ul{
 
 body{
     height: 100%;
+    width: 100%;
     background: #D8DCD6;
 }
 
 .sidebar{
     position: fixed;
-    left: 1375px;
+    left: 1355px;
     width: 250px;
     height: 100%;
     background: linear-gradient(15deg, #36013F , #343837 );
@@ -159,7 +161,7 @@ body{
 }
 
 ul li:hover a{
-    padding-right: 65px;
+    padding-right: 60px;
 }
 
 .sidebar ul a li{
@@ -225,4 +227,187 @@ label #cancel{
 
 #check:checked ~ Inicial{
     margin-right: 250px;
+}
+
+
+
+
+.livros-aventura{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; 
+    width: 95vw;
+}
+
+.container-aventura{
+    height: 45vh;
+    width: 90%;
+    background-color: white;
+}
+
+.titulo-aventura{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+
+.titulo-aventura h1{
+    font-size: 22px;
+}
+
+.livros-box{
+    display: flex;
+    align-items: center;
+}
+
+.livros{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    width: 90%;
+    margin-top: 16px;
+    border: black solid 1px;
+}
+
+.livro1{
+    height: 26vh;
+    width: 10vw;
+    border: black solid 1px;
+}
+
+.livros-romance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
+}
+
+.container-romance{
+    height: 45vh;
+    width: 90%;
+    background-color: white;
+}
+
+.titulo-romance{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+
+}
+
+.titulo-romance h1{
+    font-size: 22px;
+}
+
+.livro-mais{
+    display: flex;
+    align-items: flex-end;
+    height: 10vh;
+    width: 7.5vw;
+}
+
+.destaque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+}
+
+.container-destaque{
+    height: 70vh;
+    width: 90%;
+    margin-top: 30px;
+    background-color: white;
+}
+
+.titulo-destaque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    width: 100%;
+}
+
+.titulo-destaque h1{
+    font-size: 32px;
+}
+
+.destaque-box{
+    display: flex;
+    align-items: center;
+}
+
+.livros-destaque{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 61vh;
+    width: 100%;
+    border: #343837 solid 1px;
+}
+
+.destaque1{
+    display: flex;
+    height: 45vh;
+    width: 30vw;
+    border: black solid 1px;
+}
+
+.livros-terror{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
+}
+
+.container-terror{
+    height: 45vh;
+    width: 90%;
+    background-color: white;   
+}
+
+.titulo-terror{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+.titulo-terror h1{
+    font-size: 22px;
+}
+
+
+
+
+
+h1:hover{
+    color: #C83CB9;
+}
+
+p:hover{
+    color: #C83CB9;
+    text-decoration: none;
+}
+
+.livros a{
+    text-decoration: none;
+}
+
+.menu-baixo{
+    background: linear-gradient(15deg, #36013F , #343837 );
+    height: 13vh;
+    margin-top: 45px;
+    width: 100%;
+    border: black solid 1px;
 }

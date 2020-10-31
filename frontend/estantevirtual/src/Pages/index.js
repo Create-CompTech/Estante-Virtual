@@ -10,7 +10,7 @@ function Inicial() {
         <div class="Logo"><h1>goBook</h1></div>
 
         <div class="Pesquisa1">
-          <input type="search" placeholder="Livro ou Autor" class="Texto"></input> 
+          <input type="search" placeholder=" Livro ou Autor" class="Texto"></input> 
             <i class="fas fa-search"></i>
         </div>
 
@@ -23,9 +23,9 @@ function Inicial() {
       <body>
         <nav class="Cabeçalho">
             <ul class="OpcoesCabeçalho">
-              <Link to=""><li class="OpcoesCabeçalho2">Livros e Autores</li></Link>
-              <Link to=""><li class="OpcoesCabeçalho2">Livros mais recomendados</li></Link>
-              <Link to=""><li class="OpcoesCabeçalho2">Livros mais vendidos</li></Link>
+              <Link to="/./InicialCliente"><li class="OpcoesCabeçalho2">Livros e Autores</li></Link>
+              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">Livros mais recomendados</li></Link>
+              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">Livros mais vendidos</li></Link>
             </ul>
           </nav>
         </body>

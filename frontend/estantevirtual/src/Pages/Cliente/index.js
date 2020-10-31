@@ -43,7 +43,80 @@ function Inicial() {
             </ul>
           </nav>
         </body>
-    </div>
+
+        <div class="livros-aventura">
+          <div class="container-aventura">
+            <div className="titulo-aventura">
+              <h1>Livros de aventura</h1>
+            </div>
+            <div className="livros-box">
+              <div className="livros">
+                <div className="livro1"></div>
+                <div className="livro1"></div>
+                <div className="livro1"></div>
+                <div className="livro1"></div>
+                <div className="livro1"></div>
+                <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="livros-romance">
+          <div class="container-romance">
+            <div className="titulo-romance">
+              <h1>Livros de romance</h1>
+            </div>
+            <div className="livros-box">
+              <div className="livros">
+                <div className="livro1"></div>
+                <div className="livro1"></div>
+                <div className="livro1"></div>
+                <div className="livro1"></div>
+                <div className="livro1"></div>
+                <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="destaque">
+          <div className="container-destaque">
+            <div className="titulo-destaque">
+              <h1>Destaques da semana</h1>
+            </div>
+            <div className="destaque-box">
+              <div className="livros-destaque">
+               <div className="destaque1"></div> 
+               <div className="destaque1"></div> 
+               <div className="destaque1"></div> 
+               <div className="destaque1"></div> 
+               <div className="destaque1"></div> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="livros-terror">
+          <div className="container-terror">
+            <div className="titulo-terror">
+              <h1>Livros de terror</h1>
+            </div>
+            <div className="livros">
+              <div className="livro1"></div>
+              <div className="livro1"></div>
+              <div className="livro1"></div>
+              <div className="livro1"></div>
+              <div className="livro1"></div>
+              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="menu-baixo"></div>
+
+  </div>
   );
 }
 
