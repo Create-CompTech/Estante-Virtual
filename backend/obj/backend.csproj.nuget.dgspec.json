@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucie\\OneDrive\\Documentos\\STHEFANY\\Frei\\Software\\Projetos\\estante virtual\\Estante-Virtual\\backend\\backend.csproj": {}
+    "/var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucie\\OneDrive\\Documentos\\STHEFANY\\Frei\\Software\\Projetos\\estante virtual\\Estante-Virtual\\backend\\backend.csproj": {
+    "/var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucie\\OneDrive\\Documentos\\STHEFANY\\Frei\\Software\\Projetos\\estante virtual\\Estante-Virtual\\backend\\backend.csproj",
+        "projectUniqueName": "/var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\lucie\\OneDrive\\Documentos\\STHEFANY\\Frei\\Software\\Projetos\\estante virtual\\Estante-Virtual\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\lucie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucie\\OneDrive\\Documentos\\STHEFANY\\Frei\\Software\\Projetos\\estante virtual\\Estante-Virtual\\backend\\obj\\",
+        "projectPath": "/var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/backend.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lucie\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
         }
       }
     }
