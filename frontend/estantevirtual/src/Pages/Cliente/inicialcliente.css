@@ -126,7 +126,7 @@ body{
 
 .sidebar{
     position: fixed;
-    left: 1355px;
+    left: 1368px;
     width: 250px;
     height: 100%;
     background: linear-gradient(15deg, #36013F , #343837 );
@@ -179,7 +179,7 @@ label #btn, label #cancel{
 }
 
 label #btn{
-    left: 1300px;
+    left: 1290px;
     top: 10px;
     font-size: 40px;
     color: #fff;
@@ -188,18 +188,16 @@ label #btn{
 }
 
 label #cancel{
-    z-index: 1111;
-    left: -100px;
     top: 12px;
     font-size: 40px;
     color: #fff;
     background: #282c34;
     padding: 2px 6px;
-    transition: all .0s
+    transition: all .5s ease
 }
 
 .botaologout{
-    margin-top: 225px;
+    margin-top: 270px;
 }
 
 .botaologout1{
@@ -222,14 +220,12 @@ label #cancel{
 }
 
 #check:checked ~ label #cancel{
-    left: 1310px;
+    left: 1100px;
 }
 
 #check:checked ~ Inicial{
     margin-right: 250px;
 }
-
-
 
 
 .livros-aventura{
@@ -403,8 +399,10 @@ p:hover{
 }
 
 .menu-baixo{
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(15deg, #36013F , #343837 );
-    height: 13vh;
+    height: 15vh;
     margin-top: 45px;
     width: 100%;
     border: black solid 1px;

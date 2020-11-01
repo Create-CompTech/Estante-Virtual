@@ -1,11 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import './perfil.css'
+import './estantes.css'
 
-function Perfil (){
+function Estantes(){
     return(
-        <div className="Perfil">
-            <div className="Perfil-Header">
+        <div className="Estantes">
+            <div className="Estantes-Header">
             <input type="checkbox" id="check"></input>
                 <label for="check">
                     <i class="fas fa-bars" id="btn"></i>
@@ -24,4 +24,4 @@ function Perfil (){
     );
 }
 
-export default Perfil;
+export default Estantes;

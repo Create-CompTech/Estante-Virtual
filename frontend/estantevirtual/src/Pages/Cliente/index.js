@@ -23,10 +23,9 @@ function Inicial() {
           <div class="sidebar">
               <header>Menu goBook</header>
               <ul>
-                <li><a href="perfil" >Perfil</a></li> 
-                <li><a href="a">Mensagens</a></li>
-                <li><a href="a">Minhas estantes</a></li>
-                <li><a href="a">Meu carrinho</a></li>
+                  <li><Link to="/Perfil">Perfil</Link></li>
+                  <li><Link to="/Estantes">Minhas estantes</Link></li>
+                  <li><Link to="/Carrinho">Meu carrinho</Link></li>
               </ul>
               <div class="botaologout">
                 <Link class="botaologout1" to="/">Logout</Link>

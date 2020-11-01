@@ -11,6 +11,8 @@ import Cadastro1 from './Pages/Cliente/Cadastro/Cadastro1'
 import Cadastro2 from './Pages/Cliente/Cadastro/Cadastro2'
 import InicialCliente from './Pages/Cliente'
 import Perfil from './Pages/Cliente/Menu/Perfil'
+import Estantes from './Pages/Cliente/Menu/Estantes'
+import Carrinho from './Pages/Cliente/Menu/Carrinho'
 
 export default function Routes(){
 
@@ -26,6 +28,8 @@ export default function Routes(){
                 <Route path="/Cadastro2" component={Cadastro2} />
                 <Route path="/InicialCliente" component={InicialCliente} />
                 <Route path="/Perfil" component={Perfil} />
+                <Route path="/Estantes" component={Estantes} />
+                <Route path="/Carrinho" component={Carrinho} />
             </Switch>
         </BrowserRouter>
     )
