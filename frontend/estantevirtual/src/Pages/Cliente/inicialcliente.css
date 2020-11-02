@@ -99,10 +99,8 @@ ul{
     justify-content: center;
     width: 100%;
     height: 40px;
-
     background-color: #482d66;
 }
-
 
 .OpcoesCabeçalho2{
     display: block;
@@ -110,7 +108,6 @@ ul{
     justify-content: space-between;
     margin-right: 100px;
     margin-left: 100px;
-
     color: #fff;
 }
 
@@ -124,9 +121,10 @@ body{
     background: #D8DCD6;
 }
 
+
 .sidebar{
     position: fixed;
-    left: 1355px;
+    left: 1368px;
     width: 250px;
     height: 100%;
     background: linear-gradient(15deg, #36013F , #343837 );
@@ -179,7 +177,7 @@ label #btn, label #cancel{
 }
 
 label #btn{
-    left: 1300px;
+    left: 1290px;
     top: 10px;
     font-size: 40px;
     color: #fff;
@@ -188,22 +186,21 @@ label #btn{
 }
 
 label #cancel{
-    z-index: 1111;
-    left: -100px;
     top: 12px;
     font-size: 40px;
     color: #fff;
     background: #282c34;
     padding: 2px 6px;
-    transition: all .0s
+    transition: all .5s ease
 }
 
 .botaologout{
-    margin-top: 225px;
+    margin-top: 270px;
 }
 
 .botaologout1{
     color: #fff;
+    font-size: 20px;
 }
 
 #btn1{
@@ -222,14 +219,12 @@ label #cancel{
 }
 
 #check:checked ~ label #cancel{
-    left: 1310px;
+    left: 1100px;
 }
 
 #check:checked ~ Inicial{
     margin-right: 250px;
 }
-
-
 
 
 .livros-aventura{
@@ -277,7 +272,11 @@ label #cancel{
 .livro1{
     height: 26vh;
     width: 10vw;
-    border: black solid 1px;
+}
+
+.livro1 img:hover{
+    height: 27vh;
+    width: 12vw;
 }
 
 .livros-romance{
@@ -351,14 +350,12 @@ label #cancel{
     align-items: center;
     height: 61vh;
     width: 100%;
-    border: #343837 solid 1px;
 }
 
 .destaque1{
     display: flex;
     height: 45vh;
     width: 30vw;
-    border: black solid 1px;
 }
 
 .livros-terror{
@@ -387,16 +384,82 @@ label #cancel{
     font-size: 22px;
 }
 
-
-
-
-
-h1:hover{
-    color: #C83CB9;
+.livros-zumbi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
 }
 
-p:hover{
-    color: #C83CB9;
+.container-zumbi{
+    height: 45vh;
+    width: 90%;
+    background-color: white;   
+}
+
+.titulo-zumbi{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+.titulo-zumbi h1{
+    font-size: 22px;
+}
+
+.livros-fantasia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
+}
+
+.container-fantasia{
+    height: 45vh;
+    width: 90%;
+    background-color: white;    
+}
+
+.titulo-fantasia{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+.titulo-fantasia h1{
+    font-size: 22px;
+}
+
+
+
+.titulo-aventura h1:hover{
+    color: #A442A0;
+}
+
+.titulo-romance h1:hover{
+    color: #A442A0;
+}
+
+.titulo-destaque h1:hover{
+    color: #A442A0;
+}
+
+.titulo-terror h1:hover{
+    color: #A442A0;
+}
+
+.titulo-zumbi h1:hover{
+    color: #A442A0;
+}
+
+.livro-mais p:hover{
+    color: #A442A0;
     text-decoration: none;
 }
 
@@ -405,8 +468,10 @@ p:hover{
 }
 
 .menu-baixo{
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(15deg, #36013F , #343837 );
-    height: 13vh;
+    height: 15vh;
     margin-top: 45px;
     width: 100%;
     border: black solid 1px;
