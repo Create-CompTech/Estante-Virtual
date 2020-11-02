@@ -21,7 +21,7 @@ function ConfirmacaoSenha() {
 
         <div className="botao">
           <div className="reenviar">
-            <button>REENVIAR EMAIL</button>
+            <button>Reenviar e-mail</button>
           </div>
           <div className="confirmar">
           <Link to="/Login"><button class="cancelar">Cancelar</button></Link>

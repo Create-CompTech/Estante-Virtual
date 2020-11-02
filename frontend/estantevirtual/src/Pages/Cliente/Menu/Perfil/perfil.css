@@ -102,3 +102,69 @@ label #cancel{
 #check:checked ~ Inicial{
     margin-right: 250px;
 }
+
+.container-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-perfil{
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    height: 85vh;
+    width: 59vw;
+    margin-top: 50px;
+}
+
+.titulo-perfil{
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    width: 100%;
+    border: black solid 2px;
+}
+
+.titulo-perfil h1{
+    font-size: 29px;
+}
+
+.titulo-perfil h1:hover{
+    color: #36013F;
+}
+
+
+.informacao{
+    display: flex;
+    justify-content: center;
+}
+
+.informacao-container{
+    display: flex;
+    height: 54vh;
+    width: 59vw;
+    border: pink solid 2px;
+}
+
+.foto{
+    height: 24vh;
+    width: 12vw;
+    border: black solid 1px;
+}
+
+.dados-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 53vh;
+    width: 50vw;
+    border: black solid 1px;
+}
+
+.dados{
+    display: flex;
+    height: 45vh;
+    width: 42vw;
+    border: black solid 1px;
+}

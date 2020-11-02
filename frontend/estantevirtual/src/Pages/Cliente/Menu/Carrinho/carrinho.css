@@ -42,7 +42,7 @@
 }
 
 ul li:hover a{
-    padding-right: 60px;
+    padding-right: 40px;
 }
 
 .sidebarperfil ul a li{
@@ -101,4 +101,125 @@ label #cancel{
 
 #check:checked ~ Inicial{
     margin-right: 250px;
+}
+
+.carrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.carrinho-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top: 39px;
+    height: 87vh;
+    width: 50vw;
+}
+
+.titulo-carrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 100%;
+}
+
+.titulo-carrinho h1{
+    font-size: 25px;
+}
+
+.titulo-carrinho h1:hover{
+    color: #A442A0;
+}
+
+.item-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    height: 35vh;
+    width: 93%;
+    border: black solid 1px;
+}
+
+.item1{
+    height: 23vh;
+    width: 9.5vw;
+    border: pink solid 1px;
+}
+
+.item1 img:hover{
+    height: 23.5vh;
+    width: 10vw;
+}
+
+.descricao1{
+    height: 23vh;
+    width: 10.5vw;
+}
+
+.item2{
+    height: 23vh;
+    width: 9.5vw;
+    border: pink solid 1px;
+}
+
+.item2 img:hover{
+    height: 23.5vh;
+    width: 10vw;
+}
+
+.descricao2{
+    height: 23vh;
+    width: 10.5vw;
+}
+
+.nomes{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    width: 100%;
+    height: 11.5vh;
+}
+
+.preco{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    width: 100%;
+    height: 11.5vh;
+}
+
+.preco p,a{
+    font-size: 12px;
+    text-align: center;
+}
+
+.preco a:hover{
+    color: #A442A0;
+}
+
+.nomes p{
+    font-size: 12px;
+    text-align: center;
+}
+
+.botao-comprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    width: 100%;
+}
+
+.botao-comprar button{
+    background-color: #33B864;
+    color: white;
+    height: 47px;
+    width: 133px;
+    border-radius: 6px;
 }

@@ -80,6 +80,22 @@ function Inicial() {
           </div>
         </div>
 
+        <div className="livros-fantasia">
+          <div className="container-fantasia">
+            <div className="titulo-fantasia">
+              <h1>Livros de fantasia</h1>
+            </div>
+            <div className="livros">
+              <div className="livro1"><img src='/assets/AGuerraDosTronosAsCronicasDeGeloEFogo.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/AsBrumasDeAvalonMarionZimmer.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/OLeaoAFeiticeiraEoGurdaRoupaCronicasDeNarnia.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/OMaravilhosoMagicoDeOz1900.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/OFeiticeiroDeTerramarUrsulaKLEGuin.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
+            </div>
+          </div>
+        </div>
+
         <div className="destaque">
           <div className="container-destaque">
             <div className="titulo-destaque">
@@ -113,6 +129,21 @@ function Inicial() {
           </div>
         </div>
 
+        <div className="livros-zumbi">
+          <div className="container-zumbi">
+            <div className="titulo-zumbi">
+              <h1>Livros de zumbis</h1>
+            </div>
+            <div className="livros">
+              <div className="livro1"><img src='/assets/TheWalkingDeadV1.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/TerioEPraticaDeComoSerUmZumbiTiagoToy.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/AIlhaDosMortosRodrigoDeOliveira.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/StrangerThingsGarotosZumbis.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/ApocalipseZumbi3AlexandreCallari.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
+            </div>
+          </div>
+        </div>
 
         <div className="menu-baixo"></div>
 

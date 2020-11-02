@@ -15,11 +15,29 @@ function Perfil (){
                     <header>Menu goBook</header>
                     <ul>
                         <li><Link to="/InicialCliente">Inicial</Link></li>
-                        <li><Link to="/Perfil">Perfil</Link></li>
                         <li><Link to="/Estantes">Minhas estantes</Link></li>
                         <li><Link to="/Carrinho">Meu carrinho</Link></li>
                     </ul>
                 </div>
+            </div>
+
+            
+            <div className="container-menu">
+                 <div className="container-perfil">
+                     <div className="titulo-perfil">
+                         <h1>Suas Informações</h1>
+                     </div>
+                     <div className="informacao">
+                         <div className="informacao-container">
+                             <div className="foto">
+                                 <p>foto</p>
+                             </div>
+                             <div className="dados-container">
+                                 <div className="dados"></div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
             </div>
         </div>
     );

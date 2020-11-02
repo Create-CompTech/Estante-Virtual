@@ -102,8 +102,6 @@ ul{
     background-color: #482d66;
 }
 
-
-
 .OpcoesCabeçalho2{
     display: block;
     font-size: 25px;
@@ -202,6 +200,7 @@ label #cancel{
 
 .botaologout1{
     color: #fff;
+    font-size: 20px;
 }
 
 #btn1{
@@ -275,6 +274,11 @@ label #cancel{
     width: 10vw;
 }
 
+.livro1 img:hover{
+    height: 27vh;
+    width: 12vw;
+}
+
 .livros-romance{
     display: flex;
     justify-content: center;
@@ -346,7 +350,6 @@ label #cancel{
     align-items: center;
     height: 61vh;
     width: 100%;
-    border: #343837 solid 1px;
 }
 
 .destaque1{
@@ -381,16 +384,82 @@ label #cancel{
     font-size: 22px;
 }
 
-
-
-
-
-h1:hover{
-    color: #C83CB9;
+.livros-zumbi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
 }
 
-p:hover{
-    color: #C83CB9;
+.container-zumbi{
+    height: 45vh;
+    width: 90%;
+    background-color: white;   
+}
+
+.titulo-zumbi{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+.titulo-zumbi h1{
+    font-size: 22px;
+}
+
+.livros-fantasia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
+}
+
+.container-fantasia{
+    height: 45vh;
+    width: 90%;
+    background-color: white;    
+}
+
+.titulo-fantasia{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+.titulo-fantasia h1{
+    font-size: 22px;
+}
+
+
+
+.titulo-aventura h1:hover{
+    color: #A442A0;
+}
+
+.titulo-romance h1:hover{
+    color: #A442A0;
+}
+
+.titulo-destaque h1:hover{
+    color: #A442A0;
+}
+
+.titulo-terror h1:hover{
+    color: #A442A0;
+}
+
+.titulo-zumbi h1:hover{
+    color: #A442A0;
+}
+
+.livro-mais p:hover{
+    color: #A442A0;
     text-decoration: none;
 }
 
