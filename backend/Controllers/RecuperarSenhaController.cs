@@ -18,7 +18,7 @@ namespace backend.Controllers
 
 
 
-        [HttpPost("email")]
+        [HttpPost("{destinatario}")]
         public ActionResult<Models.Response.MensagemResponse> VerificarEmail (string destinatario)
         {
             try 
@@ -39,6 +39,8 @@ namespace backend.Controllers
             }
         }
 
+
+        [HttpPut]
         public ActionResult<Models.Response.MensagemResponse> AlterarSenha(Models.Request.AlterarSenhaRequest req)
         {
             try 

@@ -11,7 +11,7 @@ namespace backend.Services.EnviarMensagem
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 587;
-            smtp.EnableSsl = false;
+            smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = new System.Net.NetworkCredential("gobookcompany@gmail.com", "gobook@123");
 

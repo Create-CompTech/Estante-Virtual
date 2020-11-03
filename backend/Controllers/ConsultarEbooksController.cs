@@ -14,6 +14,7 @@ namespace backend.Controllers
         Utils.Conversor.ConsultarEbooksConversor conversor = new Utils.Conversor.ConsultarEbooksConversor();
 
 
+        [HttpGet]
         public ActionResult<List<List<Models.Response.EbookResponse>>> EbooksPorGenero ()
         {
             try 

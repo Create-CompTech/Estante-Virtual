@@ -30,7 +30,6 @@ namespace backend.Utils.Conversor
                 ebooks.Add(
                         new Models.Response.EbookResponse() {
                             nome = x.IdEbookNavigation.NmEbook,
-                            autor = x.IdEbookNavigation.IdAutorNavigation.NmAutor,
                             ebook = x.IdEbookNavigation.DsImg,
                             sinopse = x.IdEbookNavigation.DsEbook,
                             valor = x.IdEbookNavigation.VlEbook,
