@@ -15,8 +15,8 @@ namespace backend.Models
         public uint IdPrateleira { get; set; }
         [Column("id_ebook", TypeName = "int(11)")]
         public int IdEbook { get; set; }
-        [Column("bt_favorito", TypeName = "tinyint(4)")]
-        public sbyte? BtFavorito { get; set; }
+        [Column("bt_favorito")]
+        public bool? BtFavorito { get; set; }
 
         [ForeignKey(nameof(IdEbook))]
         [InverseProperty(nameof(TbEbook.TbPrateleiraItem))]
