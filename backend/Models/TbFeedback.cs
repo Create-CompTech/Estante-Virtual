@@ -21,8 +21,8 @@ namespace backend.Models
         public string DsFeedback { get; set; }
         [Column("qt_estrelas", TypeName = "int(11)")]
         public int? QtEstrelas { get; set; }
-        [Column("bt_aprovado", TypeName = "tinyint(4)")]
-        public sbyte? BtAprovado { get; set; }
+        [Column("bt_aprovado")]
+        public bool? BtAprovado { get; set; }
         [Column("dt_feedback", TypeName = "datetime")]
         public DateTime? DtFeedback { get; set; }
 

@@ -21,7 +21,7 @@ function AlterarSenha () {
                <div class="form">
                   <input type="password" name="name" autocomplete="on" required />
                  <label for="name" class="label-name">
-                   <span class="content-name">confirmar nova Senha</span>
+                   <span class="content-name">Confirmar nova Senha</span>
                  </label>
                </div>
                 </div>

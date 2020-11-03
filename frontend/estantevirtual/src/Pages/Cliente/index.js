@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './inicialcliente.css';
 
+
 function Inicial() {
   return (
     <div className="Inicial">
@@ -22,10 +23,9 @@ function Inicial() {
           <div class="sidebar">
               <header>Menu goBook</header>
               <ul>
-                <li><a href="a">Perfil</a></li>
-                <li><a href="a">Mensagens</a></li>
-                <li><a href="a">Minhas estantes</a></li>
-                <li><a href="a">Meu carrinho</a></li>
+                  <li><Link to="/Perfil">Perfil</Link></li>
+                  <li><Link to="/Estantes">Minhas estantes</Link></li>
+                  <li><Link to="/Carrinho">Meu carrinho</Link></li>
               </ul>
               <div class="botaologout">
                 <Link class="botaologout1" to="/">Logout</Link>
@@ -51,11 +51,11 @@ function Inicial() {
             </div>
             <div className="livros-box">
               <div className="livros">
-                <div className="livro1"></div>
-                <div className="livro1"></div>
-                <div className="livro1"></div>
-                <div className="livro1"></div>
-                <div className="livro1"></div>
+                <div className="livro1"><img src='/assets/HarryPotterPedraFilosofal' height="160x" width="134px" alt=""></img></div>
+                <div className="livro1"><img src='/assets/SenhorDosAneisTolkienV1' height="160x" width="134px" alt=""></img></div>
+                <div className="livro1"><img src='/assets/PiratasDoCaribeJackSparrowOGuardiaoDoTempo.png' height="160x" width="134px" alt=""></img></div>
+                <div className="livro1"><img src='/assets/GravityFallsAventuraEmDobro.png' height="160x" width="134px" alt=""></img></div>
+                <div className="livro1"><img src='/assets/Eragon.png' height="160x" width="134px" alt=""></img></div>
                 <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link></div>
               </div>
             </div>
@@ -69,13 +69,29 @@ function Inicial() {
             </div>
             <div className="livros-box">
               <div className="livros">
-                <div className="livro1"></div>
-                <div className="livro1"></div>
-                <div className="livro1"></div>
-                <div className="livro1"></div>
-                <div className="livro1"></div>
+                <div className="livro1"><img src='/assets/FilmeCulpaDasEstrelas.png' height="160x" width="134px" alt=""></img></div>
+                <div className="livro1"><img src='/assets/AGarotaQueVoceDeixouParaTras.png' height="160x" width="134px" alt=""></img></div>
+                <div className="livro1"><img src='/assets/ACincoPassosDeVoce.png' height="160x" width="134px" alt=""></img></div>
+                <div className="livro1"><img src='/assets/AnnaEOBeijoFrances' height="160x" width="134px" alt=""></img></div>
+                <div className="livro1"><img src='/assets/UmQuartoComVista' height="160x" width="134px" alt=""></img></div>
                 <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="livros-fantasia">
+          <div className="container-fantasia">
+            <div className="titulo-fantasia">
+              <h1>Livros de fantasia</h1>
+            </div>
+            <div className="livros">
+              <div className="livro1"><img src='/assets/AGuerraDosTronosAsCronicasDeGeloEFogo.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/AsBrumasDeAvalonMarionZimmer.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/OLeaoAFeiticeiraEoGurdaRoupaCronicasDeNarnia.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/OMaravilhosoMagicoDeOz1900.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/OFeiticeiroDeTerramarUrsulaKLEGuin.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
             </div>
           </div>
         </div>
@@ -87,11 +103,11 @@ function Inicial() {
             </div>
             <div className="destaque-box">
               <div className="livros-destaque">
-               <div className="destaque1"></div> 
-               <div className="destaque1"></div> 
-               <div className="destaque1"></div> 
-               <div className="destaque1"></div> 
-               <div className="destaque1"></div> 
+               <div className="destaque1"><img src='/assets/OQueAconteceuComAnnie.png' height="279.5x" width="231px" alt=""></img></div> 
+               <div className="destaque1"><img src='/assets/AGarotaDoLago.png' height="279.5x" width="231px" alt=""></img></div> 
+               <div className="destaque1"><img src='/assets/OHobbitJJRTolkien.png' height="279.5x" width="231px" alt=""></img></div> 
+               <div className="destaque1"><img src='/assets/AsCronicasDeNarnia2009.png' height="279.5x" width="231px" alt=""></img></div> 
+               <div className="destaque1"><img src='/assets/ZaynMalik.png' height="279.5x" width="231px" alt=""></img></div> 
               </div>
             </div>
           </div>
@@ -103,16 +119,31 @@ function Inicial() {
               <h1>Livros de terror</h1>
             </div>
             <div className="livros">
-              <div className="livro1"></div>
-              <div className="livro1"></div>
-              <div className="livro1"></div>
-              <div className="livro1"></div>
-              <div className="livro1"></div>
+              <div className="livro1"><img src='/assets/ItACoisaStephenKing.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/OCemiterioStephenKing.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/AAssombracaoDaCasaDaColina.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/QuatroEstacoesStephenKing.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/GuerraMundialZ.png' height="160x" width="134px" alt=""></img></div>
               <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
             </div>
           </div>
         </div>
 
+        <div className="livros-zumbi">
+          <div className="container-zumbi">
+            <div className="titulo-zumbi">
+              <h1>Livros de zumbis</h1>
+            </div>
+            <div className="livros">
+              <div className="livro1"><img src='/assets/TheWalkingDeadV1.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/TerioEPraticaDeComoSerUmZumbiTiagoToy.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/AIlhaDosMortosRodrigoDeOliveira.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/StrangerThingsGarotosZumbis.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro1"><img src='/assets/ApocalipseZumbi3AlexandreCallari.png' height="160x" width="134px" alt=""></img></div>
+              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
+            </div>
+          </div>
+        </div>
 
         <div className="menu-baixo"></div>
 
