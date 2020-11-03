@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/bin/Debug/netcoreapp3.1/appsettings.json
 /var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
@@ -43,3 +44,10 @@
 /var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/obj/Debug/netcoreapp3.1/backend.dll
 /var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/obj/Debug/netcoreapp3.1/backend.pdb
 /var/snap/amazon-ssm-agent/2012/services/Estante-Virtual/backend/obj/Debug/netcoreapp3.1/backend.genruntimeconfig.cache
+=======
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.csprojAssemblyReference.cache
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.AssemblyInfoInputs.cache
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.AssemblyInfo.cs
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.csproj.CoreCompileInputs.cache
+C:\Users\lucie\OneDrive\Documentos\STHEFANY\Frei\Software\Projetos\estante virtual\Estante-Virtual\backend\obj\Debug\netcoreapp3.1\backend.MvcApplicationPartsAssemblyInfo.cache
+>>>>>>> 4fe21b8adf6e00df01e4b4d943bdfba46dabfa0f
