@@ -19,19 +19,19 @@ namespace backend.Controllers
 
 
         [HttpPost("{destinatario}")]
-        public ActionResult<Models.Response.MensagemResponse> VerificarEmail (string destinatario)
+        public ActionResult<string> VerificarEmail (string destinatario)
         {
             try 
             {
+                string codigo = gerador.GerarCodigo();
+                
                 mail.EmailSimples(new Models.Request.VerificarEmail() {
                     destinatario = destinatario,
                     assunto = "Verificação de email",
-                    conteudo = $"Olá! Você acabou de pedir uma alteração de senha na GoBook Company. Seu código de verificação é: ${gerador.GerarCodigo()}. OBS: Se você não fez o pedido, ignore este e-mail."
+                    conteudo = $"Olá! Você acabou de pedir uma alteração de senha na GoBook Company. Seu código de verificação é: {codigo}. OBS: Se você não fez o pedido, ignore este e-mail."
                 });
 
-                return new Models.Response.MensagemResponse() {
-                    msg = "Email enviado com sucesso"
-                };
+                return codigo;
             }
             catch (Exception ex)
             {
