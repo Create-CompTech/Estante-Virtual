@@ -1,21 +1,45 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import './senha.css';
 import {Link} from 'react-router-dom';
+import LoadingBar from 'react-top-loading-bar';
 
-function ConfirmacaoSenha() {
+import RecuperarSenha from '../../../services/RecuperarSenha';
+const api = new RecuperarSenha();
+
+
+function ConfirmacaoSenha(props) {
+
+  const loadingBar = useRef(null);
+  const [destinatario, setDestinatario] = useState("");
+  const [codigo, setCodigo] = useState("");
+
+  const [info, setInfo] = useState(props.location.state);
+
+
+  const verificarEmail = async (e) => {
+
+    loadingBar.current.continuousStart();
+
+    const resp = await api.verificarEmail(destinatario);
+    
+    loadingBar.current.complete();
+  };
+
+
   return (
     <div className="fundo1">
+      <LoadingBar />
       <div className="confirmacaosenha">
         <div className="confirmaremail">
           <h1>Confirmação de e-mail</h1>
         </div>
         <div className="descricao">
-          <p>Foi enviado um e-mail para gustavofurtado***@gmail com o código para realizar  a confirmação</p>
+          <p>Foi enviado um e-mail para  com o código para realizar  a confirmação</p>
         </div>
 
         <div className="codigo">
           <label>
-            <input  type="text" placeholder=" Código Recebido" ></input>
+            <input  type="text" placeholder="Código Recebido" ></input>
           </label>
         </div>
 
