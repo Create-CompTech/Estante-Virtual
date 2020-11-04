@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './inicialcliente.css';
 
 
-function Inicial() {
+function Inicial(props) {
   return (
     <div className="Inicial">
       <header className="Inicial-Header">
