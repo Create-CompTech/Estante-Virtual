@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_autor` (
   `ds_genero` VARCHAR(45) NULL,
   `dt_nascimento` DATETIME NULL,
   `ds_autor` VARCHAR(400) NULL,
-  `bt_filiado` TINYINT NULL,
+  `bt_filiado` BOOL NULL,
   PRIMARY KEY (`id_autor`))
 ENGINE = InnoDB;
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_ebook` (
   `nm_lingua_original` VARCHAR(45) NULL,
   `dt_insercao` DATETIME NULL,
   PRIMARY KEY (`id_ebook`),
-  INDEX `fk_tb_ebook_tb_autor1_idx` (`id_autor` ASC) VISIBLE,
+  INDEX `fk_tb_ebook_tb_autor1_idx` (`id_autor` ASC),
   CONSTRAINT `fk_tb_ebook_tb_autor1`
     FOREIGN KEY (`id_autor`)
     REFERENCES `db_gobook`.`tb_autor` (`id_autor`)
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_usuario` (
   `ds_cpf` VARCHAR(20) NULL,
   `ds_genero` VARCHAR(45) NULL,
   PRIMARY KEY (`id_usuario`),
-  INDEX `fk_tb_usuario_tb_login_idx` (`id_login` ASC) VISIBLE,
+  INDEX `fk_tb_usuario_tb_login_idx` (`id_login` ASC),
   CONSTRAINT `fk_tb_usuario_tb_login`
     FOREIGN KEY (`id_login`)
     REFERENCES `db_gobook`.`tb_login` (`id_login`)
@@ -130,8 +130,8 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_admin` (
   `id_endereco` INT NOT NULL,
   `ds_cargo` VARCHAR(100) NULL,
   PRIMARY KEY (`id_admin`),
-  INDEX `fk_tb_administrador_tb_endereco1_idx` (`id_endereco` ASC) VISIBLE,
-  INDEX `fk_tb_usuario_administrador_tb_usuario1_idx` (`id_usuario` ASC) VISIBLE,
+  INDEX `fk_tb_administrador_tb_endereco1_idx` (`id_endereco` ASC),
+  INDEX `fk_tb_usuario_administrador_tb_usuario1_idx` (`id_usuario` ASC),
   CONSTRAINT `fk_tb_administrador_tb_endereco1`
     FOREIGN KEY (`id_endereco`)
     REFERENCES `db_gobook`.`tb_endereco` (`id_endereco`)
@@ -154,9 +154,9 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_cliente` (
   `id_cliente` INT NOT NULL AUTO_INCREMENT,
   `id_usuario` INT NOT NULL,
   `qt_pontos` INT NULL,
-  `bt_assinante` TINYINT NULL,
+  `bt_assinante` BOOL NULL,
   PRIMARY KEY (`id_cliente`),
-  INDEX `fk_tb_cliente_tb_usuario1_idx` (`id_usuario` ASC) VISIBLE,
+  INDEX `fk_tb_cliente_tb_usuario1_idx` (`id_usuario` ASC),
   CONSTRAINT `fk_tb_cliente_tb_usuario1`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `db_gobook`.`tb_usuario` (`id_usuario`)
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_cartao` (
   `ds_cartao` VARCHAR(19) NULL,
   `dt_expira` DATETIME NULL,
   PRIMARY KEY (`id_cartao`),
-  INDEX `fk_tb_cartao_tb_cliente1_idx` (`id_cliente` ASC) VISIBLE,
+  INDEX `fk_tb_cartao_tb_cliente1_idx` (`id_cliente` ASC),
   CONSTRAINT `fk_tb_cartao_tb_cliente1`
     FOREIGN KEY (`id_cliente`)
     REFERENCES `db_gobook`.`tb_cliente` (`id_cliente`)
@@ -201,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_venda` (
   `tp_pgto` VARCHAR(45) NULL,
   `qt_parcelas` INT NULL,
   PRIMARY KEY (`id_venda`),
-  INDEX `fk_tb_venda_tb_cartao1_idx` (`id_cartao` ASC) VISIBLE,
+  INDEX `fk_tb_venda_tb_cartao1_idx` (`id_cartao` ASC) ,
   CONSTRAINT `fk_tb_venda_tb_cartao1`
     FOREIGN KEY (`id_cartao`)
     REFERENCES `db_gobook`.`tb_cartao` (`id_cartao`)
@@ -221,8 +221,8 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_venda_item` (
   `id_venda` INT NOT NULL,
   `qt_itens` INT NULL,
   PRIMARY KEY (`id_venda_item`),
-  INDEX `fk_tb_compra_item_tb_ebook1_idx` (`id_ebook` ASC) VISIBLE,
-  INDEX `fk_tb_compra_item_tb_compra1_idx` (`id_venda` ASC) VISIBLE,
+  INDEX `fk_tb_compra_item_tb_ebook1_idx` (`id_ebook` ASC) ,
+  INDEX `fk_tb_compra_item_tb_compra1_idx` (`id_venda` ASC),
   CONSTRAINT `fk_tb_compra_item_tb_ebook1`
     FOREIGN KEY (`id_ebook`)
     REFERENCES `db_gobook`.`tb_ebook` (`id_ebook`)
@@ -249,8 +249,8 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_pgto_autor` (
   `dt_pgto_referente` DATETIME NULL,
   `dt_pgto_efetuado` DATETIME NULL,
   PRIMARY KEY (`id_pgto_autor`),
-  INDEX `fk_tb_pagamento_autor_tb_autor1_idx` (`id_autor` ASC) VISIBLE,
-  INDEX `fk_tb_pgto_autor_tb_ebook1_idx` (`id_ebook` ASC) VISIBLE,
+  INDEX `fk_tb_pagamento_autor_tb_autor1_idx` (`id_autor` ASC) ,
+  INDEX `fk_tb_pgto_autor_tb_ebook1_idx` (`id_ebook` ASC) ,
   CONSTRAINT `fk_tb_pagamento_autor_tb_autor1`
     FOREIGN KEY (`id_autor`)
     REFERENCES `db_gobook`.`tb_autor` (`id_autor`)
@@ -274,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_controle_admin` (
   `id_login` INT NOT NULL,
   `dt_login` DATETIME NULL,
   PRIMARY KEY (`id_controle_admin`),
-  INDEX `fk_tb_controle_administrador_tb_login1_idx` (`id_login` ASC) VISIBLE,
+  INDEX `fk_tb_controle_administrador_tb_login1_idx` (`id_login` ASC),
   CONSTRAINT `fk_tb_controle_administrador_tb_login1`
     FOREIGN KEY (`id_login`)
     REFERENCES `db_gobook`.`tb_login` (`id_login`)
@@ -294,7 +294,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_pgto_assinatura` (
   `dt_pgto_referente` DATETIME NULL,
   `dt_pgto_efetuado` DATETIME NULL,
   PRIMARY KEY (`id_pgto_assinatura`),
-  INDEX `fk_tb_pgto_cliente_tb_cartao1_idx` (`id_cartao` ASC) VISIBLE,
+  INDEX `fk_tb_pgto_cliente_tb_cartao1_idx` (`id_cartao` ASC),
   CONSTRAINT `fk_tb_pgto_cliente_tb_cartao1`
     FOREIGN KEY (`id_cartao`)
     REFERENCES `db_gobook`.`tb_cartao` (`id_cartao`)
@@ -312,7 +312,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_estante` (
   `id_estante` INT NOT NULL AUTO_INCREMENT,
   `id_cliente` INT NOT NULL,
   PRIMARY KEY (`id_estante`),
-  INDEX `fk_tb_estante_tb_cliente1_idx` (`id_cliente` ASC) VISIBLE,
+  INDEX `fk_tb_estante_tb_cliente1_idx` (`id_cliente` ASC),
   CONSTRAINT `fk_tb_estante_tb_cliente1`
     FOREIGN KEY (`id_cliente`)
     REFERENCES `db_gobook`.`tb_cliente` (`id_cliente`)
@@ -330,7 +330,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_genero` (
   `id_genero` INT NOT NULL AUTO_INCREMENT,
   `nm_genero` VARCHAR(100) NULL,
   PRIMARY KEY (`id_genero`),
-  UNIQUE INDEX `nm_genero_UNIQUE` (`nm_genero` ASC) VISIBLE)
+  UNIQUE INDEX `nm_genero_UNIQUE` (`nm_genero` ASC) )
 ENGINE = InnoDB;
 
 
@@ -346,12 +346,12 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_feedback` (
   `id_admin_aprovacao` INT NULL,
   `ds_feedback` VARCHAR(400) NULL,
   `qt_estrelas` INT NULL,
-  `bt_aprovado` TINYINT NULL,
+  `bt_aprovado` BOOL NULL,
   `dt_feedback` DATETIME NULL,
   PRIMARY KEY (`id_feedback`),
-  INDEX `fk_tb_feedback_tb_ebook1_idx` (`id_ebook` ASC) VISIBLE,
-  INDEX `fk_tb_feedback_tb_usuario_administrador1_idx` (`id_admin_aprovacao` ASC) VISIBLE,
-  INDEX `fk_tb_feedback_tb_cliente1_idx` (`id_cliente` ASC) VISIBLE,
+  INDEX `fk_tb_feedback_tb_ebook1_idx` (`id_ebook` ASC) ,
+  INDEX `fk_tb_feedback_tb_usuario_administrador1_idx` (`id_admin_aprovacao` ASC),
+  INDEX `fk_tb_feedback_tb_cliente1_idx` (`id_cliente` ASC) ,
   CONSTRAINT `fk_tb_feedback_tb_ebook1`
     FOREIGN KEY (`id_ebook`)
     REFERENCES `db_gobook`.`tb_ebook` (`id_ebook`)
@@ -379,10 +379,10 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_genero_ebook` (
   `id_genero_ebook` INT NOT NULL AUTO_INCREMENT,
   `id_genero` INT NOT NULL,
   `id_ebook` INT NOT NULL,
-  `bt_genero_principal` TINYINT NULL,
+  `bt_genero_principal` BOOL NULL,
   PRIMARY KEY (`id_genero_ebook`),
-  INDEX `fk_tb_genero_ebook_item_tb_genero1_idx` (`id_genero` ASC) VISIBLE,
-  INDEX `fk_tb_genero_ebook_item_tb_ebook1_idx` (`id_ebook` ASC) VISIBLE,
+  INDEX `fk_tb_genero_ebook_item_tb_genero1_idx` (`id_genero` ASC) ,
+  INDEX `fk_tb_genero_ebook_item_tb_ebook1_idx` (`id_ebook` ASC) ,
   CONSTRAINT `fk_tb_genero_ebook_item_tb_genero1`
     FOREIGN KEY (`id_genero`)
     REFERENCES `db_gobook`.`tb_genero` (`id_genero`)
@@ -402,12 +402,12 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `db_gobook`.`tb_genero_fav_cliente` ;
 
 CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_genero_fav_cliente` (
-  `id_genero_fav_cliente` INT UNSIGNED NOT NULL,
+  `id_genero_fav_cliente` INT NOT NULL AUTO_INCREMENT,
   `id_cliente` INT NOT NULL,
   `id_genero` INT NOT NULL,
   PRIMARY KEY (`id_genero_fav_cliente`),
-  INDEX `fk_tb_genero_fav_cliente_tb_genero1_idx` (`id_genero` ASC) VISIBLE,
-  INDEX `fk_tb_genero_fav_cliente_tb_cliente1_idx` (`id_cliente` ASC) VISIBLE,
+  INDEX `fk_tb_genero_fav_cliente_tb_genero1_idx` (`id_genero` ASC) ,
+  INDEX `fk_tb_genero_fav_cliente_tb_cliente1_idx` (`id_cliente` ASC) ,
   CONSTRAINT `fk_tb_genero_fav_cliente_tb_genero1`
     FOREIGN KEY (`id_genero`)
     REFERENCES `db_gobook`.`tb_genero` (`id_genero`)
@@ -427,10 +427,10 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `db_gobook`.`tb_prateleira` ;
 
 CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_prateleira` (
-  `id_prateleira` INT UNSIGNED NOT NULL,
+  `id_prateleira` INT NOT NULL AUTO_INCREMENT,
   `id_estante` INT NOT NULL,
   PRIMARY KEY (`id_prateleira`),
-  INDEX `fk_tb_prateleira_tb_estante1_idx` (`id_estante` ASC) VISIBLE,
+  INDEX `fk_tb_prateleira_tb_estante1_idx` (`id_estante` ASC) ,
   CONSTRAINT `fk_tb_prateleira_tb_estante1`
     FOREIGN KEY (`id_estante`)
     REFERENCES `db_gobook`.`tb_estante` (`id_estante`)
@@ -445,13 +445,13 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `db_gobook`.`tb_prateleira_item` ;
 
 CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_prateleira_item` (
-  `id_prateleira_item` INT UNSIGNED NOT NULL,
-  `id_prateleira` INT UNSIGNED NOT NULL,
+  `id_prateleira_item` INT NOT NULL AUTO_INCREMENT,
+  `id_prateleira` INT NOT NULL,
   `id_ebook` INT NOT NULL,
-  `bt_favorito` TINYINT NULL,
+  `bt_favorito` BOOL NULL,
   PRIMARY KEY (`id_prateleira_item`),
-  INDEX `fk_tb_prateleira_item_tb_ebook1_idx` (`id_ebook` ASC) VISIBLE,
-  INDEX `fk_tb_prateleira_item_tb_prateleira1_idx` (`id_prateleira` ASC) VISIBLE,
+  INDEX `fk_tb_prateleira_item_tb_ebook1_idx` (`id_ebook` ASC) ,
+  INDEX `fk_tb_prateleira_item_tb_prateleira1_idx` (`id_prateleira` ASC),
   CONSTRAINT `fk_tb_prateleira_item_tb_ebook1`
     FOREIGN KEY (`id_ebook`)
     REFERENCES `db_gobook`.`tb_ebook` (`id_ebook`)
@@ -471,12 +471,12 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `db_gobook`.`tb_presente` ;
 
 CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_presente` (
-  `id_presente` INT NOT NULL,
+  `id_presente` INT NOT NULL AUTO_INCREMENT,
   `id_venda_item` INT NOT NULL,
   `id_cliente` INT NOT NULL,
   PRIMARY KEY (`id_presente`),
-  INDEX `fk_tb_presente_tb_venda_item1_idx` (`id_venda_item` ASC) VISIBLE,
-  INDEX `fk_tb_presente_tb_cliente1_idx` (`id_cliente` ASC) VISIBLE,
+  INDEX `fk_tb_presente_tb_venda_item1_idx` (`id_venda_item` ASC) ,
+  INDEX `fk_tb_presente_tb_cliente1_idx` (`id_cliente` ASC) ,
   CONSTRAINT `fk_tb_presente_tb_venda_item1`
     FOREIGN KEY (`id_venda_item`)
     REFERENCES `db_gobook`.`tb_venda_item` (`id_venda_item`)
