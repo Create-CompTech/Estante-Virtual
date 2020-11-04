@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.confirmacaosenha{
+.codigo-container{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -19,7 +19,7 @@
     border-radius: 10px;
 }
 
-.confirmaremail{
+.titulo-codigo{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -37,10 +37,10 @@
     text-align: flex-start;
 }
 
-.confirmaremail h1{
+.titulo-codigo h1{
     font-size: 23px;
     margin-top: 13px;
-    margin-left: 12px;
+    margin-left: 5px;
 }
 
 .codigo{

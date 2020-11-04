@@ -103,13 +103,12 @@ ul{
 }
 
 .OpcoesCabeçalho2{
-    display: block;
-    font-size: 25px;
-    justify-content: space-between;
-    margin-right: 100px;
-    margin-left: 100px;
+    display: flex;
+    font-size: 23px;
+    justify-content: space-evenly;
     color: #fff;
 }
+
 
 .OpcoesCabe2:hover{
     color: #36013F;
@@ -471,8 +470,8 @@ label #cancel{
     display: flex;
     flex-direction: column;
     background: linear-gradient(15deg, #36013F , #343837 );
-    height: 15vh;
-    margin-top: 45px;
+    height: 11vh;
+    margin-top: 75px;
     width: 100%;
     border: black solid 1px;
 }

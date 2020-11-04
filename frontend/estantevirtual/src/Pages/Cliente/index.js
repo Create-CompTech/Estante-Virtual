@@ -44,6 +44,7 @@ function Inicial() {
           </nav>
         </body>
 
+        <div className="livros-container">
         <div class="livros-aventura">
           <div class="container-aventura">
             <div className="titulo-aventura">
@@ -143,6 +144,7 @@ function Inicial() {
               <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
             </div>
           </div>
+        </div>
         </div>
 
         <div className="menu-baixo"></div>

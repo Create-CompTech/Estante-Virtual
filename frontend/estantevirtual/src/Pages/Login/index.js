@@ -90,7 +90,7 @@ const api = new RealizarLogin();
 
        <div class="opçoes">
                   <Link to="/Cadastro">Cadastrar-se</Link>
-                  <Link onClick={confirmarSenha} to="/ConfirmacaoSenha" > 
+                  <Link to="/ConfirmarEmail"> 
                    Esqueci a senha
                   </Link>
               </div>

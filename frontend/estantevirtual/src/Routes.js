@@ -13,6 +13,7 @@ import InicialCliente from './Pages/Cliente'
 import Perfil from './Pages/Cliente/Menu/Perfil'
 import Estantes from './Pages/Cliente/Menu/Estantes'
 import Carrinho from './Pages/Cliente/Menu/Carrinho'
+import ConfirmarEmail from './Pages/Login/ConfirmarEmail'
 
 export default function Routes(){
 
@@ -22,6 +23,7 @@ export default function Routes(){
                 <Route path="/" exact={true} component={Inicial} />
                 <Route path="/Login" component={Login} />
                 <Route path="/ConfirmacaoSenha" component={ConfirmacaoSenha} />
+                <Route path="/ConfirmarEmail" component={ConfirmarEmail} />
                 <Route path="/Alterar" component={AlterarSenha} />
                 <Route path="/Cadastro" component={Cadastro} />
                 <Route path="/Cadastro1" component={Cadastro1} />

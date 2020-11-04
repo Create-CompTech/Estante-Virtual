@@ -29,9 +29,9 @@ function ConfirmacaoSenha(props) {
   return (
     <div className="fundo1">
       <LoadingBar />
-      <div className="confirmacaosenha">
-        <div className="confirmaremail">
-          <h1>Confirmação de e-mail</h1>
+      <div className="codigo-container">
+        <div className="titulo-codigo">
+          <h1>Confirmação de código</h1>
         </div>
         <div className="descricao">
           <p>Foi enviado um e-mail para  com o código para realizar  a confirmação</p>
