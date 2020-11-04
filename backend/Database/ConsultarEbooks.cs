@@ -22,10 +22,10 @@ namespace backend.Database
             {
                 List<Models.TbGeneroEbook> ebooks =
                     ctx.TbGeneroEbook.Include(x => x.IdEbookNavigation)
+                                     .Include(x => x.IdEbookNavigation.IdAutorNavigation)
                                      .Include(x => x.IdGeneroNavigation)
                                      .Where(x => x.IdGenero == genero.IdGenero && x.BtGeneroPrincipal == true)
                                      .ToList();
-            
 
                 ebooksPorGenero.Add(ebooks);
             }
