@@ -41,7 +41,7 @@ namespace backend.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql("server=localhost;user id=admin;password=123@AbC#2020;database=db_gobook", x => x.ServerVersion("8.0.18-mysql"));
+                optionsBuilder.UseMySql("server=localhost;user id=admin;password=1234@AbC#2020;database=db_gobook", x => x.ServerVersion("5.7.32-mysql"));
             }
         }
 
