@@ -21,14 +21,19 @@ function ConfirmacaoSenha(props) {
     loadingBar.current.continuousStart();
 
     const resp = await api.verificarEmail(destinatario);
-    
+    setCodigo(resp);
+
     loadingBar.current.complete();
   };
 
 
   return (
     <div className="fundo1">
-      <LoadingBar />
+      <LoadingBar 
+          height={8}
+          color='#9900FA'
+          ref={loadingBar}
+      />
       <div className="codigo-container">
         <div className="titulo-codigo">
           <h1>Confirmação de código</h1>

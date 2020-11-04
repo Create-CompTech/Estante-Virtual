@@ -24,26 +24,32 @@ const api = new RealizarLogin();
 
     loadingBar.current.continuousStart();
 
-    const resp = await api.fazerLogin({
-        email: email,
-        senha: senha
-    });
+    const req = {
+      email: email,
+      senha: senha
+    }
+
+    console.log(req);
+
+    const resp = await api.fazerLogin(req);
+
+    console.log(req);
+    console.log(resp);
 
     if(resp.perfil === "cliente"){
         navegacao.push("/InicialCliente", resp);
     } else {
         navegacao.push("/f/admin", resp);
     }
-
     
     loadingBar.current.complete();
     
     console.log(resp);
   }
 
-  const confirmarSenha = async (e) => {
-    navegacao.push("/ConfirmacaoSenha", email);
-  }
+  // const confirmarSenha = async (e) => {
+  //   navegacao.push("/ConfirmacaoSenha", email);
+  // }
 
   
 
@@ -51,7 +57,11 @@ const api = new RealizarLogin();
   return (
     <div className="Login">
 
-      <LoadingBar />
+      <LoadingBar 
+          height={8}
+          color='#9900FA'
+          ref={loadingBar}
+      />
 
       <div className="menu">
 
