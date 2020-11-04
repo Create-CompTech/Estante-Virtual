@@ -900,19 +900,19 @@
     ]
   },
   "packageFolders": {
-    "/root/.nuget/packages/": {}
+    "C:\\Users\\lucie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/root/snap/amazon-ssm-agent/2012/Estante-Virtual/backend/backend.csproj",
+      "projectUniqueName": "C:\\Users\\lucie\\OneDrive\\Documentos\\STHEFANY\\Frei\\Software\\Projetos\\estante virtual\\Estante-Virtual\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "/root/snap/amazon-ssm-agent/2012/Estante-Virtual/backend/backend.csproj",
-      "packagesPath": "/root/.nuget/packages/",
-      "outputPath": "/root/snap/amazon-ssm-agent/2012/Estante-Virtual/backend/obj/",
+      "projectPath": "C:\\Users\\lucie\\OneDrive\\Documentos\\STHEFANY\\Frei\\Software\\Projetos\\estante virtual\\Estante-Virtual\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\lucie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lucie\\OneDrive\\Documentos\\STHEFANY\\Frei\\Software\\Projetos\\estante virtual\\Estante-Virtual\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/root/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\lucie\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -969,7 +969,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
