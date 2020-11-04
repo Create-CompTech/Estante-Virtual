@@ -15,8 +15,8 @@ namespace backend.Models
         public int IdGenero { get; set; }
         [Column("id_ebook", TypeName = "int(11)")]
         public int IdEbook { get; set; }
-        [Column("bt_genero_principal", TypeName = "tinyint(4)")]
-        public sbyte? BtGeneroPrincipal { get; set; }
+        [Column("bt_genero_principal")]
+        public bool? BtGeneroPrincipal { get; set; }
 
         [ForeignKey(nameof(IdEbook))]
         [InverseProperty(nameof(TbEbook.TbGeneroEbook))]

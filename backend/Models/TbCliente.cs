@@ -24,8 +24,8 @@ namespace backend.Models
         public int IdUsuario { get; set; }
         [Column("qt_pontos", TypeName = "int(11)")]
         public int? QtPontos { get; set; }
-        [Column("bt_assinante", TypeName = "tinyint(4)")]
-        public sbyte? BtAssinante { get; set; }
+        [Column("bt_assinante")]
+        public bool? BtAssinante { get; set; }
 
         [ForeignKey(nameof(IdUsuario))]
         [InverseProperty(nameof(TbUsuario.TbCliente))]

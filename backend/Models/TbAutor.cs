@@ -27,8 +27,8 @@ namespace backend.Models
         public DateTime? DtNascimento { get; set; }
         [Column("ds_autor", TypeName = "varchar(400)")]
         public string DsAutor { get; set; }
-        [Column("bt_filiado", TypeName = "tinyint(4)")]
-        public sbyte? BtFiliado { get; set; }
+        [Column("bt_filiado")]
+        public bool? BtFiliado { get; set; }
 
         [InverseProperty("IdAutorNavigation")]
         public virtual ICollection<TbEbook> TbEbook { get; set; }

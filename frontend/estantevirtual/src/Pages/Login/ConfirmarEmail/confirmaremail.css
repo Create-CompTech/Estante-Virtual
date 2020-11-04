@@ -1,0 +1,29 @@
+.confirmar-email{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 45vh;
+    width: 48vw;
+
+    border: black solid 1px;
+    border-radius: 10px;
+}
+
+.titulo-email{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 61px;
+    width: 45vw;
+}
+
+.titulo-email h1:hover{
+    color: #A442A0;
+}
+
+.titulo-email h1{
+    font-size: 23px;
+    margin-top: 13px;
+    margin-left: 5px;
+}

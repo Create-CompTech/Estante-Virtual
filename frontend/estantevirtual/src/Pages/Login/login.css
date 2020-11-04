@@ -47,7 +47,9 @@
 }
   
 .opçoes a{
-    color: #9DBCD4;
+    color: #9900FA;
+    font-size: 16px;
+    text-decoration: none;
 }
 
 .botao{
@@ -69,17 +71,9 @@
 
     border: none;
     border-radius: 5px;
+
+    font-size: 14px;
 }
-
-
-
-
-
-
-
-
-
-
 
 .titulo h1{
     font-size: 25px;

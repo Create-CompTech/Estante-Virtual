@@ -20,7 +20,6 @@
     width: 100%;
     height: 100%;
     background: #222f3e;
-    display: flex;
     justify-content: space-between;
     background: linear-gradient(15deg, #36013F , #343837 );
 }
@@ -29,14 +28,13 @@
     width: 140px;
     height: 120px;
     margin: 20px;
-    border-radius: 100px;
+    border-radius: 80px;
     align-items: flex-start;
     justify-content: left;
-
     background-color: #482d66;
 }
 
-.Pesquisa{
+.Pesquisa1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,11 +43,10 @@
     margin-top: 95px;
     padding: 10px 10px;
     border-radius: 100px;
-    
     background-color: #fff;
 }
 
-.Pesquisa input{
+.Pesquisa1 input{
     padding: 5px;
     border: none;
     outline: none;
@@ -70,12 +67,15 @@
 .BotoesCabeçalho1{
     margin-right: 20px;
     color: #fff;
+    font-size: 16px;
 }
 
 .BotoesCabeçalho2{
     margin-right: 10px;
     color: #fff;
+    font-size: 16px;
 }
+
 
 
 i{
@@ -86,6 +86,7 @@ i{
 .Cabecalho{
     display: flex;
 }
+
 
 ul{
     margin: 0px;
@@ -98,17 +99,15 @@ ul{
     justify-content: center;
     width: 100%;
     height: 40px;
-
     background-color: #482d66;
 }
 
 .OpcoesCabeçalho2{
-    display: block;
+    display: flex;
     font-size: 25px;
-    justify-content: space-between;
-    margin-right: 100px;
-    margin-left: 100px;
-
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
     color: #fff;
 }
 
@@ -116,7 +115,14 @@ ul{
     color: #36013F;
 }
 
-body{
-    height: 100%;
-    background: gray;
+.body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.livros-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

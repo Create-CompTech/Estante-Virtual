@@ -9,17 +9,29 @@ namespace backend.Controllers
 
     public class RecuperarSenhaController : ControllerBase
     {
-        Utils.RecuperarSenhaConversor conversor = new Utils.RecuperarSenhaConversor();
         Business.RecuperarSenhaBusiness business = new Business.RecuperarSenhaBusiness();
-        Resources.EnviarEmail mail = new Resources.EnviarEmail();
+        Utils.Conversor.RecuperarSenhaConversor conversor = new Utils.Conversor.RecuperarSenhaConversor();
 
-        [HttpPost("email")]
-        public ActionResult<string> VerificarEmail (string info)
+        Services.EnviarMensagem.EmailMensagem mail = new Services.EnviarMensagem.EmailMensagem();
+        Utils.GeradorCodigo.RecuperacaoSenha gerador = new Utils.GeradorCodigo.RecuperacaoSenha();
+
+
+
+
+        [HttpPost("{destinatario}")]
+        public ActionResult<string> VerificarEmail (string destinatario)
         {
             try 
             {
-                // mail.VerificarEmail();
-                return "Ok";
+                string codigo = gerador.GerarCodigo();
+                
+                mail.EmailSimples(new Models.Request.VerificarEmail() {
+                    destinatario = destinatario,
+                    assunto = "Verificação de email",
+                    conteudo = $"Olá! Você acabou de pedir uma alteração de senha na GoBook Company. Seu código de verificação é: {codigo}. OBS: Se você não fez o pedido, ignore este e-mail."
+                });
+
+                return codigo;
             }
             catch (Exception ex)
             {
@@ -27,12 +39,16 @@ namespace backend.Controllers
             }
         }
 
+
+        [HttpPut]
         public ActionResult<Models.Response.MensagemResponse> AlterarSenha(Models.Request.AlterarSenhaRequest req)
         {
             try 
             {
+                business.AlterarSenha(conversor.ParaTabela(req));
+
                 return new Models.Response.MensagemResponse() {
-                    msg = business.AlterarSenha(conversor.ParaTabela(req))
+                    msg = "Senha alterada com sucesso" 
                 };
             }
             catch(Exception ex)
