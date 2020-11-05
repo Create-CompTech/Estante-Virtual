@@ -1,25 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './confirmaremail.css';
-import {Link} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-function ConfirmarEmail (){
+import RecuperarSenha from '../../../services/RecuperarSenha';
+const api = new RecuperarSenha();
+
+function ConfirmarEmail(props) {
+
+    const navegacao = useHistory();
+    const [email, setEmail] = useState("");
+
+    const enviarEmail = async (e) => {
+
+        const resp = await api.VerificarEmail(email);
+        navegacao.push('/ConfirmacaoCodigo', resp);
+    } 
+
     return (
         <div className="fundo1">
           <div className="ConfirmarEmail">
             <div className="confirmar-email">
                 <div className="titulo-email">
-                    <h1>Confirmar e-mail</h1>
+                    <h1>Recuperar Senha</h1>
                 </div>
                 <div className="descricao">
-                    <p>Digite o e-mail de login, que seja cadastrado em nosso site.</p>
+                    <p>Vamos enviar um código de verificação pra você. Digite seu email abaixo:</p>
                 </div>
                 <div className="codigo">
                  <label>
-                   <input  type="text" placeholder=" E-mail" ></input>
+                   <input  type="text" placeholder="E-mail" onChange={e => setEmail(e.target.value)}></input>
                  </label>
                 </div>
                 <div className="botao">
-                <Link to="/ConfirmacaoSenha"><button class="cancelar">Enviar</button></Link>
+                <button onClick={enviarEmail} class="cancelar">Enviar</button>
                 </div>
             </div>
         </div>

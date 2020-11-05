@@ -1,20 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './inicialcliente.css';
 
+import ConsultarEbooks from '../../services/ConsultarEbooks';
+const api = new ConsultarEbooks();
+
 
 function Inicial(props) {
+
+  const [ebooks, setEbooks] = useState([]);
+
+  const ebooksPorGenero = async (e) => {
+    
+    const resp = await api.EbooksPorGenero();
+    setEbooks(resp);    
+    console.log(ebooks);
+  }
+
+  useEffect(() => {
+    ebooksPorGenero();
+  }, []);
+
   return (
     <div className="Inicial">
       <header className="Inicial-Header">
       
         <div class="Logo"><h1>goBook</h1></div>
+        <div>Olá, {props.location.state.nome}!</div>
 
         <div class="Pesquisa">
           <input type="search" placeholder="Livro ou Autor" class="Texto"></input> 
             <i class="fas fa-search"></i>
         </div>
-        
+      
         <input type="checkbox" id="check"></input>
           <label for="check">
               <i class="fas fa-bars" id="btn"></i>
@@ -42,115 +60,25 @@ function Inicial(props) {
               <Link to=""><li class="OpcoesCabeçalho2">Livros mais vendidos</li></Link>
             </ul>
           </nav>
-        </body>
+      </body>
 
-        <div className="livros-container">
-        <div class="livros-aventura">
-          <div class="container-aventura">
-            <div className="titulo-aventura">
-              <h1>Livros de aventura</h1>
-            </div>
-            <div className="livros-box">
-              <div className="livros">
-                <div className="livro1"><img src='/assets/HarryPotterPedraFilosofal' height="160x" width="134px" alt=""></img></div>
-                <div className="livro1"><img src='/assets/SenhorDosAneisTolkienV1' height="160x" width="134px" alt=""></img></div>
-                <div className="livro1"><img src='/assets/PiratasDoCaribeJackSparrowOGuardiaoDoTempo.png' height="160x" width="134px" alt=""></img></div>
-                <div className="livro1"><img src='/assets/GravityFallsAventuraEmDobro.png' height="160x" width="134px" alt=""></img></div>
-                <div className="livro1"><img src='/assets/Eragon.png' height="160x" width="134px" alt=""></img></div>
-                <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link></div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="livros-romance">
-          <div class="container-romance">
-            <div className="titulo-romance">
-              <h1>Livros de romance</h1>
-            </div>
-            <div className="livros-box">
-              <div className="livros">
-                <div className="livro1"><img src='/assets/FilmeCulpaDasEstrelas.png' height="160x" width="134px" alt=""></img></div>
-                <div className="livro1"><img src='/assets/AGarotaQueVoceDeixouParaTras.png' height="160x" width="134px" alt=""></img></div>
-                <div className="livro1"><img src='/assets/ACincoPassosDeVoce.png' height="160x" width="134px" alt=""></img></div>
-                <div className="livro1"><img src='/assets/AnnaEOBeijoFrances' height="160x" width="134px" alt=""></img></div>
-                <div className="livro1"><img src='/assets/UmQuartoComVista' height="160x" width="134px" alt=""></img></div>
-                <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        <div className="titulo">Vários Ebooksss</div>
 
-        <div className="livros-fantasia">
-          <div className="container-fantasia">
-            <div className="titulo-fantasia">
-              <h1>Livros de fantasia</h1>
+        <div className="ebooks_box">
+          {ebooks.map( item => 
+            <div className="ebook">
+              <p>{item.nome}</p>
+              <p>{item.autor}</p>
+              <p>{item.sinopse}</p>
             </div>
-            <div className="livros">
-              <div className="livro1"><img src='/assets/AGuerraDosTronosAsCronicasDeGeloEFogo.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/AsBrumasDeAvalonMarionZimmer.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/OLeaoAFeiticeiraEoGurdaRoupaCronicasDeNarnia.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/OMaravilhosoMagicoDeOz1900.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/OFeiticeiroDeTerramarUrsulaKLEGuin.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
-            </div>
-          </div>
+          )}
         </div>
-
-        <div className="destaque">
-          <div className="container-destaque">
-            <div className="titulo-destaque">
-              <h1>Destaques da semana</h1>
-            </div>
-            <div className="destaque-box">
-              <div className="livros-destaque">
-               <div className="destaque1"><img src='/assets/OQueAconteceuComAnnie.png' height="279.5x" width="231px" alt=""></img></div> 
-               <div className="destaque1"><img src='/assets/AGarotaDoLago.png' height="279.5x" width="231px" alt=""></img></div> 
-               <div className="destaque1"><img src='/assets/OHobbitJJRTolkien.png' height="279.5x" width="231px" alt=""></img></div> 
-               <div className="destaque1"><img src='/assets/AsCronicasDeNarnia2009.png' height="279.5x" width="231px" alt=""></img></div> 
-               <div className="destaque1"><img src='/assets/ZaynMalik.png' height="279.5x" width="231px" alt=""></img></div> 
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="livros-terror">
-          <div className="container-terror">
-            <div className="titulo-terror">
-              <h1>Livros de terror</h1>
-            </div>
-            <div className="livros">
-              <div className="livro1"><img src='/assets/ItACoisaStephenKing.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/OCemiterioStephenKing.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/AAssombracaoDaCasaDaColina.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/QuatroEstacoesStephenKing.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/GuerraMundialZ.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="livros-zumbi">
-          <div className="container-zumbi">
-            <div className="titulo-zumbi">
-              <h1>Livros de zumbis</h1>
-            </div>
-            <div className="livros">
-              <div className="livro1"><img src='/assets/TheWalkingDeadV1.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/TerioEPraticaDeComoSerUmZumbiTiagoToy.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/AIlhaDosMortosRodrigoDeOliveira.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/StrangerThingsGarotosZumbis.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/ApocalipseZumbi3AlexandreCallari.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
-            </div>
-          </div>
-        </div>
-        </div>
-
+          
         <div className="menu-baixo"></div>
 
-  </div>
-  );
-}
+       </div>   
+    )};
 
-export default Inicial;
+    export default Inicial;

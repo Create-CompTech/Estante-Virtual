@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import './login.css'
+import './login.css';
 
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
 
 import RealizarLogin from '../../services/RealizarLogin';
@@ -9,7 +9,7 @@ const api = new RealizarLogin();
 
 
 
-  function Login() {
+  function Login(props) {
 
   const navegacao = useHistory();
   const loadingBar = useRef(null);
@@ -29,27 +29,18 @@ const api = new RealizarLogin();
       senha: senha
     }
 
-    console.log(req);
-
     const resp = await api.fazerLogin(req);
 
-    console.log(req);
-    console.log(resp);
+    loadingBar.current.complete();
 
     if(resp.perfil === "cliente"){
         navegacao.push("/InicialCliente", resp);
     } else {
         navegacao.push("/f/admin", resp);
     }
-    
-    loadingBar.current.complete();
-    
-    console.log(resp);
   }
 
-  // const confirmarSenha = async (e) => {
-  //   navegacao.push("/ConfirmacaoSenha", email);
-  // }
+
 
   
 

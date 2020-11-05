@@ -24,7 +24,7 @@ export default function Routes(){
                 <Route path="/Login" component={Login} />
                 <Route path="/ConfirmacaoSenha" component={ConfirmacaoSenha} />
                 <Route path="/ConfirmarEmail" component={ConfirmarEmail} />
-                <Route path="/Alterar" component={AlterarSenha} />
+                <Route path="/AlterarSenha" component={AlterarSenha} />
                 <Route path="/Cadastro" component={Cadastro} />
                 <Route path="/Cadastro1" component={Cadastro1} />
                 <Route path="/Cadastro2" component={Cadastro2} />
