@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import Header from '../../components/header';
 import { Link } from 'react-router-dom';
-import './inicialcliente.css';
+import './index.css';
+
 
 import ConsultarEbooks from '../../services/ConsultarEbooks';
 const api = new ConsultarEbooks();
+
 
 
 function Inicial(props) {
@@ -23,9 +26,9 @@ function Inicial(props) {
 
   return (
     <div className="InicialCliente">  
-    oi
+      <Header /> 
     </div>   
     );
 }
 
-    export default Inicial;
+export default Inicial;
