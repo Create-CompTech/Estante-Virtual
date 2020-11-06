@@ -27,3 +27,9 @@
     margin-top: 13px;
     margin-left: 5px;
 }
+
+.codigo input{
+    outline: none;
+    padding: 8px;
+    border-color: #A442A0;
+}
