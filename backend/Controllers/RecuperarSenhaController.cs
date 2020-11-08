@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Controllers
 {
@@ -41,14 +42,14 @@ namespace backend.Controllers
 
 
         [HttpPut]
-        public ActionResult<Models.Response.MensagemResponse> AlterarSenha(Models.Request.AlterarSenhaRequest req)
+        public async Task<ActionResult<Models.Response.MensagemResponse>> AlterarSenha(Models.Request.AlterarSenhaRequest req)
         {
             try 
             {
-                business.AlterarSenha(conversor.ParaTabela(req));
+                await business.AlterarSenha(conversor.ParaTabela(req));
 
                 return new Models.Response.MensagemResponse() {
-                    msg = "Senha alterada com sucesso" 
+                    msg = "Senha alterada com sucesso!" 
                 };
             }
             catch(Exception ex)
