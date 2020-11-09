@@ -22,7 +22,7 @@ namespace backend.Utils.Conversor
         }
 
 
-        private List<Models.Response.EbookResponse> ParaResponse (List<Models.TbGeneroEbook> tb)
+        public List<Models.Response.EbookResponse> ParaResponse (List<Models.TbGeneroEbook> tb)
         {
             List<Models.Response.EbookResponse> ebooks = new List<Models.Response.EbookResponse>();
             List<string> generos = new List<string>();

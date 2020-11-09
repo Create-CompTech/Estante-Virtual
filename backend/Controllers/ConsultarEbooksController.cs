@@ -30,12 +30,14 @@ namespace backend.Controllers
             }
         }
 
-        [HttpGet("/pesquisa")]
-        public async Task<ActionResult<List<Models.Response.EbookResponse>>> PesquisarEbooks (string nome) 
+        [HttpGet("/ebookautor")]
+        public async Task<ActionResult<List<Models.Response.EbookResponse>>> PesquisaEbookAutor (string nome) 
         {
             try 
             {
-                return new List<Models.Response.EbookResponse>();
+                List<Models.TbGeneroEbook> ebooks = await business.PesquisaEbookAutor(nome);
+
+                return conversor.ParaResponse(ebooks);
             }
             catch(Exception ex)
             {
