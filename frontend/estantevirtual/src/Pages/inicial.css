@@ -25,13 +25,16 @@
 }
 
 .Logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 140px;
     height: 120px;
-    margin: 20px;
-    border-radius: 80px;
-    align-items: flex-start;
-    justify-content: left;
-    background-color: #482d66;
+    margin: 10px;
+}
+
+.Logo img {
+    display: flex;
 }
 
 .Pesquisa1{
@@ -40,7 +43,7 @@
     align-items: center;
     width: 400px;
     height: 40px;
-    margin-top: 95px;
+    margin-top: 70px;
     padding: 10px 10px;
     border-radius: 100px;
     background-color: #fff;

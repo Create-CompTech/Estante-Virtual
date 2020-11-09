@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './inicial.css';
+import gobook_logo from '../storage/images/logo/SizePinterest/gobook_logo.png'
 
 function Inicial() {
   return (
     <div className="Inicial">
       <header className="Inicial-Header">
       
-        <div class="Logo"><h1>goBook</h1></div>
+        <div class="Logo">
+          <img src={gobook_logo} height="270px" width="275px"/>
+        </div>
 
         <div class="Pesquisa1">
           <input type="search" placeholder=" Livro ou Autor" class="Texto"></input> 
