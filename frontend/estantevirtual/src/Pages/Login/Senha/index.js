@@ -7,7 +7,7 @@ import RecuperarSenha from '../../../services/RecuperarSenha';
 const api = new RecuperarSenha();
 
 
-function ConfirmacaoSenha(props) {
+function ConfirmacaoCodigo(props) {
 
   const loadingBar = useRef(null);
   const [destinatario, setDestinatario] = useState("");
@@ -63,4 +63,4 @@ function ConfirmacaoSenha(props) {
   );
 }
 
-export default ConfirmacaoSenha;
+export default ConfirmacaoCodigo;

@@ -1,4 +1,6 @@
 using System;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Business
 {
@@ -6,14 +8,14 @@ namespace backend.Business
     {
         Database.RecuperarSenhaDatabase db = new Database.RecuperarSenhaDatabase();
 
-        public void AlterarSenha(Models.TbLogin tb)
+        public async Task<Models.TbLogin> AlterarSenha(Models.TbLogin tb)
         {
             if (tb.IdLogin <= 0)
                 throw new Exception("ID inválido.");
             if (String.IsNullOrEmpty(tb.DsSenha))
                 throw new Exception("Senha inválida.");
 
-            db.AlterarSenha(tb);
+            return await db.AlterarSenha(tb);
         }
     }
 }

@@ -1,5 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Controllers
 {
@@ -13,11 +15,11 @@ namespace backend.Controllers
 
 
         [HttpPost]
-        public ActionResult<Models.Response.LoginResponse> FazerLogin (Models.Request.LoginRequest req)
+        public async Task<ActionResult<Models.Response.LoginResponse>> FazerLogin (Models.Request.LoginRequest req)
         {
             try 
             {
-                Models.TbLogin tb = business.RealizarLogin(conversor.ParaTbLogin(req));
+                Models.TbLogin tb = await business.RealizarLogin(conversor.ParaTbLogin(req));
                 return conversor.ParaResponse(tb);
 
             }

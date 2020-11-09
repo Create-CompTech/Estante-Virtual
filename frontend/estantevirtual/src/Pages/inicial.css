@@ -78,7 +78,7 @@
 
 
 
-i{
+.Cabecalho li{
     cursor: pointer;
     color:#482d66;
 }
@@ -88,7 +88,7 @@ i{
 }
 
 
-ul{
+.Cabecalho ul{
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -125,4 +125,255 @@ ul{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+
+.livros-aventura{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; 
+    width: 95vw;
+}
+
+.container-aventura{
+    height: 45vh;
+    width: 90%;
+    background-color: white;
+}
+
+.titulo-aventura{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+
+.titulo-aventura h1{
+    font-size: 22px;
+}
+
+.livros-box{
+    display: flex;
+    align-items: center;
+}
+
+.livros{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    width: 90%;
+    margin-top: 16px;
+    border: black solid 1px;
+}
+
+.livro1{
+    height: 26vh;
+    width: 10vw;
+}
+
+.livro1 img:hover{
+    height: 27vh;
+    width: 12vw;
+}
+
+
+.livros-romance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
+}
+
+.container-romance{
+    height: 45vh;
+    width: 90%;
+    background-color: white;
+}
+
+.titulo-romance{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+
+}
+
+.titulo-romance h1{
+    font-size: 22px;
+}
+
+.livro-mais{
+    display: flex;
+    align-items: flex-end;
+    height: 10vh;
+    width: 7.5vw;
+}
+
+.destaque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+}
+
+.container-destaque{
+    height: 70vh;
+    width: 90%;
+    margin-top: 30px;
+    background-color: white;
+}
+
+.titulo-destaque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    width: 100%;
+}
+
+.titulo-destaque h1{
+    font-size: 32px;
+}
+
+.destaque-box{
+    display: flex;
+    align-items: center;
+}
+
+.livros-destaque{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 61vh;
+    width: 100%;
+}
+
+.destaque1{
+    display: flex;
+    height: 45vh;
+    width: 30vw;
+}
+
+.livros-terror{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
+}
+
+.container-terror{
+    height: 45vh;
+    width: 90%;
+    background-color: white;   
+}
+
+.titulo-terror{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+.titulo-terror h1{
+    font-size: 22px;
+}
+
+.livros-zumbi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
+}
+
+.container-zumbi{
+    height: 45vh;
+    width: 90%;
+    background-color: white;   
+}
+
+.titulo-zumbi{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+.titulo-zumbi h1{
+    font-size: 22px;
+}
+
+.livros-fantasia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    width: 95vw;
+}
+
+.container-fantasia{
+    height: 45vh;
+    width: 90%;
+    background-color: white;    
+}
+
+.titulo-fantasia{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 08vh;
+    width: 90%;
+}
+
+.titulo-fantasia h1{
+    font-size: 22px;
+}
+
+
+
+.titulo-aventura h1:hover{
+    color: #A442A0;
+}
+
+.titulo-romance h1:hover{
+    color: #A442A0;
+}
+
+.titulo-destaque h1:hover{
+    color: #A442A0;
+}
+
+.titulo-terror h1:hover{
+    color: #A442A0;
+}
+.titulo-zumbi h1:hover{
+    color: #A442A0;
+}
+
+.livro-mais p:hover{
+    color: #A442A0;
+    text-decoration: none;
+}
+
+.livros a{
+    text-decoration: none;
+}
+
+.menu-baixo{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(15deg, #36013F , #343837 );
+    height: 11vh;
+    margin-top: 75px;
+    width: 100%;
+    border: black solid 1px;
 }

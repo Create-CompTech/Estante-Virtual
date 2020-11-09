@@ -1,15 +1,17 @@
 import React, { useState, useRef } from 'react';
-import './login.css'
+import './login.css';
 
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
+import gobook_logo from '../../storage/images/logo/SizePinterest/gobook_logo.png';
+import instagram from '../../storage/images/icons/instagram_icon.png';
 
 import RealizarLogin from '../../services/RealizarLogin';
 const api = new RealizarLogin();
 
 
+  function Login(props) {
 
-  function Login() {
 
   const navegacao = useHistory();
   const loadingBar = useRef(null);
@@ -29,30 +31,16 @@ const api = new RealizarLogin();
       senha: senha
     }
 
-    console.log(req);
-
     const resp = await api.fazerLogin(req);
 
-    console.log(req);
-    console.log(resp);
+    loadingBar.current.complete();
 
     if(resp.perfil === "cliente"){
         navegacao.push("/InicialCliente", resp);
     } else {
         navegacao.push("/f/admin", resp);
     }
-    
-    loadingBar.current.complete();
-    
-    console.log(resp);
   }
-
-  // const confirmarSenha = async (e) => {
-  //   navegacao.push("/ConfirmacaoSenha", email);
-  // }
-
-  
-
 
   return (
     <div className="Login">
@@ -66,10 +54,12 @@ const api = new RealizarLogin();
       <div className="menu">
 
         <div className="imagem">
-          <p>imagemlogo</p>
+          <p>
+            <img src={gobook_logo} height="215px" width="235px"/>
+          </p>
         </div>
         <div className="contato">
-          <p>contato</p>
+          <a to="" href="https://www.instagram.com/gobookcompany/"><img src={instagram} height="49px" width="53px"></img></a>
         </div>
       </div>
 
@@ -91,12 +81,13 @@ const api = new RealizarLogin();
        </div>
 
        <div class="form">
-        <input type="password" name="name" autocomplete="on" required 
+        <input type="password" name="name"  autocomplete="on" required 
                 onChange={e => setSenha(e.target.value)}/>
         <label for="name" class="label-name">
             <span class="content-name">Senha</span>
         </label>
        </div>
+
 
        <div class="opçoes">
                   <Link to="/Cadastro">Cadastrar-se</Link>

@@ -1,5 +1,7 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Database
 {
@@ -7,18 +9,21 @@ namespace backend.Database
     {
         Models.db_gobookContext ctx = new Models.db_gobookContext();
 
-        public Models.TbLogin RealizarLogin (Models.TbLogin dados)
+        public async Task<Models.TbLogin> RealizarLogin (Models.TbLogin dados)
         {
-            Models.TbLogin login = ctx.TbLogin.ToList().FirstOrDefault(x =>
+            Models.TbLogin login = await ctx.TbLogin.FirstOrDefaultAsync(x =>
                 x.DsEmail == dados.DsEmail && 
                 x.DsSenha == dados.DsSenha
             );
 
-            ctx.Add(new Models.TbControleAdmin() {
-                IdLogin = login.IdLogin,
-                DtLogin = DateTime.Now
-            });
-            ctx.SaveChanges();
+            if (login.DsPerfil == "admin")
+            {
+                await ctx.AddAsync(new Models.TbControleAdmin() {
+                    IdLogin = login.IdLogin,
+                    DtLogin = DateTime.Now
+                });
+                await ctx.SaveChangesAsync();
+            }
 
             return login;
         }

@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Inicial from './Pages/index'
 import Login from './Pages/Login'
-import ConfirmacaoSenha from './Pages/Login/Senha'
+import ConfirmacaoCodigo from './Pages/Login/Senha'
 import AlterarSenha from './Pages/Login/Alterar'
 import Cadastro from './Pages/Cliente/Cadastro'
 import Cadastro1 from './Pages/Cliente/Cadastro/Cadastro1'
@@ -22,7 +22,7 @@ export default function Routes(){
             <Switch>
                 <Route path="/" exact={true} component={Inicial} />
                 <Route path="/Login" component={Login} />
-                <Route path="/ConfirmacaoSenha" component={ConfirmacaoSenha} />
+                <Route path="/ConfirmacaoCodigo" component={ConfirmacaoCodigo} />
                 <Route path="/ConfirmarEmail" component={ConfirmarEmail} />
                 <Route path="/Alterar" component={AlterarSenha} />
                 <Route path="/Cadastro" component={Cadastro} />

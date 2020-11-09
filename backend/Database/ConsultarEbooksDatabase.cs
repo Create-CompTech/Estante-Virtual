@@ -1,20 +1,21 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Database
 {
-    public class ConsultarEbooks
+    public class ConsultarEbooksDatabase
     {
         Models.db_gobookContext ctx = new Models.db_gobookContext();
 
 
 
 
-        public List<List<Models.TbGeneroEbook>> EbooksPorGenero ()
+        public async Task<List<List<Models.TbGeneroEbook>>> EbooksPorGenero ()
         {
-            List<Models.TbGenero> generos = ctx.TbGenero.ToList();         
+            List<Models.TbGenero> generos = await ctx.TbGenero.ToListAsync();         
             List<List<Models.TbGeneroEbook>> ebooksPorGenero = new List<List<Models.TbGeneroEbook>>();
             
 
@@ -31,6 +32,11 @@ namespace backend.Database
             }
 
             return ebooksPorGenero;
+        }
+
+        public async Task<List<Models.TbGeneroEbook>> PesquisarEbooks (string nome)
+        {
+            return new List<Models.TbGeneroEbook>();
         }
     }
 }
