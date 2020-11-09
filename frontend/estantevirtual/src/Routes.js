@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import Inicial from './Pages/index'
 import Login from './Pages/Login'
-import ConfirmacaoSenha from './Pages/Login/Senha'
+import ConfirmacaoCodigo from './Pages/Login/Senha'
 import AlterarSenha from './Pages/Login/Alterar'
 import Cadastro from './Pages/Cliente/Cadastro'
 import Cadastro1 from './Pages/Cliente/Cadastro/Cadastro1'
@@ -13,6 +13,7 @@ import InicialCliente from './Pages/Cliente'
 import Perfil from './Pages/Cliente/Menu/Perfil'
 import Estantes from './Pages/Cliente/Menu/Estantes'
 import Carrinho from './Pages/Cliente/Menu/Carrinho'
+import ConfirmarEmail from './Pages/Login/ConfirmarEmail'
 
 export default function Routes(){
 
@@ -21,7 +22,8 @@ export default function Routes(){
             <Switch>
                 <Route path="/" exact={true} component={Inicial} />
                 <Route path="/Login" component={Login} />
-                <Route path="/ConfirmacaoSenha" component={ConfirmacaoSenha} />
+                <Route path="/ConfirmacaoCodigo" component={ConfirmacaoCodigo} />
+                <Route path="/ConfirmarEmail" component={ConfirmarEmail} />
                 <Route path="/Alterar" component={AlterarSenha} />
                 <Route path="/Cadastro" component={Cadastro} />
                 <Route path="/Cadastro1" component={Cadastro1} />

@@ -1,14 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './carrinho.css'
+import gobook_logo from "../../../../storage/images/logo/SizePinterest/gobook_logo.png"
 
 function Carrinho(){
     return(
         <div className="Carrinho">
-            <div className="Carrinho-Header">
+            <div className="MenuCadastro">
             <input type="checkbox" id="check"></input>
                 <label for="check">
-                    <i class="fas fa-bars" id="btn"></i>
                     <i class="fas fa-bars" id="cancel"></i>
                 </label>
                 <div class="sidebarperfil">
@@ -17,6 +17,9 @@ function Carrinho(){
                         <li><Link to="/InicialCliente">Inicial</Link></li>
                         <li><Link to="/Perfil">Perfil</Link></li>
                         <li><Link to="/Estantes">Minhas estantes</Link></li>
+                        <div className="img">
+                        <img src={gobook_logo} height="240px" width="255px"/>
+                        </div>
                     </ul>
                 </div>
             </div>

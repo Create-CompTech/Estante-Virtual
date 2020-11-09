@@ -1,5 +1,7 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Database
 {
@@ -7,13 +9,15 @@ namespace backend.Database
     {
         Models.db_gobookContext ctx = new Models.db_gobookContext();
 
-        public void AlterarSenha(Models.TbLogin tb)
+        public async Task<Models.TbLogin> AlterarSenha(Models.TbLogin tb)
         {
             Models.TbLogin login = 
-                ctx.TbLogin.FirstOrDefault(x => x.IdLogin == tb.IdLogin);
+                await ctx.TbLogin.FirstOrDefaultAsync(x => x.IdLogin == tb.IdLogin);
 
             login.DsSenha = tb.DsSenha;
-            ctx.SaveChanges();
+            await ctx.SaveChangesAsync();
+
+            return login;
         }
         
     }

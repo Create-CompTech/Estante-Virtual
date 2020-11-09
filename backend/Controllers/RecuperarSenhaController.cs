@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Controllers
 {
@@ -19,19 +20,19 @@ namespace backend.Controllers
 
 
         [HttpPost("{destinatario}")]
-        public ActionResult<Models.Response.MensagemResponse> VerificarEmail (string destinatario)
+        public ActionResult<string> VerificarEmail (string destinatario)
         {
             try 
             {
+                string codigo = gerador.GerarCodigo();
+                
                 mail.EmailSimples(new Models.Request.VerificarEmail() {
                     destinatario = destinatario,
                     assunto = "Verificação de email",
-                    conteudo = $"Olá! Você acabou de pedir uma alteração de senha na GoBook Company. Seu código de verificação é: ${gerador.GerarCodigo()}. OBS: Se você não fez o pedido, ignore este e-mail."
+                    conteudo = $"Olá! Você acabou de pedir uma alteração de senha na GoBook Company. Seu código de verificação é: {codigo}. OBS: Se você não fez o pedido, ignore este e-mail."
                 });
 
-                return new Models.Response.MensagemResponse() {
-                    msg = "Email enviado com sucesso"
-                };
+                return codigo;
             }
             catch (Exception ex)
             {
@@ -41,14 +42,14 @@ namespace backend.Controllers
 
 
         [HttpPut]
-        public ActionResult<Models.Response.MensagemResponse> AlterarSenha(Models.Request.AlterarSenhaRequest req)
+        public async Task<ActionResult<Models.Response.MensagemResponse>> AlterarSenha(Models.Request.AlterarSenhaRequest req)
         {
             try 
             {
-                business.AlterarSenha(conversor.ParaTabela(req));
+                await business.AlterarSenha(conversor.ParaTabela(req));
 
                 return new Models.Response.MensagemResponse() {
-                    msg = "Senha alterada com sucesso" 
+                    msg = "Senha alterada com sucesso!" 
                 };
             }
             catch(Exception ex)

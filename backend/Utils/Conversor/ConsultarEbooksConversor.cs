@@ -22,14 +22,18 @@ namespace backend.Utils.Conversor
         }
 
 
-        private List<Models.Response.EbookResponse> ParaResponse (List<Models.TbGeneroEbook> tb)
+        public List<Models.Response.EbookResponse> ParaResponse (List<Models.TbGeneroEbook> tb)
         {
             List<Models.Response.EbookResponse> ebooks = new List<Models.Response.EbookResponse>();
+            List<string> generos = new List<string>();
+            
 
             tb.ForEach( x =>
                 ebooks.Add(
                         new Models.Response.EbookResponse() {
+                            id = x.IdEbookNavigation.IdEbook,
                             nome = x.IdEbookNavigation.NmEbook,
+                            autor = x.IdEbookNavigation.IdAutorNavigation.NmAutor,
                             ebook = x.IdEbookNavigation.DsImg,
                             sinopse = x.IdEbookNavigation.DsEbook,
                             valor = x.IdEbookNavigation.VlEbook,
@@ -39,13 +43,15 @@ namespace backend.Utils.Conversor
                             isbn = x.IdEbookNavigation.DsIsbn,
                             lingua = x.IdEbookNavigation.NmLingua,
                             linguaOriginal = x.IdEbookNavigation.NmLinguaOriginal,
-                            generoPrincipal = x.IdGeneroNavigation.NmGenero
+                            generoPrincipal = x.IdGeneroNavigation.NmGenero,
+                            outrosGeneros = tb.Where( y => y.IdEbook == x.IdEbookNavigation.IdEbook)
+                                              .Select(y => y.IdGeneroNavigation.NmGenero)
+                                              .ToList()
                         }
                     )
             );
 
             return ebooks;
-
         }        
     }
 }

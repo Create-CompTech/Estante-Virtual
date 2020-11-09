@@ -1,4 +1,6 @@
 using System;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Business
 {
@@ -6,14 +8,14 @@ namespace backend.Business
     {
         Database.LoginDatabase db = new Database.LoginDatabase();
 
-        public Models.TbLogin RealizarLogin (Models.TbLogin login)
+        public async Task<Models.TbLogin> RealizarLogin (Models.TbLogin login)
         {
             if(string.IsNullOrEmpty(login.DsEmail))
                 throw new Exception("Email inválido.");
             if(string.IsNullOrEmpty(login.DsSenha))
                 throw new Exception("Senha inválida.");
 
-            return db.RealizarLogin(login); 
+            return await db.RealizarLogin(login); 
         }   
     }
 }

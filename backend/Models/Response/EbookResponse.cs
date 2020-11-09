@@ -4,6 +4,7 @@ namespace backend.Models.Response
 {
     public class EbookResponse
     {
+        public int id { get; set; }
         public string nome { get; set; }
         public string autor { get; set; }
         public string ebook { get; set; }
