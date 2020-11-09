@@ -78,7 +78,7 @@
 
 
 
-i{
+.Cabecalho li{
     cursor: pointer;
     color:#482d66;
 }
@@ -88,7 +88,7 @@ i{
 }
 
 
-ul{
+.Cabecalho ul{
     margin: 0px;
     padding: 0px;
     list-style: none;

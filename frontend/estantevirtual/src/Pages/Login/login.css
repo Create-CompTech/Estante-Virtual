@@ -12,6 +12,18 @@
 }
 
 
+
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95px;
+}
+
+.imagem img{
+    margin-top: 15px;
+}
+
 .container2{
     background-color: #D8DCD6;
     display: flex;
@@ -72,7 +84,7 @@
     border: none;
     border-radius: 5px;
 
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .titulo h1{
