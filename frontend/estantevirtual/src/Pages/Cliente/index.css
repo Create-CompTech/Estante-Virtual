@@ -9,3 +9,90 @@ body{
     width: 100%;
     background: #D8DCD6;
 }
+
+.menu-principal{
+    height: 11.5vh;
+    width: 100%;
+    background: linear-gradient(15deg, #36013F , #343837 );
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+
+.sidebarperfil{
+    position: absolute;
+    left: 0.1px;
+    margin-top: 6vh;
+    width: 21vw;
+    height: 90%;
+    background: #36013F; 
+    transition: all .5s ease-in-out;
+}
+
+.sidebarperfil header{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+    user-select: none;
+    transition: all .4s;
+}
+
+.sidebarperfil ul a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: all 0.6s;
+}
+
+ul li:hover a{
+    padding-right: 40px;
+}
+
+.sidebarperfil ul a li{
+    margin-right: 100px;}
+
+#check{
+    display: none;
+}
+
+label #cancel{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+label #cancel{
+    z-index: 2;
+    left: 50px;
+    top: 12px;
+    font-size: 40px;
+    color: #fff;  
+    background: #282c34;
+    padding: 2px 6px;
+    transition: all 0.5s
+}
+
+#check:checked ~ .sidebarperfil{
+    left: -750px;
+    transition: 1s;
+}
+
+
+#check:checked ~ label #cancel{
+    left: 30px;
+}
+
+#check:checked ~ Inicial{
+    margin-right: 250px;
+}

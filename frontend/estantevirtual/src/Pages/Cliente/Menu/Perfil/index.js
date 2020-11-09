@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './perfil.css'
+import gobook_logo from '../../../../storage/images/logo/SizePinterest/gobook_logo.png'
 
 function Perfil (){
     return(
@@ -8,7 +9,6 @@ function Perfil (){
             <div className="Perfil-Header">
             <input type="checkbox" id="check"></input>
                 <label for="check">
-                    <i class="fas fa-bars" id="btn"></i>
                     <i class="fas fa-bars" id="cancel"></i>
                 </label>
                 <div class="sidebarperfil">
@@ -17,11 +17,12 @@ function Perfil (){
                         <li><Link to="/InicialCliente">Inicial</Link></li>
                         <li><Link to="/Estantes">Minhas estantes</Link></li>
                         <li><Link to="/Carrinho">Meu carrinho</Link></li>
+                        <div className="img">
+                        <img src={gobook_logo} height="240px" width="255px"/>
+                        </div>
                     </ul>
                 </div>
             </div>
-
-            
             <div className="container-menu">
                  <div className="container-perfil">
                      <div className="titulo-perfil">

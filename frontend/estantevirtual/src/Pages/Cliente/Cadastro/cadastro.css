@@ -1,11 +1,12 @@
-.fundocadas{
-    background-color: #D8DCD6;
-}
-
-.container{
-    display: flex;
+.container-tudo{
     width: 100vw;
     height: 100vh;
+}
+
+.container-principal{
+    display: flex;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     border: none;
@@ -66,10 +67,12 @@
     display: flex;
     flex-direction: row-reverse;
     margin-top: 20px;
+    padding: 0;
 }
 
-
-
+.assinante input{
+    margin-top: 3.5px;
+}
 
 .botaocadastro button{
     background: linear-gradient(#EDC8FE,#9DBCD4);
@@ -87,12 +90,6 @@
     margin: 0px;
     margin-left: 3px;
 }
-
-
-
-
-
-
 
 
 .direito h1{

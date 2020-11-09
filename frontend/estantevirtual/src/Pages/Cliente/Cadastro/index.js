@@ -2,11 +2,13 @@ import React from 'react';
 import './cadastro.css';
 import {Link} from 'react-router-dom';
 
+
+
 function Cadastro() {
   return (
-    <div className="fundocadas">
-          <div className="container">
-      <div className="box">
+    <div className="container-tudo">
+           <div className="container-principal">
+       <div className="box">
 
         <div className="direito">
           <h1>Bem-vindo de volta!</h1>
@@ -35,17 +37,17 @@ function Cadastro() {
        </div>
 
        <div class="form">
-        <input type="date" name="name" autocomplete="of" required />
-        <label for="name" class="label-name">
-            <span class="content-name"></span>
-        </label>
+         <input type="date" name="name" autocomplete="of" required />
+         <label for="name" class="label-name">
+           <span class="content-name"></span>
+         </label>
        </div>
 
        <select class="genero" type="text" placeholder="Gênero">
-                    <option value="Masculino">Masculino</option>
-                    <option value="Feminino">Feminino</option>
-                    <option value="Outro">Outro</option>
-                </select>
+         <option value="Masculino">Masculino</option>
+         <option value="Feminino">Feminino</option>
+        <option value="Outro">Outro</option>
+       </select>
 
        <div class="assinante">
           <p>Quero ser assinante</p>
