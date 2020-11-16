@@ -11,6 +11,7 @@ body{
 }
 
 .menu-principal{
+    display: flex;
     height: 11.5vh;
     width: 100%;
     background: linear-gradient(15deg, #36013F , #343837 );
@@ -26,10 +27,11 @@ body{
     position: absolute;
     left: 0.1px;
     margin-top: 6vh;
+    left: -750px;
     width: 21vw;
     height: 90%;
     background: #36013F; 
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .sidebarperfil header{
@@ -74,7 +76,7 @@ label #cancel{
 
 label #cancel{
     z-index: 2;
-    left: 50px;
+    left: 40px;
     top: 12px;
     font-size: 40px;
     color: #fff;  
@@ -84,13 +86,13 @@ label #cancel{
 }
 
 #check:checked ~ .sidebarperfil{
-    left: -750px;
-    transition: 1s;
+    left: 0.1px;
+    transition: all 0.4s ease-in-out;
 }
 
 
 #check:checked ~ label #cancel{
-    left: 30px;
+    left: 55px;
 }
 
 #check:checked ~ Inicial{

@@ -1,0 +1,95 @@
+
+.sidebaradm{
+    position: fixed;
+    left: 0.1px;
+    width: 22vw;
+    height: 100%;
+    background: #36013F; 
+}
+
+.sidebaradm header{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+    user-select: none;
+}
+
+.sidebaradm ul a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.sidebaradm ul li:hover a{
+    padding-right: 40px;
+}
+
+.sidebaradm ul a li{
+    margin-right: 100px;
+}
+
+.imgadm{
+    display: flex;
+    align-items: center;
+    height: 85px;
+    width: 100%;
+}
+
+.imgadm img{
+    height: 250px;
+    width: 95%;
+}
+
+.administradores{
+    display: flex;
+    justify-content: flex-end;
+    height: 87vh;
+    width: 100%;
+}
+
+/* .container-adm{
+    display: flex;
+}/*/
+
+.adm{
+    display: flex;
+    flex-direction: column;
+    height: 35%;
+    width: 19vw;
+    background-color: #fff;
+    border: #36013F solid 3px;
+}
+
+.titulo-adm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    border: #36013F solid 1px;
+}
+
+.titulo-adm h1{
+    font-size: 23px;
+}
+
+.adm-nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+}
+
+.adm-nome p{
+    margin-top: 6px;
+    color: black;
+}

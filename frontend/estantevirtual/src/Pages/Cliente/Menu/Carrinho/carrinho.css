@@ -124,3 +124,7 @@
     width: 133px;
     border-radius: 6px;
 }
+
+.item-container p{
+    color: black;
+}

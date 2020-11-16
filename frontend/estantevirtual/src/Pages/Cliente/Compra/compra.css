@@ -1,0 +1,161 @@
+.fundo-compra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d8dcd6;
+}
+
+.container-compra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 62%;
+    background-color: white;
+    border-radius: 13px;
+    border: #33b864 solid 3px;
+}
+
+@media screen and (max-width: 1150px){
+    .container-compra{
+        height: 70%;
+        width: 80%;
+    }
+}
+
+@media screen and (min-height: 1000px){
+    .container-compra{
+        height: 68%;
+        width: 80%;
+    }
+}
+
+
+.container-pagamento{
+    display: flex;
+    align-items: center;
+    height: 92%;
+    width: 92%;
+}
+
+@media screen and (max-width: 1150px){
+    .container-pagamento{
+        height: 86%;
+    }
+}
+
+.ebook{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 55%;
+}
+
+@media screen and (max-width: 1150px){
+    .ebook{
+        height: 80%;
+    }
+}
+
+.titulo-ebook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+}
+
+.titulo-ebook h1{
+    font-size: 25px;
+}
+
+
+.book1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 35vh;
+    width: 100%;
+
+}
+
+.autor-book{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 25vh;
+    width: 40%;
+}
+
+.autor-book p{
+    color: #A442A0;
+    font-size: 13px;
+}
+
+.descricao-book{
+    display: flex;
+    height: 28vh;
+    width: 100%;
+}
+
+.descricao-book p{
+    font-size: 12px;
+    color: black;
+}
+
+.pagamento{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50%;
+    width: 45%;
+}
+
+.info-pagamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 16vh;
+    width: 100%;
+}
+
+
+.info-pagamento h1{
+    font-size: 25px;
+}
+
+
+
+.forma-pagamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    width: 100%;
+}
+
+.forma-pagamento select{
+    height: 30px;
+    width: 140px;
+    font-size: 14px;
+}
+
+.botao-prosseguir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    width: 100%;
+}
+
+.botao-prosseguir button{
+    height: 7.5vh;
+    width: 10vw;
+    background-color: #33b864;
+    border-radius: 8px;
+    color: white;
+}

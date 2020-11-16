@@ -70,6 +70,10 @@
     padding: 0;
 }
 
+.assinante p{
+    color: black;
+}
+
 .assinante input{
     margin-top: 3.5px;
 }

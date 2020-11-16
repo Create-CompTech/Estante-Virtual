@@ -33,3 +33,7 @@
     padding: 8px;
     border-color: #A442A0;
 }
+
+.descricao p{
+    color: black;
+}

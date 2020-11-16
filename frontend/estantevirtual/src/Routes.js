@@ -14,6 +14,11 @@ import Perfil from './Pages/Cliente/Menu/Perfil'
 import Estantes from './Pages/Cliente/Menu/Estantes'
 import Carrinho from './Pages/Cliente/Menu/Carrinho'
 import ConfirmarEmail from './Pages/Login/ConfirmarEmail'
+import Compra from './Pages/Cliente/Compra'
+import Cartao from './Pages/Cliente/Compra/Cartao'
+import InicialAdm from './Pages/Admin/index'
+import GerenciarEbook from './Pages/Admin/GerenciarEbook'
+import AlterarEbook from './Pages/Admin/GerenciarEbook/AlterarEbook'
 
 export default function Routes(){
 
@@ -32,6 +37,11 @@ export default function Routes(){
                 <Route path="/Perfil" component={Perfil} />
                 <Route path="/Estantes" component={Estantes} />
                 <Route path="/Carrinho" component={Carrinho} />
+                <Route path="/Comprar" component={Compra} />
+                <Route path="/PagamentoCartao" component={Cartao} />
+                <Route path="/InicialAdm" component={InicialAdm} />
+                <Route path="/GerenciarEbook" component={GerenciarEbook} />
+                <Route path="/AlterarEbook" component={AlterarEbook} />
             </Switch>
         </BrowserRouter>
     )

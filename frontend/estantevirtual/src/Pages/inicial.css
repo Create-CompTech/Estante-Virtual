@@ -68,13 +68,13 @@
 }
 
 .BotoesCabeçalho1{
-    margin-right: 20px;
+    margin-right: 25px;
     color: #fff;
     font-size: 16px;
 }
 
 .BotoesCabeçalho2{
-    margin-right: 10px;
+    margin-right: 15px;
     color: #fff;
     font-size: 16px;
 }
@@ -226,7 +226,7 @@
 }
 
 .container-destaque{
-    height: 70vh;
+    height: 60vh;
     width: 90%;
     margin-top: 30px;
     background-color: white;
@@ -373,10 +373,21 @@
 
 .menu-baixo{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     background: linear-gradient(15deg, #36013F , #343837 );
     height: 11vh;
     margin-top: 75px;
     width: 100%;
     border: black solid 1px;
+}
+
+.menu-baixo a,p{
+    color: #fff;
+}
+
+.menu-baixo a{
+    padding: 5px;
+    pointer-events: all;
 }

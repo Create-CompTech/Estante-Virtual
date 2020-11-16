@@ -40,6 +40,16 @@ function Perfil (){
                      </div>
                  </div>
             </div>
+            <div className="menu-baixo">
+              <div className="componentes">
+                <a href="#">Sobre /</a>
+                <a href="#">Termos /</a>
+                <a href="#">Contate-nos /</a>
+              </div>
+              <div className="orderby">
+                <p>São Paulo - SP</p>
+              </div>
+            </div>
         </div>
     );
 }

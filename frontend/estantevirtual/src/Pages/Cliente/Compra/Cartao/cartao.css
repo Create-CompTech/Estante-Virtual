@@ -1,0 +1,60 @@
+.pagamento-cartao{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 45%;
+}
+
+.cartao-form{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+}
+
+.info-pagamento1 h1{
+    text-align: start;
+    font-size: 25px;
+}
+
+.cartao-form .cartao{
+    height: 35px;
+    width: 135px;
+}
+
+
+.cartao1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45%;
+    width: 100%;
+}
+
+.cartao1 p{
+    color: black;
+}
+
+.finalizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    width: 100%;
+
+}
+
+.finalizar button{
+    height: 7.5vh;
+    width: 10vw;
+    background-color: #33b864;
+    border-radius: 8px;
+    color: white;
+}
+
+.container-forma input{
+    outline: none;
+    padding: 5px;
+    border-color: #33b864;
+}

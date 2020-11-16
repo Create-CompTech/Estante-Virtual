@@ -1,0 +1,99 @@
+.nome-adm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 21vh;
+    width: 20vw;
+}
+
+.nome-adm h3{
+    font-size: 18px;
+}
+
+
+.adicionar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.adicionar-container{
+    display: flex;
+    height: 75vh;
+    width: 65%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.add-esquerdo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.add-direito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.container-esquerdo{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 95%;
+    border: #351f3b solid 1px;
+}
+
+.container-direito{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 95%;
+    border: #351f3b solid 1px;
+}
+
+.input-add{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 9vh;
+    width: 100%;
+}
+
+.input-add p{
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.botao-adicionar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vh;
+    width: 100%;
+}
+
+.botao-adicionar button{
+    height: 6vh;
+    width: 8vw;
+    margin: 15px;
+    background-color: #33b864;
+    border-radius: 8px;
+    color: white;
+}
+
+.input-add input{
+    outline: none;
+    padding: 3px;
+    height: 30px;
+}
+

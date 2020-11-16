@@ -80,13 +80,18 @@ function Carrinho(){
                 </div>
             </div>
             <div className="botao-comprar">
-                <button>Comprar</button>
+                <Link to="/Comprar"><button>Comprar</button></Link>
             </div>
-
             <div className="menu-baixo">
-
+               <div className="componentes">
+                  <a href="#">Sobre /</a>
+                  <a href="#">Termos /</a>
+                  <a href="#">Contate-nos /</a>
+               </div>
+               <div className="orderby">
+                  <p>São Paulo - SP</p>
+               </div>
             </div>
-
         </div>       
     );
 }
