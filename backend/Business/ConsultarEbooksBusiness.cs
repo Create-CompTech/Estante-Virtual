@@ -14,7 +14,7 @@ namespace backend.Business
             return await db.EbooksPorGenero();
         }
 
-        public async Task<List<Models.TbGeneroEbook>> PesquisaEbookAutor(string nome)
+        public async Task<List<Models.TbEbook>> PesquisaEbookAutor(string nome)
         {
             if (String.IsNullOrEmpty(nome))
                 throw new ArgumentException("Nenhum critério de pesquisa foi encontrado.");
