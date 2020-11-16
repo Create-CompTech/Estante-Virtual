@@ -68,7 +68,9 @@ export default function AlterarEbook() {
                 <h1>Eragon</h1>
               </div>
               <div className="botao-alterar1">
-                <button>Alterar informações</button>
+                <Link to="/AlterarInformacao">
+                  <button>Alterar informações</button>
+                  </Link>
               </div>
               </div>
             </div>
@@ -81,7 +83,9 @@ export default function AlterarEbook() {
                 <h1>Eragon</h1>
               </div>
               <div className="botao-alterar1">
-                <button>Alterar informações</button>
+                <Link to="/AlterarInformacao">
+                  <button>Alterar informações</button>
+                  </Link>
               </div>
               </div>
             </div>
