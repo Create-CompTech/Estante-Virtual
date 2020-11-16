@@ -7,7 +7,7 @@ export default function AlterarEbook() {
     return(
         <div className="gerenciarebook">
         <div className="Inicial">
-      <header className="Inicial-Header">
+        <header className="Inicial-Header">
       
         <div class="Logo">
           <img src={gobook_logo} height="270px" width="275px"/>
