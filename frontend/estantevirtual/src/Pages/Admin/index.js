@@ -17,7 +17,7 @@ export default function InicialAdm(){
                  <li><Link to="/GerenciarEbook">Gerenciar ebooks</Link></li>
                  <li><Link to="/">Classificar Feedbacks</Link></li>
                  <li><Link to="/">Adicionar admin</Link></li>
-                 <li><Link to="/">Sair</Link></li>
+                 <li><Link to="/Login">Sair</Link></li>
                </ul>
               </div>
             </div>

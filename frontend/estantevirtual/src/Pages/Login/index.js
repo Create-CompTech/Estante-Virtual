@@ -59,7 +59,7 @@ const api = new RealizarLogin();
           </p>
         </div>
         <div className="contato">
-          <a to="" href="https://www.instagram.com/gobookcompany/"><img src={instagram} height="49px" width="53px"></img></a>
+          <a href="https://www.instagram.com/gobookcompany/" target="_blank"><img src={instagram} height="49px" width="53px"></img></a>
         </div>
       </div>
 
