@@ -13,7 +13,7 @@ namespace backend.Controllers
         
 
         Business.ConsultarEbooksBusiness business = new Business.ConsultarEbooksBusiness();
-        Utils.Conversor.ConsultarEbooksConversor conversor = new Utils.Conversor.ConsultarEbooksConversor();
+        Utils.Conversor.EbooksConversor conversor = new Utils.Conversor.EbooksConversor();
 
 
         [HttpGet("/porgenero")]
@@ -21,8 +21,8 @@ namespace backend.Controllers
         {
             try 
             {
-                return conversor.ParaResponse(await business.EbooksPorGenero());
-
+                await business.EbooksPorGenero();
+                return new List<List<Models.Response.EbookResponse>>();
             }
             catch(Exception ex)
             {
@@ -35,7 +35,7 @@ namespace backend.Controllers
         {
             try 
             {
-                List<Models.TbGeneroEbook> ebooks = await business.PesquisaEbookAutor(nome);
+                List<Models.TbEbook> ebooks = await business.PesquisaEbookAutor(nome);
 
                 return conversor.ParaResponse(ebooks);
             }

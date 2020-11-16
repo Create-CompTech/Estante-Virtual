@@ -34,16 +34,13 @@ namespace backend.Database
             return ebooksPorGenero;
         }
 
-        public async Task<List<Models.TbGeneroEbook>> PesquisaEbookAutor (string nome)
+        public async Task<List<Models.TbEbook>> PesquisaEbookAutor (string nome)
         {
             
-            List<Models.TbGeneroEbook> ebooks =
-                    ctx.TbGeneroEbook.Include(x => x.IdEbookNavigation)
-                                     .Include(x => x.IdEbookNavigation.IdAutorNavigation)
-                                     .Include(x => x.IdGeneroNavigation)
-                                     .Where(x => x.IdEbookNavigation.NmEbook == nome ||
-                                                 x.IdEbookNavigation.IdAutorNavigation.NmAutor == nome)
-                                     .ToList();
+            List<Models.TbEbook> ebooks =
+                    await ctx.TbEbook.Include(x => x.IdAutorNavigation)
+                                     .Where(x => x.NmEbook == nome || x.IdAutorNavigation.NmAutor == nome)
+                                     .ToListAsync();
 
             return ebooks;
         }
