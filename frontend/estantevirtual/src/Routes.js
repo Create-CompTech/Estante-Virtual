@@ -20,6 +20,7 @@ import InicialAdm from './Pages/Admin/index'
 import GerenciarEbook from './Pages/Admin/GerenciarEbook'
 import AlterarEbook from './Pages/Admin/GerenciarEbook/AlterarEbook'
 import AlterarInformacao from './Pages/Admin/GerenciarEbook/AlterarEbook/AlterarInformaçao'
+import CadastrarAdm from './Pages/Admin/AdicionarAdm'
 
 export default function Routes(){
 
@@ -44,6 +45,7 @@ export default function Routes(){
                 <Route path="/GerenciarEbook" component={GerenciarEbook} />
                 <Route path="/AlterarEbook" component={AlterarEbook} />
                 <Route path="/AlterarInformacao" component={AlterarInformacao} />
+                <Route path="/CadastroAdm" component={CadastrarAdm} />
             </Switch>
         </BrowserRouter>
     )

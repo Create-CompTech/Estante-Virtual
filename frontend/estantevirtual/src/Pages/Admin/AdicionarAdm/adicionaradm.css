@@ -1,0 +1,105 @@
+.menu-add-adm{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(15deg, #36013F , #343837 );
+}
+
+.container-add-adm{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70.5vh;
+    width: 100%;
+}
+
+.container-branco-adm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    width: 42%;
+    margin-right: 25vh;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container-campos{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    border: #825F87 solid 2px;
+}
+
+.titulo-adm-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+
+}
+
+.titulo-adm-add h1{
+    font-size: 25px;
+}
+
+.foto-adm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    width: 100%;
+}
+
+.cadastro-adm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15vh;
+    width: 100%;
+}
+
+.input-adm-cd{
+    display: flex;
+    margin-top: 8px;
+}
+
+.input-adm-cd input{
+    height: 29px;
+    padding: 5px;
+    border: #36013F solid 2px;
+}
+
+.genero-cargo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    height: 7vh;
+    width: 100%;
+}
+
+.genero-cargo select{
+    height: 30px;
+    width: 140px;
+    font-size: 14px;
+}
+
+.botao-cadastrar-adm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+}
+
+.botao-cadastrar-adm button{
+    color: white;
+    height: 40px;
+    width: 110px;
+    background-color: #33b864;
+    border: none;
+}

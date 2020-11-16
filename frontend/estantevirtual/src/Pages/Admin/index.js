@@ -16,7 +16,7 @@ export default function InicialAdm(){
                <ul>
                  <li><Link to="/GerenciarEbook">Gerenciar ebooks</Link></li>
                  <li><Link to="/">Classificar Feedbacks</Link></li>
-                 <li><Link to="/">Adicionar admin</Link></li>
+                 <li><Link to="/CadastroAdm">Adicionar admin</Link></li>
                  <li><Link to="/Login">Sair</Link></li>
                </ul>
               </div>
@@ -40,6 +40,16 @@ export default function InicialAdm(){
              </div>
            </div>
          </div>
+         <div className="menu-baixo">
+                <div className="componentes">
+                 <a href="#">Sobre /</a>
+                 <a href="#">Termos /</a>
+                 <a href="#">Contate-nos /</a>
+                </div>
+                <div className="orderby">
+                <p>São Paulo - SP</p>
+                </div>
+            </div>
       </div>
     );
 }
