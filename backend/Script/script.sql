@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_ebook` (
   `id_ebook` INT NOT NULL AUTO_INCREMENT,
   `id_autor` INT NOT NULL,
   `nm_ebook` VARCHAR(100) NULL,
-  `ds_ebook` VARCHAR(100) NULL,
+  `ds_ebook` VARCHAR(500) NULL,
   `ds_img` VARCHAR(100) NULL,
   `vl_ebook` DECIMAL(15,2) NULL,
   `qt_paginas` INT NULL,
@@ -75,6 +75,7 @@ CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_login` (
   `ds_email` VARCHAR(200) NULL,
   `ds_senha` VARCHAR(30) NULL,
   `ds_perfil` VARCHAR(100) NULL,
+  `ds_cod_seguranca` VARCHAR(9) NULL,
   PRIMARY KEY (`id_login`))
 ENGINE = InnoDB;
 
@@ -429,6 +430,8 @@ DROP TABLE IF EXISTS `db_gobook`.`tb_prateleira` ;
 CREATE TABLE IF NOT EXISTS `db_gobook`.`tb_prateleira` (
   `id_prateleira` INT NOT NULL AUTO_INCREMENT,
   `id_estante` INT NOT NULL,
+  `ds_nome` VARCHAR(70),
+  `nr_posicao` INT NULL,
   PRIMARY KEY (`id_prateleira`),
   INDEX `fk_tb_prateleira_tb_estante1_idx` (`id_estante` ASC) ,
   CONSTRAINT `fk_tb_prateleira_tb_estante1`
