@@ -23,6 +23,8 @@ namespace backend.Models
         public string DsSenha { get; set; }
         [Column("ds_perfil", TypeName = "varchar(100)")]
         public string DsPerfil { get; set; }
+        [Column("ds_cod_seguranca", TypeName = "varchar(9)")]
+        public string DsCodSeguranca { get; set; }
 
         [InverseProperty("IdLoginNavigation")]
         public virtual ICollection<TbControleAdmin> TbControleAdmin { get; set; }

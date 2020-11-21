@@ -9,10 +9,10 @@ namespace backend.Models
     public partial class TbPrateleiraItem
     {
         [Key]
-        [Column("id_prateleira_item", TypeName = "int(10) unsigned")]
-        public uint IdPrateleiraItem { get; set; }
-        [Column("id_prateleira", TypeName = "int(10) unsigned")]
-        public uint IdPrateleira { get; set; }
+        [Column("id_prateleira_item", TypeName = "int(11)")]
+        public int IdPrateleiraItem { get; set; }
+        [Column("id_prateleira", TypeName = "int(11)")]
+        public int IdPrateleira { get; set; }
         [Column("id_ebook", TypeName = "int(11)")]
         public int IdEbook { get; set; }
         [Column("bt_favorito")]

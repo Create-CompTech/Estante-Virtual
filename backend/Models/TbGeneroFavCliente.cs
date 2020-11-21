@@ -9,8 +9,8 @@ namespace backend.Models
     public partial class TbGeneroFavCliente
     {
         [Key]
-        [Column("id_genero_fav_cliente", TypeName = "int(10) unsigned")]
-        public uint IdGeneroFavCliente { get; set; }
+        [Column("id_genero_fav_cliente", TypeName = "int(11)")]
+        public int IdGeneroFavCliente { get; set; }
         [Column("id_cliente", TypeName = "int(11)")]
         public int IdCliente { get; set; }
         [Column("id_genero", TypeName = "int(11)")]

@@ -9,6 +9,7 @@ namespace backend.Database
     public class ConsultarEbooksDatabase
     {
         Models.db_gobookContext ctx = new Models.db_gobookContext();
+        Database.LoginDatabase loginDB = new LoginDatabase();
 
 
 
@@ -34,6 +35,8 @@ namespace backend.Database
             return ebooksPorGenero;
         }
 
+
+
         public async Task<List<Models.TbEbook>> PesquisaEbookAutor (string nome)
         {
             
@@ -45,14 +48,37 @@ namespace backend.Database
             return ebooks;
         }
 
-        public async Task<List<Models.TbEbook>> EbooksCliente (int id)
-        {
-            // incompletoooooooooooo
-            List<Models.TbEbook> ebooks =
-                    await ctx.TbEbook.Include(x => x.IdAutorNavigation)
-                                     .ToListAsync();
 
-            return ebooks;
+
+        public async Task<List<List<Models.TbEbook>>> EbooksCliente (int idLogin)
+        {
+            idLogin = loginDB.IdCliente(idLogin);
+            List<List<Models.TbEbook>> ebooksFinal = new List<List<Models.TbEbook>>();
+
+            Models.TbEstante estante = await ctx.TbEstante.FirstOrDefaultAsync(x => x.IdCliente == idLogin);
+            List<Models.TbPrateleira> prateleiras = ctx.TbPrateleira.Where(x => x.IdEstante == estante.IdEstante).ToList();
+            
+
+            foreach(Models.TbPrateleira prateleira in prateleiras)
+            {
+                List<Models.TbEbook> ebooks = new List<Models.TbEbook>();
+                
+                List<Models.TbPrateleiraItem> prateleiraItems = ctx.TbPrateleiraItem.Where(x => x.IdPrateleira == prateleira.IdPrateleira)
+                                                                                    .ToList();
+                
+                foreach(Models.TbPrateleiraItem prateleiraItem in prateleiraItems)
+                {
+                    ebooks.Add(
+                        await ctx.TbEbook.Include(x => x.IdAutorNavigation)
+                                         .FirstOrDefaultAsync(x => x.IdEbook == prateleiraItem.IdEbook)
+                    );
+                }
+
+                ebooksFinal.Add(ebooks);
+            }
+
+
+            return ebooksFinal;
         }
     }
 }

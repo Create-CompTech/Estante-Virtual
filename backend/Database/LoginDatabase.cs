@@ -27,5 +27,13 @@ namespace backend.Database
 
             return login;
         }
+
+        public int IdCliente (int idLogin)
+        {
+            Models.TbUsuario user = ctx.TbUsuario.FirstOrDefault(x => x.IdLogin == idLogin);
+            
+            return ctx.TbCliente.FirstOrDefault(x => x.IdUsuario == user.IdUsuario)
+                                .IdCliente;
+        }
     }
 }

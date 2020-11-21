@@ -30,6 +30,7 @@ namespace backend.Controllers
             }
         }
 
+
         [HttpGet("/ebookautor")]
         public async Task<ActionResult<List<Models.Response.EbookResponse>>> PesquisaEbookAutor (string nome) 
         {
@@ -45,12 +46,13 @@ namespace backend.Controllers
             }
         }
 
+
         [HttpGet("/ebookscliente")]
-        public async Task<ActionResult<List<Models.Response.EbookResponse>>> EbooksCliente (int id) 
+        public async Task<ActionResult<List<List<Models.Response.EbookResponse>>>> EbooksCliente (int idLogin) 
         {
             try 
             {
-                List<Models.TbEbook> ebooks = await business.EbooksCliente(id);
+                List<List<Models.TbEbook>> ebooks = await business.EbooksCliente(idLogin);
 
                 return conversor.ParaResponse(ebooks);
             }

@@ -41,7 +41,7 @@ namespace backend.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql("server=localhost;user id=admin;password=1234@AbC#2020;database=db_gobook", x => x.ServerVersion("5.7.32-mysql"));
+                optionsBuilder.UseMySql("server=localhost;user id=admin;password=1234@AbC#2020;database=db_gobook", x => x.ServerVersion("8.0.18-mysql"));
             }
         }
 
@@ -353,6 +353,10 @@ namespace backend.Models
                 entity.HasKey(e => e.IdLogin)
                     .HasName("PRIMARY");
 
+                entity.Property(e => e.DsCodSeguranca)
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
+
                 entity.Property(e => e.DsEmail)
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
@@ -412,6 +416,10 @@ namespace backend.Models
 
                 entity.HasIndex(e => e.IdEstante)
                     .HasName("fk_tb_prateleira_tb_estante1_idx");
+
+                entity.Property(e => e.DsNome)
+                    .HasCharSet("utf8")
+                    .HasCollation("utf8_general_ci");
 
                 entity.HasOne(d => d.IdEstanteNavigation)
                     .WithMany(p => p.TbPrateleira)

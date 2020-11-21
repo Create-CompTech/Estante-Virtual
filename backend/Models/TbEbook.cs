@@ -24,7 +24,7 @@ namespace backend.Models
         public int IdAutor { get; set; }
         [Column("nm_ebook", TypeName = "varchar(100)")]
         public string NmEbook { get; set; }
-        [Column("ds_ebook", TypeName = "varchar(100)")]
+        [Column("ds_ebook", TypeName = "varchar(500)")]
         public string DsEbook { get; set; }
         [Column("ds_img", TypeName = "varchar(100)")]
         public string DsImg { get; set; }
