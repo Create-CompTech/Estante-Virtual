@@ -1,72 +1,218 @@
-.Perfil{
-    height: 11.5vh;
+.container-perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 105vh;
     width: 100%;
-    background: linear-gradient(15deg, #36013F , #343837 );
+}
+
+.perfil-branco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 52%;
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container-perfil-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 95%;
+    border: #825F87 solid 2px;
+}
+
+.perfil-titulo{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.perfil-titulo h1{
+    font-size: 24px;
+}
+
+.perfil-titulo h1:hover{
+    color: #069AF3;
+    font-size: 26px;
+}
+
+.suas-informacao{
+    display: flex;
+    flex-direction: row;
+    height: 22vh;
+    width: 100%;
+}
+
+.foto-perfil{
+    display: flex;
+    height: 92%;
+    width: 22%;
+    border: black solid 1px;
+}
+
+.info-usuario{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 88%;
+}
+
+.info-1{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 6vh;
+    width: 95%;
+}
+
+.ds-usuario input{
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    width: 265px;
+    border: #825F87 solid 1px;
+    border-color: #825F87;
+}
+
+#data-usuario input{
+    height: 30px;
+    width: 149px;
+    margin: 15px;
+    border: #825F87 solid 1px;
 }
 
 
-.container-menu{
+.alterar-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 6vh;
+    width: 95%;
+}
+
+.alterar-info a{
+    color: #069AF3;
+    text-decoration: none;
+}
+
+.descricao-usuario{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 14vh;
+    width: 100%;
+}
+
+.container-du{
+    display: flex;
+    height: 98%;
+    width: 80%;
+}
+
+.container-du input {
+    size: 60px;
+    padding: 5px;
+    width: 265px;
+}
+
+.assinatura{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 22vh;
+    width: 100%;
+}
+
+.titulo-assinatura{
+    display: flex;
+    align-items: center;
+    height: 9vh;
+    width: 100%;
+}
+
+.titulo-assinatura h1{
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.titulo-assinatura h1:hover{
+    color: #069AF3;
+    font-size: 26px;
+}
+
+.input-assinatura{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.container-perfil{
-    display: flex;
-    background-color: white;
     flex-direction: column;
-    height: 85vh;
-    width: 59vw;
-    margin-top: 50px;
+    height: 90%;
+    width: 82.5%;
 }
 
-.titulo-perfil{
+#nome input{
+    height: 30px;
+    width: 149px;
+    margin: 15px;
+    border: #825F87 solid 1px;
+}
+
+#cartao input{
+    height: 30px;
+    width: 149px;
+    margin: 15px;
+}
+
+.ponto{
     display: flex;
+    flex-direction: column;
+    height: 16vh;
+    width: 100%;
+}
+
+
+.titulo-ponto{
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+}
+
+.titulo-ponto h1{
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.titulo-ponto h1:hover{
+    color: #069AF3;
+    font-size: 26px;
+}
+
+.qtd-ponto{
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
     height: 7vh;
     width: 100%;
-    border: black solid 2px;
 }
 
-.titulo-perfil h1{
-    font-size: 29px;
-}
-
-.titulo-perfil h1:hover{
-    color: #36013F;
-}
-
-
-.informacao{
+.div-ponto{
     display: flex;
-    justify-content: center;
-}
-
-.informacao-container{
-    display: flex;
-    height: 54vh;
-    width: 59vw;
-    border: pink solid 2px;
-}
-
-.foto{
-    height: 24vh;
-    width: 12vw;
-    border: black solid 1px;
-}
-
-.dados-container{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 53vh;
-    width: 50vw;
-    border: black solid 1px;
+    height: 7vh;
+    width: 78%;
 }
 
-.dados{
-    display: flex;
-    height: 45vh;
-    width: 42vw;
-    border: black solid 1px;
+.div-ponto input{
+    height: 30px;
+    width: 65px;
+    border: #825F87 solid 1px;
 }

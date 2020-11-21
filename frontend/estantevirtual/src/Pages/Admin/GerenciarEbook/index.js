@@ -21,8 +21,8 @@ export default function GerenciarEbook(){
       <body>
         <nav class="Cabeçalho">
             <ul class="OpcoesCabeçalho">
-            <Link to="./InicialAdm"><li class="OpcoesCabeçalho2">Inicial</li></Link>
-              <Link to="./AlterarEbook"><li class="OpcoesCabeçalho2">Alterar Ebook</li></Link>
+            <Link to="./InicialAdm"><li class="OpcoesCabeçalho2">Voltar</li></Link>
+              <Link to="./AlterarEbook"><li class="OpcoesCabeçalho2">Ebooks</li></Link>
             </ul>
           </nav>
         </body>

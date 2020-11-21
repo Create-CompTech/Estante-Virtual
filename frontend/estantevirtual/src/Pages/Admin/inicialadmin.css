@@ -30,10 +30,12 @@
 
 .sidebaradm ul li:hover a{
     padding-right: 40px;
+    text-decoration: none;
 }
 
 .sidebaradm ul a li{
     margin-right: 100px;
+    text-decoration: none;
 }
 
 .imgadm{

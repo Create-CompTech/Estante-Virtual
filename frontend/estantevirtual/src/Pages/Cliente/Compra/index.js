@@ -2,20 +2,27 @@ import React from 'react';
 import './compra.css';
 import {Link} from 'react-router-dom';
 import gobook_logo from '../../../storage/images/logo/SizePinterest/gobook_logo.png'
-import instagram from '../../../storage/images/icons/instagram_icon.png'
+
 
 export default function Compra(){
     return(
         <div className="Compra">
-           <div className="menu">
-                <div className="imagem">
-                <p>
-                  <img src={gobook_logo} height="215px" width="235px"/>
-                </p>
-               </div>
-            <div className="contato">
-                <a to="" href="https://www.instagram.com/gobookcompany/"><img src={instagram} height="49px" width="53px"></img></a>
-            </div>
+            <div className="MenuCadastro">
+               <input type="checkbox" id="check"></input>
+                <label for="check">
+                    <i class="fas fa-bars" id="cancel"></i>
+                </label>
+                <div class="sidebarperfil">
+                    <header>Menu goBook</header>
+                    <ul>
+                        <li><Link to="/InicialCliente">Inicial</Link></li>
+                        <li><Link to="/Perfil">Perfil</Link></li>
+                        <li><Link to="/Estantes">Minhas estantes</Link></li>
+                        <div className="img">
+                        <img src={gobook_logo} height="240px" width="255px"/>
+                        </div>
+                    </ul>
+                </div>
             </div>
             <div className="fundo-compra">
                 <div className="container-compra">
@@ -44,7 +51,7 @@ export default function Compra(){
                         </div>
                         <div className="pagamento">
                             <div className="info-pagamento">
-                                <h1>Informações do pagamento</h1>
+                                <h1>Forma de pagamento</h1>
                                 <div className="forma-pagamento">
                                      <select class="genero" type="text" placeholder=" Pagamento">
                                      <option value="Feminino">Cartão</option>

@@ -1,0 +1,86 @@
+.container-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.container-alterar-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.info-esquerdo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 53%;
+    margin-right: 7px;
+    border: black solid 1px;
+}
+
+.info-direito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 90%;
+    width: 37%;
+    margin-left: 7px;
+    border: black solid 1px;
+}
+
+.input-alterar p{
+    color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.input-alterar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 9vh;
+    width: 100%;
+}
+
+.input-alterar input{
+    outline: none;
+    padding: 3px;
+    height: 30px;
+}
+
+.botao-adicionar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vh;
+    width: 100%;
+}
+
+.botao-adicionar button{
+    height: 6vh;
+    width: 8vw;
+    margin: 15px;
+    background-color: #33b864;
+    border-radius: 8px;
+    color: white;
+}
+
+.botao-adicionar button:hover{
+    background-color: beige;
+    color: #33b864;
+    height: 6vh;
+    width: 8vw;
+    margin: 15px;
+    border-radius: 8px;
+}

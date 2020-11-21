@@ -1,7 +1,9 @@
 import React from 'react'
+
 import './inicialadmin.css'
 import { Link } from 'react-router-dom';
 import gobook_logo from '../../storage/images/logo/SizePinterest/gobook_logo.png';
+import fundo from '../../storage/images/logo/SizePinterest/fundo.png'
 
 
 export default function InicialAdm(){
@@ -14,7 +16,7 @@ export default function InicialAdm(){
                  <img src={gobook_logo} height="290px" width="255px"/>
                  </div>
                <ul>
-                 <li><Link to="/GerenciarEbook">Gerenciar ebooks</Link></li>
+                 <li><Link to="/CadastrarEbook">Gerenciar ebooks</Link></li>
                  <li><Link to="/">Classificar Feedbacks</Link></li>
                  <li><Link to="/CadastroAdm">Adicionar admin</Link></li>
                  <li><Link to="/Login">Sair</Link></li>

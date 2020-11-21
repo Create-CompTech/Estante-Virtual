@@ -7,9 +7,9 @@
 
 .container-add-adm{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    height: 70.5vh;
+    height: 85vh;
     width: 100%;
 }
 
@@ -17,15 +17,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55vh;
-    width: 42%;
-    margin-right: 25vh;
+    height: 78vh;
+    width: 45%;
     background-color: white;
+    margin-top: 5vh;
     border-radius: 10px;
 }
 
 .container-campos{
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     height: 90%;
     width: 90%;
@@ -36,21 +38,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 60px;
     width: 100%;
-
 }
 
 .titulo-adm-add h1{
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .foto-adm{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 12vh;
+    height: 13vh;
     width: 100%;
+}
+
+.foto-adm p{
+    color: black;
 }
 
 .cadastro-adm{
@@ -58,7 +63,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 15vh;
+    height: 23vh;
     width: 100%;
 }
 
@@ -78,7 +83,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
-    height: 7vh;
+    height: 9vh;
     width: 100%;
 }
 
@@ -98,8 +103,10 @@
 
 .botao-cadastrar-adm button{
     color: white;
-    height: 40px;
-    width: 110px;
+    height: 45px;
+    width: 120px;
     background-color: #33b864;
     border: none;
+    transition: 0.7s;
+    border-radius: 5px;
 }

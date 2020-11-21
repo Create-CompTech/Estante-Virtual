@@ -17,7 +17,7 @@ import ConfirmarEmail from './Pages/Login/ConfirmarEmail'
 import Compra from './Pages/Cliente/Compra'
 import Cartao from './Pages/Cliente/Compra/Cartao'
 import InicialAdm from './Pages/Admin/index'
-import GerenciarEbook from './Pages/Admin/GerenciarEbook'
+import CadastrarEbook from './Pages/Admin/GerenciarEbook'
 import AlterarEbook from './Pages/Admin/GerenciarEbook/AlterarEbook'
 import AlterarInformacao from './Pages/Admin/GerenciarEbook/AlterarEbook/AlterarInformaçao'
 import CadastrarAdm from './Pages/Admin/AdicionarAdm'
@@ -42,7 +42,7 @@ export default function Routes(){
                 <Route path="/Comprar" component={Compra} />
                 <Route path="/PagamentoCartao" component={Cartao} />
                 <Route path="/InicialAdm" component={InicialAdm} />
-                <Route path="/GerenciarEbook" component={GerenciarEbook} />
+                <Route path="/CadastrarEbook" component={CadastrarEbook} />
                 <Route path="/AlterarEbook" component={AlterarEbook} />
                 <Route path="/AlterarInformacao" component={AlterarInformacao} />
                 <Route path="/CadastroAdm" component={CadastrarAdm} />

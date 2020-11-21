@@ -35,7 +35,7 @@ export default function AlterarEbook() {
               </div>
               <div className="informacoes">
               <div className="titulo-livro">
-                <h1>Eragon</h1>
+                <p>Eragon</p>
               </div>
               <div className="botao-alterar1">
                 <Link to="./AlterarInformacao">
@@ -50,7 +50,7 @@ export default function AlterarEbook() {
               </div>
               <div className="informacoes">
               <div className="titulo-livro">
-                <h1>Eragon</h1>
+                <p>Harry Potter e a pedra filosofal</p>
               </div>
               <div className="botao-alterar1">
                 <Link to="./AlterarInformacao">
@@ -69,7 +69,7 @@ export default function AlterarEbook() {
               </div>
               <div className="informacoes">
               <div className="titulo-livro">
-                <h1>Eragon</h1>
+                <p>Gravity Falls: aventuras em dobro</p>
               </div>
               <div className="botao-alterar1">
                 <Link to="/AlterarInformacao">
@@ -84,7 +84,7 @@ export default function AlterarEbook() {
               </div>
               <div className="informacoes">
               <div className="titulo-livro">
-                <h1>Eragon</h1>
+                <p>Jack Sparrow: O Guardião do Tempo</p>
               </div>
               <div className="botao-alterar1">
                 <Link to="/AlterarInformacao">
