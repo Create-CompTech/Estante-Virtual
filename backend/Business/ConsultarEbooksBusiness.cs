@@ -21,5 +21,13 @@ namespace backend.Business
 
             return await db.PesquisaEbookAutor(nome);
         }
+
+        public async Task<List<Models.TbEbook>> EbooksCliente (int id)
+        {
+            if (id <= 0)
+                throw new ArgumentException("Id inválido.");
+
+            return await db.EbooksCliente(id);
+        }
     }
 }

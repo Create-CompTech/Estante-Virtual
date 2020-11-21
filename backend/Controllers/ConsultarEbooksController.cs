@@ -44,5 +44,20 @@ namespace backend.Controllers
                 return BadRequest(new Models.Response.ErroResponse(ex, 400));
             }
         }
+
+        [HttpGet("/ebookscliente")]
+        public async Task<ActionResult<List<Models.Response.EbookResponse>>> EbooksCliente (int id) 
+        {
+            try 
+            {
+                List<Models.TbEbook> ebooks = await business.EbooksCliente(id);
+
+                return conversor.ParaResponse(ebooks);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(new Models.Response.ErroResponse(ex, 400));
+            }
+        }
     }
 }

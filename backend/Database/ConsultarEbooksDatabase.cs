@@ -44,5 +44,15 @@ namespace backend.Database
 
             return ebooks;
         }
+
+        public async Task<List<Models.TbEbook>> EbooksCliente (int id)
+        {
+            // incompletoooooooooooo
+            List<Models.TbEbook> ebooks =
+                    await ctx.TbEbook.Include(x => x.IdAutorNavigation)
+                                     .ToListAsync();
+
+            return ebooks;
+        }
     }
 }
