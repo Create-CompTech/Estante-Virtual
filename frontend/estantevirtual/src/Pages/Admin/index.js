@@ -2,56 +2,31 @@ import React from 'react'
 
 import './inicialadmin.css'
 import { Link } from 'react-router-dom';
+import Rodape from '../../components/Rodape';
+
 import gobook_logo from '../../storage/images/logo/SizePinterest/gobook_logo.png';
 import fundo from '../../storage/images/logo/SizePinterest/fundo.png'
+import CabecalhoAdmin from '../../components/CabecalhoAdmin';
 
 
-export default function InicialAdm(){
+export default function InicialAdm(props){
+
+    const infos = props.location.state;
+
+
     return(
       <div className="Inicialadm">
-        <div className="menu-principal">
-           <div className="MenuCadastro">
-              <div class="sidebaradm">
-                 <div className="imgadm">
-                 <img src={gobook_logo} height="290px" width="255px"/>
-                 </div>
-               <ul>
-                 <li><Link to="/CadastrarEbook">Gerenciar ebooks</Link></li>
-                 <li><Link to="/">Classificar Feedbacks</Link></li>
-                 <li><Link to="/CadastroAdm">Adicionar admin</Link></li>
-                 <li><Link to="/Login">Sair</Link></li>
-               </ul>
-              </div>
-            </div>
-         </div>
-         <div className="administradores">
-           <div className="container-adm">
-             <div className="adm">
-               <div className="titulo-adm">
-                 <h1>Administradores</h1>
-               </div>
-               <div className="adm-nome">
-                 <p>Gustavo Furtado</p>
-               </div>
-               <div className="adm-nome">
-                 <p>Sthefany Cristovam</p>
-               </div>
-               <div className="adm-nome">
-                 <p>Lucas de Paula</p>
-               </div>
-             </div>
-           </div>
-         </div>
-         <div className="menu-baixo">
-                <div className="componentes">
-                 <a href="#">Sobre /</a>
-                 <a href="#">Termos /</a>
-                 <a href="#">Contate-nos /</a>
-                </div>
-                <div className="orderby">
-                <p>São Paulo - SP</p>
-                </div>
-            </div>
+        
+        <CabecalhoAdmin props = { props.location.state } />
+
+        <div className="opcoes_admin">
+            <Link to={{
+                  pathname: "/CadastrarEbook",
+                  state: props
+            }}>Cadastrar ebooks</Link>
+        </div>
+
+        <Rodape />
       </div>
     );
 }

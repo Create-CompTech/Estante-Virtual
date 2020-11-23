@@ -1,9 +1,11 @@
 import React from 'react'
 import './gerenciar.css'
 import { Link } from 'react-router-dom';
-import gobook_logo from '../../../storage/images/logo/SizePinterest/gobook_logo.png'
+import gobook_logo from '../../../../storage/images/logo/SizePinterest/gobook_logo.png'
 
-export default function GerenciarEbook(){
+export default function GerenciarEbook(props){
+
+
     return(
         <div className="gerenciarebook">
         <div className="Inicial">
@@ -14,7 +16,7 @@ export default function GerenciarEbook(){
         </div>
 
         <div className="nome-adm">
-            <h3>Seja bem-vindo Gustavo Furtado</h3>
+            <h3>Sinta-se em casa, {props.location.state.nome}!</h3>
         </div>
 
       </header>

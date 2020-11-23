@@ -10,4 +10,8 @@ export default class ConsultarEbooks {
         const resp = await api.get();
         return resp.data;
     }
+
+    async EbooksCliente(idLogin) {
+        const resp = await api.get('/ebookscliente', idLogin);
+    }
 }

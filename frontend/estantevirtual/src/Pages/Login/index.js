@@ -38,7 +38,7 @@ const api = new RealizarLogin();
     if(resp.perfil === "cliente"){
         navegacao.push("/InicialCliente", resp);
     } else {
-        navegacao.push("/f/admin", resp);
+        navegacao.push("/InicialAdm", resp);
     }
   }
 
