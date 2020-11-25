@@ -2,6 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './inicial.css';
 import gobook_logo from '../storage/images/logo/SizePinterest/gobook_logo.png'
+import Item from "../Item";
+
+import Carousel from 'react-elastic-carousel';
+
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 },
+];
 
 function Inicial() {
   return (
@@ -32,59 +42,119 @@ function Inicial() {
             </ul>
           </nav>
         </body>
-
-        <div className="livros-container">
-        <div class="livros-aventura">
-          <div class="container-aventura">
-            <div className="titulo-aventura">
-              <h1>Livros de aventura</h1>
-            </div>
-            <div className="livros-box">
-              <div className="livros">
-                <div className="livro1"><img src='/assets/HarryPotterPedraFilosofal' height="160x" width="134px" ></img></div>
-                <div className="livro1"><img src='/assets/SenhorDosAneisTolkienV1' height="160x" width="134px" ></img></div>
-                <div className="livro1"><img src='/assets/PiratasDoCaribeJackSparrowOGuardiaoDoTempo.png' height="160x" width="134px" ></img></div>
-                <div className="livro1"><img src='/assets/GravityFallsAventuraEmDobro.png' height="160x" width="134px" ></img></div>
-                <div className="livro1"><img src='/assets/Eragon.png' height="160x" width="134px" ></img></div>
-                <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link></div>
+        <body>
+          <div class="carousel-livros">
+            <h1 class="titulo">Livros de Aventura</h1>
+              <div className="App">
+                <Carousel breakPoints={breakPoints}>
+                  <Item>
+                    <img src='/assets/HarryPotterPedraFilosofal' height="300px" width="200px"/>
+                  </Item>
+                  <Item>
+                    <img src='/assets/SenhorDosAneisTolkienV1' height="300px" width="200px"/>
+                  </Item>
+                  <Item>
+                    <img src='/assets/PiratasDoCaribeJackSparrowOGuardiaoDoTempo.png' height="300px" width="200px"/>
+                  </Item>
+                  <Item>
+                    <img src='/assets/GravityFallsAventuraEmDobro.png' height="300px" width="200px"/>
+                  </Item>
+                  <Item>
+                    <img src='/assets/Eragon.png' height="300px" width="200px"/>
+                  </Item>
+                </Carousel>
               </div>
-            </div>
           </div>
-        </div>
-
-        <div class="livros-romance">
-          <div class="container-romance">
-            <div className="titulo-romance">
-              <h1>Livros de romance</h1>
-            </div>
-            <div className="livros-box">
-              <div className="livros">
-                <div className="livro1"><img src='/assets/FilmeCulpaDasEstrelas.png' height="160x" width="134px" ></img></div>
-                <div className="livro1"><img src='/assets/AGarotaQueVoceDeixouParaTras.png' height="160x" width="134px" ></img></div>
-                <div className="livro1"><img src='/assets/ACincoPassosDeVoce.png' height="160x" width="134px" ></img></div>
-                <div className="livro1"><img src='/assets/AnnaEOBeijoFrances' height="160x" width="134px" ></img></div>
-                <div className="livro1"><img src='/assets/UmQuartoComVista' height="160x" width="134px" ></img></div>
-                <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
+          <div class="carousel-livros">
+            <h1 class="titulo">Livros de Romance</h1>
+              <div className="App">
+              <Carousel breakPoints={breakPoints}>
+                <Item>
+                  <img src='/assets/FilmeCulpaDasEstrelas.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/AGarotaQueVoceDeixouParaTras.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/ACincoPassosDeVoce.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/AnnaEOBeijoFrances' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/UmQuartoComVista' height="300px" width="200px"/>
+                </Item>
+              </Carousel>
               </div>
-            </div>
           </div>
-        </div>
-
-        <div className="livros-fantasia">
-          <div className="container-fantasia">
-            <div className="titulo-fantasia">
-              <h1>Livros de fantasia</h1>
-            </div>
-            <div className="livros">
-              <div className="livro1"><img src='/assets/AGuerraDosTronosAsCronicasDeGeloEFogo.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/AsBrumasDeAvalonMarionZimmer.png' height="160x" width="134px" alt=""></img></div>
-              <div className="livro1"><img src='/assets/OLeaoAFeiticeiraEoGurdaRoupaCronicasDeNarnia.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/OMaravilhosoMagicoDeOz1900.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/OFeiticeiroDeTerramarUrsulaKLEGuin.png' height="160x" width="134px" ></img></div>
-              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
-            </div>
+          <div class="carousel-livros">
+            <h1 class="titulo">Livros de Fantasia</h1>
+              <div className="App">
+              <Carousel breakPoints={breakPoints}>
+                <Item>
+                  <img src='/assets/AGuerraDosTronosAsCronicasDeGeloEFogo.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/AsBrumasDeAvalonMarionZimmer.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/OLeaoAFeiticeiraEoGurdaRoupaCronicasDeNarnia.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/OMaravilhosoMagicoDeOz1900.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/OFeiticeiroDeTerramarUrsulaKLEGuin.png' height="300px" width="200px"/>
+                </Item>
+              </Carousel>
+              </div>
           </div>
-        </div>
+          <div class="carousel-livros">
+            <h1 class="titulo">Livros de Terror</h1>
+              <div className="App">
+              <Carousel breakPoints={breakPoints}>
+                <Item>
+                  <img src='/assets/ItACoisaStephenKing.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/OCemiterioStephenKing.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/AAssombracaoDaCasaDaColina.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/QuatroEstacoesStephenKing.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/GuerraMundialZ.png' height="300px" width="200px"/>
+                </Item>
+              </Carousel>
+              </div>
+          </div>
+          <div class="carousel-livros">
+            <h1 class="titulo">Livros de Terror</h1>
+              <div className="App">
+              <Carousel breakPoints={breakPoints}>
+                <Item>
+                  <img src='/assets/TheWalkingDeadV1.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/TerioEPraticaDeComoSerUmZumbiTiagoToy.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/AIlhaDosMortosRodrigoDeOliveira.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/StrangerThingsGarotosZumbis.png' height="300px" width="200px"/>
+                </Item>
+                <Item>
+                  <img src='/assets/ApocalipseZumbi3AlexandreCallari.png' height="300px" width="200px"/>
+                </Item>
+              </Carousel>
+              </div>
+          </div>
+          
+        </body>
 
         <div className="destaque">
           <div className="container-destaque">
@@ -101,40 +171,6 @@ function Inicial() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="livros-terror">
-          <div className="container-terror">
-            <div className="titulo-terror">
-              <h1>Livros de terror</h1>
-            </div>
-            <div className="livros">
-              <div className="livro1"><img src='/assets/ItACoisaStephenKing.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/OCemiterioStephenKing.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/AAssombracaoDaCasaDaColina.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/QuatroEstacoesStephenKing.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/GuerraMundialZ.png' height="160x" width="134px" ></img></div>
-              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="livros-zumbi">
-          <div className="container-zumbi">
-            <div className="titulo-zumbi">
-              <h1>Livros de zumbis</h1>
-            </div>
-            <div className="livros">
-              <div className="livro1"><img src='/assets/TheWalkingDeadV1.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/TerioEPraticaDeComoSerUmZumbiTiagoToy.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/AIlhaDosMortosRodrigoDeOliveira.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/StrangerThingsGarotosZumbis.png' height="160x" width="134px" ></img></div>
-              <div className="livro1"><img src='/assets/ApocalipseZumbi3AlexandreCallari.png' height="160x" width="134px" ></img></div>
-              <div className="livro-mais"><Link to="#"><p>Mostrar mais</p></Link> </div>
-            </div>
-          </div>
-        </div>
-
         </div>
 
         <div className="menu-baixo">
