@@ -20,6 +20,85 @@ body{
     background: linear-gradient(15deg, #36013F , #343837 );
 }
 
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(15deg, #36013F , #343837 );
+    transition: all .5s ease;
+  }
+
+  .sidebar header {
+    font-size: 22px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    user-select: none;
+  }
+
+  .sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    transition: .4s;
+  }
+  ul li:hover a{
+    padding-left: 100px;
+  }
+  .sidebar ul a i{
+    margin-right: 16px;
+  }
+  #check{
+    display: none;
+  }
+  label #btn,label #cancel{
+    position: absolute;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: #D8DCD6;
+    padding: 6px 12px;
+    transition: all .5s;
+  }
+
+  label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #D8DCD6;
+    padding: 4px 9px;
+    transition: all .5s ease;
+  }
+
+  #check:checked ~ .sidebar{
+    left: 0;
+  }
+
+  #check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #check:checked ~ label #cancel{
+    left: 195px;
+  }
+
 .Logo{
     display: flex;
     justify-content: flex-end;
@@ -36,8 +115,8 @@ body{
     width: 400px;
     height: 40px;
     margin-top: 60px;
-    margin-right: 350px;
-    margin-left: 170px;
+    margin-right: 200px;
+    margin-left: 300px;
     padding: 10px 10px;
     border-radius: 100px;
     
@@ -54,4 +133,29 @@ body{
 
     color: #482d66;
     background-color: #fff;
+}
+
+img{
+  border-radius: 20px;
+}
+
+.menu-baixo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(15deg, #36013F , #343837 );
+    height: 11vh;
+    margin-top: 53.5px;
+    width: 100%;
+    border: black solid 1px;
+}
+
+.menu-baixo a,p{
+    color: #fff;
+}
+
+.menu-baixo a{
+    padding: 5px;
+    pointer-events: all;
 }

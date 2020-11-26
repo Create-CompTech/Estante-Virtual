@@ -41,9 +41,9 @@ function Inicial() {
       <body>
         <nav class="Cabeçalho">
             <ul class="OpcoesCabeçalho">
-              <Link to="/./InicialCliente"><li class="OpcoesCabeçalho2">eBooks e Autores</li></Link>
-              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">eBooks mais recomendados</li></Link>
-              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">ebooks mais vendidos</li></Link>
+              <Link to="/./InicialCliente"><li class="OpcoesCabeçalho2">Livros e Autores</li></Link>
+              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">Livros mais recomendados</li></Link>
+              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">Livros mais vendidos</li></Link>
             </ul>
           </nav>
         </body>
@@ -119,6 +119,7 @@ function Inicial() {
               </Carousel>
               </div>
           </div>
+
           <div className="destaque">
           <div className="container-destaque">
             <div className="titulo-destaque">
@@ -135,6 +136,7 @@ function Inicial() {
             </div>
           </div>
         </div>
+        
           <div class="carousel-livros">
             <h1 class="titulo">Livros de Terror</h1>
               <div className="App">
