@@ -101,19 +101,54 @@ export default function mostrarEbooks(){
                 <div className="App">
                   <Carousel breakPoints={breakPoints}>
                     <Item>
-                      <img src='/assets/HarryPotterPedraFilosofal' height="300px" width="200px"/>
+                    <div class="ebook">
+                      <div class="slide-img">
+                        <img src='/assets/HarryPotterPedraFilosofal' height="300px" width="200px"/>
+                        <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                     </Item>
                     <Item>
+                    <div class="ebook">
+                      <div class="slide-img">
                       <img src='/assets/SenhorDosAneisTolkienV1' height="300px" width="200px"/>
+                      <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                     </Item>
                     <Item>
+                      <div class="ebook">
+                        <div class="slide-img">
                       <img src='/assets/PiratasDoCaribeJackSparrowOGuardiaoDoTempo.png' height="300px" width="200px"/>
+                      <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                     </Item>
                     <Item>
+                    <div class="ebook">
+                      <div class="slide-img">
                       <img src='/assets/GravityFallsAventuraEmDobro.png' height="300px" width="200px"/>
+                      <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                     </Item>
                     <Item>
+                    <div class="ebook">
+                      <div class="slide-img">
                       <img src='/assets/Eragon.png' height="300px" width="200px"/>
+                      <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                     </Item>
                   </Carousel>
                 </div>
@@ -123,19 +158,54 @@ export default function mostrarEbooks(){
                 <div className="App">
                 <Carousel breakPoints={breakPoints}>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/FilmeCulpaDasEstrelas.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/AGarotaQueVoceDeixouParaTras.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/ACincoPassosDeVoce.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/AnnaEOBeijoFrances' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/UmQuartoComVista' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                 </Carousel>
                 </div>
@@ -145,19 +215,54 @@ export default function mostrarEbooks(){
                 <div className="App">
                 <Carousel breakPoints={breakPoints}>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/AGuerraDosTronosAsCronicasDeGeloEFogo.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/AsBrumasDeAvalonMarionZimmer.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/OLeaoAFeiticeiraEoGurdaRoupaCronicasDeNarnia.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/OMaravilhosoMagicoDeOz1900.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/OFeiticeiroDeTerramarUrsulaKLEGuin.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                 </Carousel>
                 </div>
@@ -185,41 +290,111 @@ export default function mostrarEbooks(){
                 <div className="App">
                 <Carousel breakPoints={breakPoints}>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/ItACoisaStephenKing.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                    <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/OCemiterioStephenKing.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                    <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/AAssombracaoDaCasaDaColina.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/QuatroEstacoesStephenKing.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                    <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/GuerraMundialZ.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                 </Carousel>
                 </div>
             </div>
             <div class="carousel-livros">
-              <h1 class="titulo">Livros de Terror</h1>
+              <h1 class="titulo">Livros de Zumbis</h1>
                 <div className="App">
                 <Carousel breakPoints={breakPoints}>
                   <Item>
-                    <img src='/assets/TheWalkingDeadV1.png' height="300px" width="200px"/>
+                    <div class="ebook">
+                      <div class="slide-img">
+                      <img src='/assets/TheWalkingDeadV1.png' height="300px" width="200px"/>
+                      <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                    <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/TerioEPraticaDeComoSerUmZumbiTiagoToy.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/AIlhaDosMortosRodrigoDeOliveira.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                  <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/StrangerThingsGarotosZumbis.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                   <Item>
+                    <div class="ebook">
+                      <div class="slide-img">
                     <img src='/assets/ApocalipseZumbi3AlexandreCallari.png' height="300px" width="200px"/>
+                    <div class="overlay">
+                          <a href="#" class="vermais-btn">Ver mais</a>	
+                        </div>
+                      </div>
+                    </div>
                   </Item>
                 </Carousel>
                 </div>
