@@ -26,7 +26,7 @@
 
 }
 
-.inputendereco{
+.inputassinatura{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -36,8 +36,25 @@
 
 }
 
+.pagamento-checkbox{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox{
+    font-size: 12px;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: middle;
+    color: #1e1f1e;
+}
+
 .botoes{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     height: 60px;
     width: 100%;
 }
@@ -46,8 +63,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55px;
-    width: 18vw;
+    height: 43px;
+    width: 165px;
 }
 
 .botaovoltar button {
@@ -64,8 +81,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 55px;
-    width: 37vw;
+    height: 43px;
+    width: 165px;
 }
 
 .botaoconfirmar button{
@@ -77,8 +94,6 @@
     width: 165px;
     font-size: 14px;
 }
-
-
 
 .nomecadastro h1{
     font-size: 26px;

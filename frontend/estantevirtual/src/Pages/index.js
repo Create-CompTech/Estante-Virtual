@@ -41,9 +41,9 @@ function Inicial() {
       <body>
         <nav class="Cabeçalho">
             <ul class="OpcoesCabeçalho">
-              <Link to="/./InicialCliente"><li class="OpcoesCabeçalho2">Livros e Autores</li></Link>
-              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">Livros mais recomendados</li></Link>
-              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">Livros mais vendidos</li></Link>
+              <Link to="/./InicialCliente"><li class="OpcoesCabeçalho2">eBooks e Autores</li></Link>
+              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">eBooks mais recomendados</li></Link>
+              <Link to="./InicialCliente"><li class="OpcoesCabeçalho2">ebooks mais vendidos</li></Link>
             </ul>
           </nav>
         </body>
@@ -119,6 +119,22 @@ function Inicial() {
               </Carousel>
               </div>
           </div>
+          <div className="destaque">
+          <div className="container-destaque">
+            <div className="titulo-destaque">
+              <h1>Destaques da semana</h1>
+            </div>
+            <div className="destaque-box">
+              <div className="livros-destaque">
+               <div className="destaque1"><img src='/assets/OQueAconteceuComAnnie.png' height="220px" width="200px" ></img></div> 
+               <div className="destaque1"><img src='/assets/AGarotaDoLago.png' height="220px" width="200px" ></img></div> 
+               <div className="destaque1"><img src='/assets/OHobbitJJRTolkien.png' height="220px" width="200px" ></img></div> 
+               <div className="destaque1"><img src='/assets/AsCronicasDeNarnia2009.png' height="220px" width="200px" ></img></div> 
+               <div className="destaque1"><img src='/assets/ZaynMalik.png' height="220px" width="200px" ></img></div> 
+              </div>
+            </div>
+          </div>
+        </div>
           <div class="carousel-livros">
             <h1 class="titulo">Livros de Terror</h1>
               <div className="App">
@@ -165,23 +181,6 @@ function Inicial() {
           </div>
           
         </body>
-
-        <div className="destaque">
-          <div className="container-destaque">
-            <div className="titulo-destaque">
-              <h1>Destaques da semana</h1>
-            </div>
-            <div className="destaque-box">
-              <div className="livros-destaque">
-               <div className="destaque1"><img src='/assets/OQueAconteceuComAnnie.png' height="220px" width="200px" ></img></div> 
-               <div className="destaque1"><img src='/assets/AGarotaDoLago.png' height="220px" width="200px" ></img></div> 
-               <div className="destaque1"><img src='/assets/OHobbitJJRTolkien.png' height="220px" width="200px" ></img></div> 
-               <div className="destaque1"><img src='/assets/AsCronicasDeNarnia2009.png' height="220px" width="200px" ></img></div> 
-               <div className="destaque1"><img src='/assets/ZaynMalik.png' height="220px" width="200px" ></img></div> 
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div className="menu-baixo">
           <div className="componentes">

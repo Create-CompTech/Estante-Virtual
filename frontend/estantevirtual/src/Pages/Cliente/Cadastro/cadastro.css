@@ -71,14 +71,6 @@
     padding: 0;
 }
 
-.assinante p{
-    color: black;
-}
-
-.assinante input{
-    margin-top: 3.5px;
-}
-
 .botaocadastro button{
     background: linear-gradient(#EDC8FE,#9DBCD4);
     border: none;
@@ -87,13 +79,6 @@
     height: 43px;
     width: 165px;
     font-size: 14px;
-}
-
-
-.assinante p{
-    font-size: 12px;
-    margin: 0px;
-    margin-left: 3px;
 }
 
 

@@ -46,16 +46,15 @@ function Cadastro() {
        <select class="genero" type="text" placeholder="Gênero">
          <option value="Masculino">Masculino</option>
          <option value="Feminino">Feminino</option>
-        <option value="Outro">Outro</option>
+         <option value="Outro">Outro</option>
+         <option value="Prefiro não">Prefiro não</option>
        </select>
 
-       <div class="assinante">
-          <p>Quero ser assinante</p>
-          <input type="checkbox" name="name" required />
-       </div>
-
        <div className="botaocadastro">
-       <Link to="/Cadastro1"><button class="cancelarbotao">Continuar</button></Link>
+        <Link to="/Cadastro2"><button class="cancelarbotao">Continuar Cadastro</button></Link>
+       </div>
+       <div className="botaocadastro">
+        <Link to="/Cadastro1"><button class="cancelarbotao">Quero ser assinante</button></Link>
        </div>
 
 
