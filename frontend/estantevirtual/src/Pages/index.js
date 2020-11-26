@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './inicial.css';
 import gobook_logo from '../storage/images/logo/SizePinterest/gobook_logo.png'
 import Item from "../Item";
+import ItemA from "../ItemA";
 
 import Carousel from 'react-elastic-carousel';
 
@@ -11,6 +12,10 @@ const breakPoints = [
   { width: 550, itemsToShow: 2 },
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 4 },
+];
+
+const breakPoints1 = [
+  { width: 1, itemsToShow: 1 },
 ];
 
 function Inicial() {
@@ -43,9 +48,14 @@ function Inicial() {
           </nav>
         </body>
         <body>
-          <div class="carousel-livros">
+          <div class="carousel-anuncios">
+            <Carousel breakPoints={breakPoints1}>
+              <ItemA>
+                <img src='/assets/anuncio.png' height="450px" width="900px"/>
+              </ItemA>
+            </Carousel> 
             <h1 class="titulo">Livros de Aventura</h1>
-              <div className="App">
+              <div className="ebooks">
                 <Carousel breakPoints={breakPoints}>
                   <Item>
                     <img src='/assets/HarryPotterPedraFilosofal' height="300px" width="200px"/>
