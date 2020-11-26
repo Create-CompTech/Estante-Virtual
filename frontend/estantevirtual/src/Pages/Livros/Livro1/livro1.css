@@ -1,0 +1,102 @@
+.Livro1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    width: 100%;
+    border: black solid 1px;
+}
+
+.Livro1-container{
+    display: flex;
+    height: 90%;
+    width: 70%;
+    background-color: white;
+}
+
+.livro-info-container{
+    display: flex;
+    flex-direction: row;
+    height: 73vh;
+    width: 100%;
+    border: orange solid 1px;
+}
+
+.livro{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 55vh;
+    width: 28%;
+    border: black solid 1px;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    height: 67vh;
+    width: 70%;
+    border: blueviolet solid 1px;
+}
+
+.ebook-titulo{
+    display: flex;
+    align-items: center;
+    height: 9vh;
+    width: 100%;
+}
+
+.ebook-titulo h1{
+    font-size: 23px;
+}
+
+.ebook-titulo h1:hover{
+    font-size: 24px;
+    color: #069AF3;
+}
+
+.pagamento-container{
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    width: 100%;
+    border: black solid 1px;
+}
+
+.titulo-opcao{
+    height: 4vh;
+    width: 90%;
+    border: #069AF3 solid 1px; 
+}
+
+.titulo-opcao p{
+    font-size: 13px;
+    color: black;
+    margin-left: 15px;
+}
+
+.opcao-pagamento{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.opcao-pagamento button{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: #1ed760;
+    margin: 10px;
+}
+
+#ponto{
+    background-color: white;
+    transition: all 0.5s;
+}
+
+#ponto:hover{
+    background-color: #35103d;
+    color: white;
+}
