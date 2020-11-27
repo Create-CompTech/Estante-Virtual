@@ -90,7 +90,7 @@ export default function mostrarEbooks(){
           <div class="carousel-anuncios">
             <Carousel breakPoints={breakPoints1}>
               <ItemA>
-                <img src='/assets/anuncio.png' height="450px" width="750px"/>
+                <img src='/assets/anuncio.png' height="450px" width="700px"/>
               </ItemA>
             </Carousel>
           </div> 

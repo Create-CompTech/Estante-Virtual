@@ -23,7 +23,7 @@ body{
 .sidebar {
     position: fixed;
     left: -260px;
-    width: 15vh;
+    width: 40vh;
     height: 100%;
     z-index: 3;
     background: linear-gradient(15deg, #36013F , #343837 );

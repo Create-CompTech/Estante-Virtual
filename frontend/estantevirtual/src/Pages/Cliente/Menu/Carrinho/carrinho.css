@@ -7,7 +7,7 @@
 .sidebarperfil {
     position: fixed;
     left: -260px;
-    width: 250px;
+    width: 40vh;
     height: 100%;
     background: linear-gradient(15deg, #36013F , #343837 );
     transition: all .5s ease;
