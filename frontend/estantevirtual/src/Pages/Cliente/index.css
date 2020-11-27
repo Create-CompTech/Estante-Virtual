@@ -23,8 +23,9 @@ body{
 .sidebar {
     position: fixed;
     left: -260px;
-    width: 40vh;
+    width: 15vh;
     height: 100%;
+    z-index: 3;
     background: linear-gradient(15deg, #36013F , #343837 );
     transition: all .5s ease;
   }
@@ -33,6 +34,7 @@ body{
     font-size: 22px;
     color: white;
     line-height: 70px;
+    z-index: 3;
     text-align: center;
     user-select: none;
   }
@@ -49,10 +51,6 @@ body{
     padding-left: 40px;
     border-top: 1px solid black;
     border-bottom: 1px solid rgba(255,255,255,.1);
-  }
-
-  ul li:hover a{
-
   }
 
   .sidebar ul a i{
