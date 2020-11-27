@@ -49,14 +49,14 @@ export default function mostrarEbooks(){
         <i class="fas fa-bars" id="btn"></i>
         <i class="fas fa-bars" id="cancel"></i>
         </label>
-        <div class="sidebar">
+        <div class="sidebarperfil">
             <header>
               <div class="Logo">
                 <img src={gobook_logo} height="270px" width="275px"/>
               </div>
             </header>
             <ul>
-                <li><Link href="/Perfil">Perfil</Link></li>
+                <li><Link to="/Perfil">Perfil</Link></li>
                 <li><Link to="/Estantes">Estantes</Link></li>
                 <li><Link to="/Carrinho">Carrinho</Link></li>
             </ul>

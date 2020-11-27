@@ -42,19 +42,21 @@ body{
     height: 100%;
     width: 100%;
     line-height: 65px;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
-    text-decoration: none;
     color: white;
+    box-sizing: border-box;
     padding-left: 40px;
     border-top: 1px solid black;
     border-bottom: 1px solid rgba(255,255,255,.1);
   }
+
   ul li:hover a{
-    padding-left: 50px;
+
   }
+
   .sidebar ul a i{
-    margin-right: 16px;
+    margin-right: 10px;
   }
 
   #check{

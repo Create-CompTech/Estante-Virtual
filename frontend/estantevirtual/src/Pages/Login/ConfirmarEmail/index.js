@@ -32,7 +32,7 @@ function ConfirmarEmail(props) {
                  </label>
                 </div>
                 <div className="botao">
-                <button onClick={enviarEmail} class="cancelar">Enviar</button>
+                 <button onClick={enviarEmail} class="cancelar">Enviar</button>
                 </div>
             </div>
         </div>

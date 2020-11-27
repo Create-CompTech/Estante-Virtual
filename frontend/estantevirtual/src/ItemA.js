@@ -5,7 +5,7 @@ export default styled.div`
   justify-content: center;
   align-items: center;
   height: 450px;
-  width: 900px;
+  width: 800px;
   color: #fff;
   margin: 0 15px;
   font-size: 4em;
