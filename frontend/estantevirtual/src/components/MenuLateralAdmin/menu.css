@@ -1,0 +1,18 @@
+.opcoes_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 250px;
+
+    background-color:#36013F;
+}
+
+.opcoes_menu ul li Link p {
+    font-size: 25px;
+    color: #ffffff;
+    border: 1px solid black;
+}
+

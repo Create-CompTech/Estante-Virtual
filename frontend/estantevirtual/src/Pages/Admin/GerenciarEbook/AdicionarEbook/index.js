@@ -1,9 +1,56 @@
-import React from 'react'
-import './gerenciar.css'
+import React, { useState } from 'react';
+import './gerenciar.css';
+
 import { Link } from 'react-router-dom';
+import Rodape from '../../../../components/Rodape';
 import gobook_logo from '../../../../storage/images/logo/SizePinterest/gobook_logo.png'
+import ConsultarEbooks from '../../../../services/ConsultarEbooks';
+const api = new ConsultarEbooks();
 
 export default function GerenciarEbook(props){
+
+    const [nome, setNome] = useState("");
+    const [img, setImg] = useState();
+    const [autor, setAutor] = useState();
+    const [sinopse, setSinopse] = useState("");
+    const [valor, setValor] = useState();
+    const [qtPaginas, setQtPaginas] = useState();
+    const [editora, setEditora] = useState("");
+    const [edicao, setEdicao] = useState("");
+    const [lingua, setLingua] = useState("");
+    const [linguaOriginal, setLinguaOriginal] = useState("");
+    const [generoPrincipal, setGeneroPrincipal] = useState();
+    const [outrosGeneros, setOutrosGeneros] = useState();
+
+    const [autores, setAutores] = useState([]);
+    const [generos, setGeneros] = useState([]);
+
+    
+    const ConsultarAutores = async (e) => {
+      const resp = api.ConsultarAutores();
+      setAutores(...resp);
+    }
+
+    const ConsultarGeneros = async (e) => {
+      const resp = api.ConsultarGeneros();
+      setGeneros(...resp);
+    }
+
+    const resp = {
+      nome: nome,
+      img: img,
+      sinopse: sinopse,
+      autor: autor,
+      valor: valor,
+      qtPaginas: qtPaginas,
+      editora: editora,
+      edicao: edicao,
+      lingua: lingua,
+      linguaOriginal: linguaOriginal,
+      generoPrincipal: generoPrincipal,
+      outrosGeneros: outrosGeneros
+    };
+
 
 
     return(
@@ -16,7 +63,7 @@ export default function GerenciarEbook(props){
         </div>
 
         <div className="nome-adm">
-            <h3>Sinta-se em casa, {props.location.state.nome}!</h3>
+          <h3>Sinta-se em casa, {props.location.state}!</h3>
         </div>
 
       </header>
@@ -36,49 +83,58 @@ export default function GerenciarEbook(props){
                 <div className="input-add">
                 <p>Ebook</p>
                   <label> 
-                    <input type="text"></input>
+                    <input value="nome" type="text" onChange={e => setNome(e.target.value)}></input>
                   </label>
                 </div>
                 <div className="input-add">
                 <p>Descrição</p>
                   <label> 
-                    <input type="text"></input>
+                    <input type="text" onChange={e => setSinopse(e.target.value)}></input>
                   </label>
                 </div>
                 <div className="input-add">
                 <p>Foto ebook</p>
                   <label> 
-                    <input id="file" type="file"></input>
+                    <input id="file" type="file" onChange={e => setImg(e.target.value)}></input>
                   </label>
                 </div>
                 <div className="input-add">
                 <p>Preços</p>
                   <label> 
-                    <input type="text"></input>
+                    <input type="text" onChange={e => setValor(e.target.value)}></input>
                   </label>
                 </div>
                 <div className="input-add">
                 <p>Paginas</p>
                   <label> 
-                    <input type="text"></input>
+                    <input type="text" onChange={e => setQtPaginas(e.target.value)}></input>
                   </label>
                 </div>
                 <div className="input-add">
                 <p>Editora</p>
                   <label> 
-                    <input type="text"></input>
+                    <input type="text" onChange={e => setEditora(e.target.value)}></input>
                   </label>
                 </div>
                 <div className="input-add">
                 <p>Edição</p>
                   <label> 
-                    <input type="text"></input>
+                    <input type="text" onChange={e => setEdicao(e.target.value)}></input>
                   </label>
                 </div>
               </div>
             </div>
             <div className="add-direito">
               <div className="container-direito">
+
+                <div>
+                  <select>
+                    {autores.map(x => 
+                      <option value={x.id} onSelect={e => setGeneroPrincipal(e.target.value)}>{x.autor}</option>
+                    )};
+                  </select>
+                </div>
+                
               <div className="input-add">
                 <p>Generos</p>
                   <label> 
@@ -123,16 +179,7 @@ export default function GerenciarEbook(props){
             </div>
           </div>
         </div>
-        <div className="menu-baixo">
-          <div className="componentes">
-            <a href="#">Sobre /</a>
-            <a href="#">Termos /</a>
-            <a href="#">Contate-nos /</a>
-          </div>
-          <div className="orderby">
-            <p>São Paulo - SP</p>
-          </div>
-        </div>
+        <Rodape />
     </div>
     );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './menu.css';
 import { Link } from 'react-router-dom';
 
 export default function MenuLateralAdmin({ props }) {
@@ -9,10 +10,10 @@ export default function MenuLateralAdmin({ props }) {
                  <li><Link to={{
                             pathname: "/CadastrarEbook",
                             state: props
-                      }}>Cadastrar ebooks</Link></li>
-                 <li><Link to="/">Classificar Feedbacks</Link></li>
-                 <li><Link to="/CadastroAdm">Adicionar admin</Link></li>
-                 <li><Link to="/Login">Sair</Link></li>
+                      }}><p>Cadastrar ebooks</p></Link></li>
+                 <li><Link to="/"><p>Classificar Feedbacks</p></Link></li>
+                 <li><Link to="/CadastroAdm"><p>Adicionar admin</p></Link></li>
+                 <li><Link to="/Login"><p>Sair</p></Link></li>
             </ul>
       </div>
     );
