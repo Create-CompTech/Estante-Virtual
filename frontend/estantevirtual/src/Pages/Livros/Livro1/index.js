@@ -35,8 +35,8 @@ export default function Livro1(){
                     </div>
                 </header>
                     <ul>
-                      <li><Link href="/InicialCliente">Inicial</Link></li>
-                        <li><Link href="/Perfil">Perfil</Link></li>
+                        <li><Link to="/InicialCliente">Inicial</Link></li>
+                        <li><Link to="/Perfil">Perfil</Link></li>
                         <li><Link to="/Estantes">Estantes</Link></li>
                         <li><Link to="/Carrinho">Carrinho</Link></li>
                     </ul>

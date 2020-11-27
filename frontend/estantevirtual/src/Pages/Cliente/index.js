@@ -49,14 +49,14 @@ export default function mostrarEbooks(){
         <i class="fas fa-bars" id="btn"></i>
         <i class="fas fa-bars" id="cancel"></i>
         </label>
-        <div class="sidebar">
+        <div class="sidebarperfil">
             <header>
               <div class="Logo">
                 <img src={gobook_logo} height="270px" width="275px"/>
               </div>
             </header>
             <ul>
-                <li><Link href="/Perfil">Perfil</Link></li>
+                <li><Link to="/Perfil">Perfil</Link></li>
                 <li><Link to="/Estantes">Estantes</Link></li>
                 <li><Link to="/Carrinho">Carrinho</Link></li>
             </ul>
@@ -90,7 +90,7 @@ export default function mostrarEbooks(){
           <div class="carousel-anuncios">
             <Carousel breakPoints={breakPoints1}>
               <ItemA>
-                <img src='/assets/anuncio.png' height="450px" width="900px"/>
+                <img src='/assets/anuncio.png' height="450px" width="750px"/>
               </ItemA>
             </Carousel>
           </div> 

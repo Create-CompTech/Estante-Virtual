@@ -8,8 +8,6 @@ function Cadastro() {
   return (
     <div className="container-tudo">
            <div className="container-principal">
-       <div className="box">
-
         <div className="direito">
           <h1>Bem-vindo de volta!</h1>
           <p>Para se manter ligado nos melhores</p>
@@ -60,7 +58,6 @@ function Cadastro() {
 
           </div>
         </div>
-      </div>
     </div>
     </div>
   );
