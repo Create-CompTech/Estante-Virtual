@@ -816,5 +816,166 @@ goBook é uma biblioteca virtual que lhe traz a possibilidade de realizar a leit
 ## 7. MAPEAMENTO DAS ROTAS
 
 
-Controllers:
+### Controllers
+#### - BuscarImagem
 
+    Rota Buscar foto
+    - Recebe: caminho imagem
+    - Imagem: Imagem
+    
+#### - ConsultarEbooks
+    Rota: EbooksPorGenero
+    - Recebe: -
+    - Retorna: modelo de response "EbookResponse"
+    
+    Rota: PesquisaEbookAutor
+    - Recebe: nome do autor/ebook
+    - Retorna: modelo de response "EbookResponse"
+    
+    Rota: EbooksCliente
+    - Recebe: id de login do cliente
+    - Retorna: modelo de response "EbookResponse"
+    
+    Rota: ConsultarGeneros
+    - Recebe: -
+    - Retorna: modelo de response "GenerosResponse"
+    
+    Rota: ConsultarAutores
+    - Recebe: -
+    - Retorna: modelo de response "AutorResponse"
+    
+#### - GerenciarCliente 
+
+    Rota: Cadastrar
+    - Rebece: modelo request CadastrarCliente
+    - Retorna: modelo response "MensagemResponse"
+    
+    Rota: Consultar
+    - Rebece: id de login
+    - Retorna: modelo response "ClienteResponse"
+    
+    Rota: Alterar
+    - Rebece: modelo request "CadastrarCliente" e id de login
+    - Retorna: modelo response "MensagemResponse"
+    
+    Rota: Deletar
+    - Rebece: id de login
+    - Retorna: modelo response "MensagemResponse"
+    
+#### - GerenciarEbooks
+
+    Rota: CadastrarEbook
+    - Recebe: modelo request "EbookRequest"
+    - Retorna: modelo response "EbookResponse" 
+    
+#### - Login
+
+    Rota: Login
+    - Recebe: modelo request "LoginRequest"
+    - Retorna: modelo response "LoginResponse"
+
+    
+#### - RecuperarSenha
+
+    Rota: AlterarSenha
+    - Recebe: modelo request "AlterarSenhaRequest"
+    - Retorna: modelo response "MensagemResponse"
+    
+    Rota: VerificarEmail
+    - Recebe: email do destinatário
+    - Retorna: modelo response "MensagemResponse"
+    
+
+### Modelos
+
+#### Request
+
+
+- AlterarSenhaRequest
+    
+        public int IdLogin { get; set; }
+        public string novaSenha { get; set; }
+
+- CadastrarCliente
+    public string email { get; set; }
+        public string senha { get; set; }
+        public string nome { get; set; }
+        public string cpf { get; set; }
+        public string genero { get; set; }
+        public bool? assinante { get; set; }
+        public DateTime nascimento { get; set; }
+        public IFormFile img { get; set; }
+- EbookRequest
+    public string nome { get; set; }
+        public IFormFile img { get; set; }
+        public int autor { get; set; }
+        public string sinopse { get; set; }
+        public decimal? valor { get; set; }
+        public int? qtPaginas { get; set; }
+        public string editora { get; set; }
+        public string edicao { get; set; }
+        public string lingua { get; set; }
+        public string linguaOriginal { get; set; }
+        public int generoPrincipal { get; set; }
+        public List<int> outrosGeneros { get; set; }
+        
+- LoginRequest
+
+    public string email { get; set; }
+    public string senha { get; set; }
+    
+- VerificarEmailRequest
+    public string destinatario { get; set; }
+        public string assunto { get; set; }
+        public string conteudo { get; set; }
+        
+#### Response
+
+- AutorResponse
+    public int id { get; set; }
+        public string autor { get; set; }
+    
+- ClienteResponse
+    
+- public string nome { get; set; }
+        public string img { get; set; }
+        public DateTime? nascimento { get; set; }
+        public string cpf { get; set; }
+        public string genero { get; set; }
+        public bool? assinante { get; set; }
+        public int? pontos { get; set; }
+        public string email { get; set; }
+    
+- EbookResponse
+public int id { get; set; }
+        public string nome { get; set; }
+        public string autor { get; set; }
+        public string ebook { get; set; }
+        public string sinopse { get; set; }
+        public decimal? valor { get; set; }
+        public int? qtPaginas { get; set; }
+        public string editora { get; set; }
+        public string edicao { get; set;}
+        public string isbn { get; set; }
+        public string lingua { get; set; }
+        public string linguaOriginal { get; set; }
+        public string generoPrincipal { get; set; }
+        public List<string> outrosGeneros { get; set; }
+    
+- ErroResponse
+        public string erro { get; set; }
+        public int codigo { get; set; } 
+        
+- GenerosResponse
+        public int id { get; set; }
+        public string genero { get; set; }
+        
+- LoginResponse
+public int LoginID { get; set; }
+        public string Nome { get; set; }
+        public string Perfil { get; set; }
+
+
+- MensagemResponse
+public string msg { get; set; }
+    
