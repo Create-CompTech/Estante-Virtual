@@ -22,6 +22,7 @@ import AlterarEbook from './Pages/Admin/GerenciarEbook/AlterarEbook'
 import AlterarInformacao from './Pages/Admin/GerenciarEbook/AlterarEbook/AlterarInformaçao'
 import CadastrarAdm from './Pages/Admin/AdicionarAdm'
 import Livro1 from './Pages/Livros/Livro1'
+import Livro2 from './Pages/Livros/Livro2'
 
 export default function Routes(){
 
@@ -48,6 +49,7 @@ export default function Routes(){
                 <Route path="/AlterarInformacao" component={AlterarInformacao} />
                 <Route path="/CadastroAdm" component={CadastrarAdm} />
                 <Route path="/HarryPotterPedraFilosofal" component={Livro1} />
+                <Route path="/ACulpaEDasEstrelas" component={Livro2} />
             </Switch>
         </BrowserRouter>
     )

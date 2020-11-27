@@ -44,7 +44,6 @@ export default function mostrarEbooks(){
   return (
     <div className="Inicial">
       <header className="Inicial-Header">
-
       <input type="checkbox" id="check"></input>
         <label for="check">
         <i class="fas fa-bars" id="btn"></i>
@@ -105,7 +104,7 @@ export default function mostrarEbooks(){
                       <div class="slide-img">
                         <img src='/assets/HarryPotterPedraFilosofal' height="300px" width="200px"/>
                         <div class="overlay">
-                          <a href="#" class="vermais-btn">Ver mais</a>	
+                          <a href="/harryPotterPedraFilosofal" class="vermais-btn">Ver mais</a>	
                         </div>
                       </div>
                     </div>
@@ -162,7 +161,7 @@ export default function mostrarEbooks(){
                       <div class="slide-img">
                     <img src='/assets/FilmeCulpaDasEstrelas.png' height="300px" width="200px"/>
                     <div class="overlay">
-                          <a href="#" class="vermais-btn">Ver mais</a>	
+                          <a href="/ACulpaEDasEstrelas" class="vermais-btn">Ver mais</a>	
                         </div>
                       </div>
                     </div>

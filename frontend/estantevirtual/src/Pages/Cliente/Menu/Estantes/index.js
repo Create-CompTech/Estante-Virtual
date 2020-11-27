@@ -9,7 +9,7 @@ function Estantes(){
             <div className="MenuCadastro">
             <input type="checkbox" id="check"></input>
                 <label for="check">
-                    <i class="fas fa-bars" id="cancel"></i>
+                    <i class="fas fa-bars" id="cancel2"></i>
                 </label>
                 <div class="sidebarperfil">
                     <header>Menu goBook</header>

@@ -57,7 +57,7 @@ function Inicial() {
             <h1 class="titulo">Livros de Aventura</h1>
               <div className="ebooks">
                 <Carousel breakPoints={breakPoints}>
-                  <Item>
+                  <Item><a href="/HarryPotterPedraFilosofal"></a>
                     <img src='/assets/HarryPotterPedraFilosofal' height="300px" width="200px"/>
                   </Item>
                   <Item>
@@ -79,7 +79,7 @@ function Inicial() {
             <h1 class="titulo">Livros de Romance</h1>
               <div className="App">
               <Carousel breakPoints={breakPoints}>
-                <Item>
+                <Item><a href="/ACulpaEDasEstrelas"></a>
                   <img src='/assets/FilmeCulpaDasEstrelas.png' height="300px" width="200px"/>
                 </Item>
                 <Item>
