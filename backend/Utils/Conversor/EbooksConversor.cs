@@ -69,5 +69,24 @@ namespace backend.Utils.Conversor
                             linguaOriginal = tb.NmLinguaOriginal
                         };
         }
+
+        public Models.Response.GenerosResponse ParaResponse (Models.TbGeneroEbook tb)
+        {
+            return new Models.Response.GenerosResponse() 
+            {
+                id = tb.IdGenero,
+                genero = tb.IdGeneroNavigation.NmGenero
+
+            };
+        }
+    
+        public Models.Response.AutorResponse ParaResponse (Models.TbAutor tb)
+        {
+            return new Models.Response.AutorResponse() 
+            {
+                id = tb.IdAutor,
+                autor = tb.NmAutor
+            };
+        }
     }
 }

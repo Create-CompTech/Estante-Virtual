@@ -17,5 +17,13 @@ namespace backend.Business
 
             return await db.AlterarSenha(tb);
         }
+
+        public bool EmailValido (string email)
+        {
+            if (String.IsNullOrEmpty(email))
+                throw new ArgumentException("Email inválido.");
+
+            return db.EmailValido(email);
+        }
     }
 }

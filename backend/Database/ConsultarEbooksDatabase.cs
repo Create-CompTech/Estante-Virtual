@@ -14,25 +14,11 @@ namespace backend.Database
 
 
 
-        public async Task<List<List<Models.TbGeneroEbook>>> EbooksPorGenero ()
+        public async Task<List<Models.TbEbook>> EbooksPorGenero ()
         {
-            List<Models.TbGenero> generos = await ctx.TbGenero.ToListAsync();         
-            List<List<Models.TbGeneroEbook>> ebooksPorGenero = new List<List<Models.TbGeneroEbook>>();
-            
+            List<Models.TbEbook> ebooks = await ctx.TbEbook.ToListAsync();        
 
-            foreach(Models.TbGenero genero in generos)
-            {
-                List<Models.TbGeneroEbook> ebooks =
-                    ctx.TbGeneroEbook.Include(x => x.IdEbookNavigation)
-                                     .Include(x => x.IdEbookNavigation.IdAutorNavigation)
-                                     .Include(x => x.IdGeneroNavigation)
-                                     .Where(x => x.IdGenero == genero.IdGenero && x.BtGeneroPrincipal == true)
-                                     .ToList();
-
-                ebooksPorGenero.Add(ebooks);
-            }
-
-            return ebooksPorGenero;
+            return ebooks;
         }
 
 
@@ -52,10 +38,10 @@ namespace backend.Database
 
         public async Task<List<List<Models.TbEbook>>> EbooksCliente (int idLogin)
         {
-            idLogin = loginDB.IdCliente(idLogin);
+            int idCliente = loginDB.IdCliente(idLogin);
             List<List<Models.TbEbook>> ebooksFinal = new List<List<Models.TbEbook>>();
 
-            Models.TbEstante estante = await ctx.TbEstante.FirstOrDefaultAsync(x => x.IdCliente == idLogin);
+            Models.TbEstante estante = await ctx.TbEstante.FirstOrDefaultAsync(x => x.IdCliente == idCliente);
             List<Models.TbPrateleira> prateleiras = ctx.TbPrateleira.Where(x => x.IdEstante == estante.IdEstante).ToList();
             
 
@@ -80,5 +66,29 @@ namespace backend.Database
 
             return ebooksFinal;
         }
+
+        public List<Models.TbGeneroEbook> AtribuirGenero (int idEbook)
+        {
+            List<Models.TbGeneroEbook> genero =
+                    ctx.TbGeneroEbook.Where(x => x.IdEbook == idEbook)
+                                     .Include(x => x.IdGeneroNavigation)
+                                     .ToList();
+            
+            return genero;
+        }
+
+        public List<Models.TbGeneroEbook> Generos ()
+        {
+            List<Models.TbGeneroEbook> genero =
+                    ctx.TbGeneroEbook.Include(x => x.IdGeneroNavigation)
+                                     .ToList();
+            
+            return genero;
+        } 
+
+        public List<Models.TbAutor> Autores ()
+        {
+            return ctx.TbAutor.ToList();
+        } 
     }
 }

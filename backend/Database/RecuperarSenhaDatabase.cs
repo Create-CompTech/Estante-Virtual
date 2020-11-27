@@ -20,5 +20,16 @@ namespace backend.Database
             return login;
         }
         
+
+        public bool EmailValido (string email)
+        {
+            Models.TbLogin login = ctx.TbLogin.FirstOrDefault(x => x.DsEmail == email);
+            
+            if(login == null)
+                return false;
+            else
+                return true;
+            
+        }
     }
 }

@@ -20,19 +20,29 @@ namespace backend.Controllers
 
 
         [HttpPost("{destinatario}")]
-        public ActionResult<string> VerificarEmail (string destinatario)
+        public ActionResult<Models.Response.MensagemResponse> VerificarEmail (string destinatario)
         {
             try 
             {
                 string codigo = gerador.GerarCodigo();
-                
-                mail.EmailSimples(new Models.Request.VerificarEmail() {
-                    destinatario = destinatario,
-                    assunto = "Verificação de email",
-                    conteudo = $"Olá! Você acabou de pedir uma alteração de senha na GoBook Company. Seu código de verificação é: {codigo}. OBS: Se você não fez o pedido, ignore este e-mail."
-                });
 
-                return codigo;
+                if (business.EmailValido(destinatario) == true)
+                {
+                
+                    mail.EmailSimples(new Models.Request.VerificarEmail() {
+                        destinatario = destinatario,
+                        assunto = "Verificação de email",
+                        conteudo = $"Olá! Você acabou de pedir uma alteração de senha na GoBook Company. Seu código de verificação é: {codigo}. OBS: Se você não fez o pedido, ignore este e-mail."
+                    });
+
+                    return new Models.Response.MensagemResponse() {
+                        msg = $"{codigo}"
+                    };
+                } 
+                
+                return new Models.Response.MensagemResponse() {
+                        msg = "Usuário não identificado"
+                };
             }
             catch (Exception ex)
             {

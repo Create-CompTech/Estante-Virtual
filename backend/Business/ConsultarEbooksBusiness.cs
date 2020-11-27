@@ -9,7 +9,7 @@ namespace backend.Business
     {
         Database.ConsultarEbooksDatabase db = new Database.ConsultarEbooksDatabase();
 
-        public async Task<List<List<Models.TbGeneroEbook>>> EbooksPorGenero()
+        public async Task<List<Models.TbEbook>> EbooksPorGenero()
         {
             return await db.EbooksPorGenero();
         }
@@ -28,6 +28,21 @@ namespace backend.Business
                 throw new ArgumentException("Id inválido.");
 
             return await db.EbooksCliente(idLogin);
+        }
+
+        public List<Models.TbGeneroEbook> AtribuirGenero (int idEbook)
+        {
+            return db.AtribuirGenero(idEbook);
+        }
+
+        public List<Models.TbGeneroEbook> Generos ()
+        {
+            return db.Generos();
+        }
+
+        public List<Models.TbAutor> ConsultarAutores ()
+        {
+            return db.Autores();
         }
     }
 }
