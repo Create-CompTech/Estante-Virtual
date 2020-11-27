@@ -1,7 +1,7 @@
-  **Instituto Nossa Senhora de Fatima
-Informática** 
+  **Instituto Nossa Senhora de Fatima**
+**Informática** 
 
-**goBook**
+**GoBook**
 
 **São Paulo
 2020**
